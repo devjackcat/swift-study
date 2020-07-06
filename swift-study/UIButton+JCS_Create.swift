@@ -9,71 +9,81 @@
 import UIKit
 
 extension UIButton {
-    
-    //MARK: - 文字
-    func jcs_title(title: String, state: UIControl.State?) -> UIButton {
-        self.setTitle(title, for: state ?? .normal)
+    // MARK: - 文字
+
+    func jcs_title(title: String, state: UIControl.State = .normal) -> UIButton {
+        setTitle(title, for: state)
         return self
     }
-    
-    //MARK: - 文字颜色
-    func jcs_titleColor(color: UIColor, state: UIControl.State?) -> UIButton {
-        self.setTitleColor(color, for: state ?? .normal)
+
+    // MARK: - 文字颜色
+
+    func jcs_titleColor(color: UIColor, state: UIControl.State = .normal) -> UIButton {
+        setTitleColor(color, for: state)
         return self
     }
-    func jcs_titleColor(hex: Int, state: UIControl.State?) -> UIButton {
-        self.setTitleColor(UIColor(hex: hex), for: state ?? .normal)
+
+    func jcs_titleColor(hex: Int, state: UIControl.State  = .normal ) -> UIButton {
+        setTitleColor(UIColor(hex: hex), for: state)
         return self
     }
-    
-    //MAKR: - 字体
+
+    // MAKR: - 字体
     func jcs_font(font: UIFont) -> UIButton {
-        self.titleLabel?.font = font
+        titleLabel?.font = font
         return self
     }
+
     func jcs_font(fontSize: CGFloat) -> UIButton {
-        self.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         return self
     }
-    
-    //MARK: - 图标
-    func jcs_image(image: UIImage, state: UIControl.State?) -> UIButton {
-        self.setImage(image, for: state ?? .normal)
+
+    // MARK: - 图标
+
+    func jcs_image(image: UIImage, state: UIControl.State = .normal) -> UIButton {
+        setImage(image, for: state)
         return self
     }
-    func jcs_image(imageName: String, state: UIControl.State?) -> UIButton {
-        self.setImage(UIImage(named: imageName), for: state ?? .normal)
+
+    func jcs_image(imageName: String, state: UIControl.State = .normal) -> UIButton {
+        setImage(UIImage(named: imageName), for: state)
         return self
     }
-    
-    //MARK: - 背景图
-    func jcs_backgroundImage(image: UIImage, state: UIControl.State?) -> UIButton {
-        self.setBackgroundImage(image, for: state ?? .normal)
+
+    // MARK: - 背景图
+
+    func jcs_backgroundImage(image: UIImage, state: UIControl.State = .normal) -> UIButton {
+        setBackgroundImage(image, for: state)
         return self
     }
-    func jcs_backgroundImage(imageName: String, state: UIControl.State?) -> UIButton {
-        self.setBackgroundImage(UIImage(named: imageName), for: state ?? .normal)
+
+    func jcs_backgroundImage(imageName: String, state: UIControl.State = .normal) -> UIButton {
+        setBackgroundImage(UIImage(named: imageName), for: state)
         return self
     }
-    
-    //MARK: - adjustsImage
+
+    // MARK: - adjustsImage
+
     func jcs_adjustsImageWhenHighlighted(value: Bool) -> UIButton {
-        self.adjustsImageWhenHighlighted = value
+        adjustsImageWhenHighlighted = value
         return self
     }
+
     func jcs_adjustsImageWhenDisabled(value: Bool) -> UIButton {
-        self.adjustsImageWhenDisabled = value
+        adjustsImageWhenDisabled = value
         return self
     }
-    
-    //MARK: - EdgeInsets
-    func jcs_imageEdgeInsets(top:CGFloat,left:CGFloat,bottom:CGFloat,right:CGFloat) -> UIButton {
-        self.imageEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+
+    // MARK: - EdgeInsets
+
+    func jcs_imageEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> UIButton {
+        imageEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }
-    func jcs_contentEdgeInsets(top:CGFloat,left:CGFloat,bottom:CGFloat,right:CGFloat) -> UIButton {
-        self.contentEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+
+    func jcs_contentEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> UIButton {
+        contentEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }
-    
 }

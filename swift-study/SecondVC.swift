@@ -11,10 +11,17 @@ import UIKit
 class SecondVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.red
+        
+        let vc = ThirdVC()
+        _ = vc.view.jcs_layout(superView: self) { (make) in
+            make.width.height.equalTo(100)
+            make.center.equalTo(self.view)
+        }
+        self.addChild(vc)
     }
-    
+
 //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        
+//
 //    }
 }

@@ -11,6 +11,6 @@ import UIKit
 class SmallVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.purple
+        view.backgroundColor = UIColor.purple
     }
 }

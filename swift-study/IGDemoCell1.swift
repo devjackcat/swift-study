@@ -9,22 +9,22 @@
 import UIKit
 
 class IGDemoCell1: UICollectionViewCell {
-    var titleLabel:UILabel!
+    var titleLabel: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.titleLabel = UILabel(text: nil, font: UIFont.systemFont(ofSize: 16), color: UIColor.red)
-            .jcs_layout(superView: self.contentView, layout: { (make) in
+
+        titleLabel = UILabel(text: nil, font: UIFont.systemFont(ofSize: 16), color: UIColor.red)
+            .jcs_layout(superView: contentView, layout: { make in
                 make.center.equalTo(self.contentView)
             })
             .jcs_toLabel()
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func configData(data: String) {
-        self.titleLabel.text = data
+        titleLabel.text = data
     }
 }

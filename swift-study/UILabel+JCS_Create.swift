@@ -6,66 +6,77 @@
 //  Copyright © 2020 永平. All rights reserved.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 extension UILabel {
-
-    convenience init(text:String?,font:UIFont,color:UIColor) {
+    convenience init(text: String?, font: UIFont, color: UIColor) {
         self.init()
         self.text = text
         self.font = font
-        self.textColor = color
+        textColor = color
     }
-    
-    //MARK: - Text
+
+    // MARK: - Text
+
     func jcs_text(text: String?) -> UILabel {
         self.text = text
         return self
     }
-    
-    //MARK: - 颜色
+
+    // MARK: - 颜色
+
     func jcs_textColor(color: UIColor) -> UILabel {
-        self.textColor = color
+        textColor = color
         return self
     }
+
     func jcs_textColor(hex: Int, alpha: CGFloat = 1) -> UILabel {
-        self.textColor = UIColor(hex: hex,alpha: alpha)
+        textColor = UIColor(hex: hex, alpha: alpha)
         return self
     }
-    
-    //MAKR: - 字体
+
+    // MAKR: - 字体
     func jcs_font(font: UIFont) -> UILabel {
         self.font = font
         return self
     }
+
     func jcs_font(fontSize: CGFloat) -> UILabel {
-        self.font = UIFont.systemFont(ofSize: fontSize)
+        font = UIFont.systemFont(ofSize: fontSize)
         return self
     }
-    
-    //numberOfLines
+
+    // numberOfLines
     func jcs_numberOfLines(numberOfLines: Int) -> UILabel {
         self.numberOfLines = numberOfLines
         return self
     }
+
     func jcs_numberOfLines_Zero() -> UILabel {
-        self.numberOfLines = 0
+        numberOfLines = 0
         return self
     }
-    
-    //对齐方式
+
+    // 对齐方式
     func jcs_textAlignment_Left() -> UILabel {
-        self.textAlignment = .left
+        textAlignment = .left
         return self
     }
+
     func jcs_textAlignment_Right() -> UILabel {
-        self.textAlignment = .right
+        textAlignment = .right
         return self
     }
+
     func jcs_textAlignment_Center() -> UILabel {
-        self.textAlignment = .center
+        textAlignment = .center
         return self
     }
     
+    @discardableResult
+    func jcs_frame(frame: CGRect) -> some JCS_ReturnAble {
+        super.jcs_frame(frame: frame)
+        return self
+    }
 }

@@ -11,12 +11,15 @@ target 'swift-study' do
     pod 'SnapKit'
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'RxRelay'
     pod 'Moya'
     pod 'Moya/RxSwift'
     pod 'HandyJSON'
     pod 'Closures'
     pod 'Kingfisher'
+    pod 'ReactorKit'
     
     pod 'IGListKit'
+    pod 'UITableView+FDTemplateLayoutCell'
 
 end

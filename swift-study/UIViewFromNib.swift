@@ -13,7 +13,7 @@ public extension UIView {
         return fromNib(nibNameOrNil, type: self)!
     }
 
-    class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil, owner: Any? = nil, type: T.Type) -> T? {
+    class func fromNib<T: UIView>(_ nibNameOrNil: String? = nil, owner: Any? = nil, type _: T.Type) -> T? {
         var view: T?
         let name: String
         if let nibName = nibNameOrNil {
@@ -45,4 +45,3 @@ public extension UIView {
         }
     }
 }
-

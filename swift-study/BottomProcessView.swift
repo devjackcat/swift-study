@@ -10,7 +10,5 @@ import UIKit
 
 @IBDesignable
 class BottomProcessView: UIView {
-    
-    override func awakeFromNib() {
-    }
+    override func awakeFromNib() {}
 }

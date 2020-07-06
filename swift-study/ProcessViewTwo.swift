@@ -6,54 +6,74 @@
 //  Copyright © 2020 永平. All rights reserved.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class ProcessViewTwo: UIView {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
-        
-        var views = [UIView]()
-        
-        views.append({
-            UIView().jcs_backgroundColor_Random().jcs_layout(superView: self) { (make) in
-                make.height.equalTo(50)
-            }
+        backgroundColor = UIColor.clear
+
+        _ = UIImageView(imageName: "fst_bg")
+            .jcs_layout(superView: self) { make in
+                make.leading.top.right.bottom.equalTo(0)
+            }.jcs_contentMode(mode: .scaleAspectFill)
+
+        let stackView = UIStackView(subviews: nil, spacing: 4.5).jcs_layout(superView: self) { make in
+            make.left.equalTo(6)
+            make.right.equalTo(-4)
+            make.bottom.equalTo(-4)
+        }.jcs_toStackView()
+
+        stackView.addArrangedSubview({
+            UILabel(text: "距离安全还差:", font: UIFont.systemFont(ofSize: 7), color: UIColor(hex: 0x6B28FF))
+                .jcs_layout(superView: self) { make in
+                    make.height.equalTo(7)
+                }
         }())
-        views.append({
-            UIView().jcs_backgroundColor_Random().jcs_layout(superView: self) { (make) in
-                make.height.equalTo(80)
-            }
+
+        stackView.addArrangedSubview({
+            UILabel(text: "距离安全还差:", font: UIFont.systemFont(ofSize: 7), color: UIColor(hex: 0x6B28FF))
+                .jcs_layout(superView: self) { make in
+                    make.height.equalTo(7)
+                }
         }())
-        views.append({
-            UIView().jcs_backgroundColor_Random().jcs_layout(superView: self) { (make) in
-                make.height.equalTo(30)
+
+        stackView.addArrangedSubview({
+            UILabel(text: "距离安全还差:", font: UIFont.systemFont(ofSize: 7), color: UIColor(hex: 0x6B28FF))
+                .jcs_layout(superView: self) { make in
+                    make.height.equalTo(7)
+                }
+               }())
+
+        // 进度条背景
+        stackView.addArrangedSubview({
+            let processBackView = UIView().jcs_layout(superView: self) { make in
+                make.height.equalTo(8.5)
             }
+            .jcs_backgroundColor(hex: 0xD6C3FF)
+            .jcs_cornerRadius(value: 4)
+
+            // 进度条前景色
+            _ = UIView().jcs_layout(superView: processBackView) { make in
+                make.leading.top.bottom.equalTo(0)
+                make.width.equalTo(processBackView).multipliedBy(0.8)
+            }
+            .jcs_backgroundColor(hex: 0x6C2AFF)
+            .jcs_cornerRadius(value: 4)
+
+            // 进度条Label
+            _ = UILabel(text: "10/80", font: UIFont.systemFont(ofSize: 7), color: UIColor.white)
+                .jcs_layout(superView: processBackView) { make in
+                    make.leading.right.top.bottom.equalTo(processBackView)
+                }
+                .jcs_toLabel().jcs_textAlignment_Center()
+
+            return processBackView
         }())
-        
-//        let stackView = UIStackView(arrangedSubviews: views)
-//        stackView.axis = .vertical
-//        stackView.alignment = .fill
-//        stackView.spacing = 5
-//        stackView.distribution = .fill
-//        stackView.backgroundColor = UIColor.red
-//        self.addSubview(stackView)
-//        stackView.snp.makeConstraints { (make) in
-//            make.width.equalTo(UIScreen.main.bounds.size.width)
-//            make.center.equalTo(self)
-//        }
- 
-        _ = UIStackView(subviews: views,axis: .vertical, distribution: .fill, spacing: 10).jcs_layout(superView: self) { (make) in
-            make.width.equalTo(UIScreen.main.bounds.size.width)
-            make.center.equalTo(self)
-            }.jcs_toStackView().jcs_spacing(20)
     }
-    
-    required init?(coder: NSCoder) {
+
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
 }

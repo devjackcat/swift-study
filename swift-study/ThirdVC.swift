@@ -10,7 +10,11 @@ import UIKit
 class ThirdVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.blue
-        self.view.layer.cornerRadius = 4
+        view.backgroundColor = UIColor.blue
+        view.layer.cornerRadius = 4
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+           dismiss(animated: true, completion: nil)
+       }
 }

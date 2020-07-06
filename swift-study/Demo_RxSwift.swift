@@ -7,113 +7,109 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
-class XXItem:Equatable {
+class XXItem: Equatable {
     static func == (lhs: XXItem, rhs: XXItem) -> Bool {
         return lhs.name == rhs.name
     }
-    
+
     var name = ""
-    init(_ name:String) {
+    init(_ name: String) {
         self.name = name
     }
+
     func desc() {
-        print(" XXItem \(self.name)")
+        print(" XXItem \(name)")
     }
-    
 }
 
 class Demo_Rxswift {
-    
     let disposeBag = DisposeBag()
-    
+
     func run() {
         Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe(onNext: { _ in
                 print("interval")
             })
     }
-    
-    func flatMapFirst() {
 
+    func flatMapFirst() {
         struct Player {
             var score: BehaviorRelay<Int>
         }
-        
+
         let John = Player(score: BehaviorRelay(value: 70))
         let Peter = Player(score: BehaviorRelay(value: 90))
-        
+
         let players = PublishSubject<Player>()
         players
             .flatMapFirst { $0.score }
             .subscribe(onNext: {
                 print($0)
             })
-        .disposed(by: disposeBag)
-        
+            .disposed(by: disposeBag)
+
         players.onNext(John)
-        
+
         John.score.accept(10)
-        
+
         players.onNext(Peter)
         John.score.accept(20)
         Peter.score.accept(40)
     }
-    
-    func flatMapLatest() {
 
+    func flatMapLatest() {
         struct Player {
             var score: BehaviorRelay<Int>
         }
-        
+
         let John = Player(score: BehaviorRelay(value: 70))
         let Peter = Player(score: BehaviorRelay(value: 90))
-        
+
         let players = PublishSubject<Player>()
         players
             .flatMapLatest { $0.score }
             .subscribe(onNext: {
                 print($0)
             })
-        .disposed(by: disposeBag)
-        
+            .disposed(by: disposeBag)
+
         players.onNext(John)
-        
+
         John.score.accept(10)
-        
+
         players.onNext(Peter)
         John.score.accept(20)
         Peter.score.accept(40)
     }
-    
-    func flatMap() {
 
+    func flatMap() {
         struct Player {
             var score: BehaviorRelay<Int>
         }
-        
+
         let John = Player(score: BehaviorRelay(value: 70))
         let Peter = Player(score: BehaviorRelay(value: 90))
-        
+
         let players = PublishSubject<Player>()
         players
             .flatMap { $0.score }
             .subscribe(onNext: {
                 print($0)
             })
-        .disposed(by: disposeBag)
-        
+            .disposed(by: disposeBag)
+
         players.onNext(John)
-        
+
         John.score.accept(10)
-        
+
         players.onNext(Peter)
         John.score.accept(20)
         Peter.score.accept(40)
     }
-    
+
     func distinctUntilChanged2() {
         let first = PublishSubject<XXItem>()
         first.distinctUntilChanged()
@@ -130,7 +126,7 @@ class Demo_Rxswift {
         first.onNext(XXItem("C"))
         first.onNext(XXItem("C"))
     }
-    
+
     func distinctUntilChanged1() {
         let first = PublishSubject<String>()
         first.distinctUntilChanged()
@@ -138,7 +134,7 @@ class Demo_Rxswift {
                 print($0)
             })
             .disposed(by: disposeBag)
-        
+
         first.onNext("A")
         first.onNext("B")
         first.onNext("B")
@@ -146,72 +142,71 @@ class Demo_Rxswift {
         first.onNext("C")
         first.onNext("C")
     }
-    
+
     func concatMap() {
-        
         let first = PublishSubject<String>()
         let second = PublishSubject<String>()
-        
+
 //        first.concatMap(<#T##selector: (String) throws -> ObservableConvertibleType##(String) throws -> ObservableConvertibleType#>)
-        
+
         first.concat(second)
             .subscribe(onNext: {
                 print($0)
             })
             .disposed(by: disposeBag)
-        
+
 //        Observable.concat(first,second) { $0 + $1 }
 //            .subscribe(onNext: {
 //                print($0)
 //            })
 //            .disposed(by: disposeBag)
-        
+
         first.onNext("A")
         first.onNext("B")
         first.onNext("C")
         second.onNext("1")
         second.onNext("2")
         second.onNext("3")
-        
+
 //        first.onCompleted()
         second.onNext("ff")
     }
-    
+
     func concat() {
-                let first = PublishSubject<String>()
-                let second = PublishSubject<String>()
-                
-                first.concat(second)
-                    .subscribe(onNext: {
-                        print($0)
+        let first = PublishSubject<String>()
+        let second = PublishSubject<String>()
+
+        first.concat(second)
+            .subscribe(onNext: {
+                print($0)
                     })
-                    .disposed(by: disposeBag)
-                
+            .disposed(by: disposeBag)
+
         //        Observable.concat(first,second) { $0 + $1 }
         //            .subscribe(onNext: {
         //                print($0)
         //            })
         //            .disposed(by: disposeBag)
-                
-                first.onNext("aa")
-                first.onNext("bb")
-                second.onNext("cc")
-                second.onNext("dd")
-                first.onNext("ee")
-                
-                first.onCompleted()
-                second.onNext("ff")
+
+        first.onNext("aa")
+        first.onNext("bb")
+        second.onNext("cc")
+        second.onNext("dd")
+        first.onNext("ee")
+
+        first.onCompleted()
+        second.onNext("ff")
     }
-    
+
     func zip() {
         let first = PublishSubject<String>()
         let second = PublishSubject<String>()
 
-        Observable.zip(first,second) { $0 + $1 }
-          .subscribe(onNext: {
-              print($0)
+        Observable.zip(first, second) { $0 + $1 }
+            .subscribe(onNext: {
+                print($0)
           })
-          .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
 
         first.onNext("aa")
         first.onNext("bb")
@@ -219,23 +214,23 @@ class Demo_Rxswift {
         second.onNext("dd")
         first.onNext("ee")
     }
-    
+
     func combineLatest() {
         let first = PublishSubject<String>()
         let second = PublishSubject<String>()
-        
-        Observable.combineLatest(first,second) { $0 + $1 }
+
+        Observable.combineLatest(first, second) { $0 + $1 }
             .subscribe(onNext: {
                 print($0)
             })
             .disposed(by: disposeBag)
-        
+
         first.onNext("aa")
         first.onNext("bb")
         second.onNext("cc")
         second.onNext("dd")
         first.onNext("ee")
-        
+
         /**
          bbcc
          bbdd

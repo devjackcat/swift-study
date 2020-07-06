@@ -6,13 +6,13 @@
 //  Copyright © 2020 永平. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 extension UIControl {
     func jcs_click(closures: @escaping (_ sender: UIControl) -> Void) -> UIControl {
-        _ = self.rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] _ in
+        _ = rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] _ in
             closures(self!)
         })
         return self

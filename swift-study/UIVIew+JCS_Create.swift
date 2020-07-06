@@ -6,26 +6,33 @@
 //  Copyright © 2020 永平. All rights reserved.
 //
 
-import UIKit
-import SnapKit
-import RxSwift
-import RxCocoa
 import Closures
+import RxCocoa
+import RxSwift
+import SnapKit
+import UIKit
 
-extension UIView {
+protocol JCS_ReturnAble {
     
-    //MARK: - - 布局
-    func jcs_layout(superView:AnyObject,layout:(ConstraintMaker) -> Void) -> UIView {
+}
+
+extension UIView: JCS_ReturnAble {
+    // MARK: - - 布局
+
+    @discardableResult
+    func jcs_layout(superView: AnyObject, layout: (ConstraintMaker) -> Void) -> Self {
         if let parentView = superView as? UIView {
             parentView.addSubview(self)
         }
         if let parentView = superView as? UIViewController {
             parentView.view.addSubview(self)
         }
-        self.snp.makeConstraints(layout)
+        snp.makeConstraints(layout)
         return self
     }
-    func jcs_layout(superView:AnyObject,frame:CGRect) -> UIView {
+
+    @discardableResult
+    func jcs_layout(superView: AnyObject, frame: CGRect) -> Self {
         if let parentView = superView as? UIView {
             parentView.addSubview(self)
         }
@@ -35,131 +42,189 @@ extension UIView {
         self.frame = frame
         return self
     }
-    func jcs_frame(frame: CGRect) -> UIView {
+
+    @discardableResult
+    func jcs_frame(frame: CGRect) -> some JCS_ReturnAble {
         self.frame = frame
         return self
     }
+
+    @discardableResult
     func jcs_bounds(bounds: CGRect) -> UIView {
         self.bounds = bounds
         return self
     }
+
+    @discardableResult
     func jcs_center(center: CGPoint) -> UIView {
         self.center = center
         return self
     }
-    
-    //MARK: - 属性
+
+    // MARK: - 属性
+
+    @discardableResult
     func jcs_tag(tag: Int) -> UIView {
         self.tag = tag
         return self
     }
+
+    @discardableResult
     func jcs_backgroundColor(color: UIColor) -> UIView {
-        self.backgroundColor = color
+        backgroundColor = color
         return self
     }
+
+    @discardableResult
     func jcs_backgroundColor(hex: Int, alpha: CGFloat = 1) -> UIView {
-        self.backgroundColor = UIColor(hex: hex, alpha: alpha)
+        backgroundColor = UIColor(hex: hex, alpha: alpha)
         return self
     }
+
+    @discardableResult
     func jcs_backgroundColor_Random() -> UIView {
-        self.backgroundColor = UIColor.jcs_randomColor()
+        backgroundColor = UIColor.jcs_randomColor()
         return self
     }
+
+    @discardableResult
     func jcs_backgroundColor_Clear() -> UIView {
-        self.backgroundColor = UIColor.clear
+        backgroundColor = UIColor.clear
         return self
     }
+
+    @discardableResult
     func jcs_backgroundColor_White() -> UIView {
-        self.backgroundColor = UIColor.white
+        backgroundColor = UIColor.white
         return self
     }
+
+    @discardableResult
     func jcs_contentMode(mode: UIView.ContentMode) -> UIView {
-        self.contentMode = mode
+        contentMode = mode
         return self
     }
+
+    @discardableResult
     func jcs_hidden(value: Bool) -> UIView {
-        self.isHidden = value
+        isHidden = value
         return self
     }
+
+    @discardableResult
     func jcs_userInteractionEnabled(value: Bool) -> UIView {
-        self.isUserInteractionEnabled = value
+        isUserInteractionEnabled = value
         return self
     }
+
+    @discardableResult
     func jcs_clipsToBounds(value: Bool) -> UIView {
-        self.clipsToBounds = value
+        clipsToBounds = value
         return self
     }
+
+    @discardableResult
     func jcs_alpha(value: CGFloat) -> UIView {
-        self.alpha = value
+        alpha = value
         return self
     }
-    
-    //MARK: - 显示顺序
+
+    // MARK: - 显示顺序
+
+    @discardableResult
     func jcs_bringToFront() -> UIView {
-        self.superview?.bringSubviewToFront(self)
+        superview?.bringSubviewToFront(self)
         return self
     }
+
+    @discardableResult
     func jcs_sendToBack() -> UIView {
-        self.superview?.sendSubviewToBack(self)
+        superview?.sendSubviewToBack(self)
         return self
     }
+
+    // MAKR: - CGLayer
     
-    //MAKR: - CGLayer
+    @discardableResult
     func jcs_cornerRadius(value: CGFloat) -> UIView {
-        self.layer.cornerRadius = value
-        self.layer.masksToBounds = true
+        layer.cornerRadius = value
+        layer.masksToBounds = true
         return self
     }
+
+    @discardableResult
     func jcs_borderColor(value: UIColor) -> UIView {
-        self.layer.borderColor = value.cgColor
+        layer.borderColor = value.cgColor
         return self
     }
+
+    @discardableResult
     func jcs_borderColor(hex: Int, alpha: CGFloat = 1) -> UIView {
-        self.layer.borderColor = UIColor(hex: hex, alpha: alpha).cgColor
+        layer.borderColor = UIColor(hex: hex, alpha: alpha).cgColor
         return self
     }
+
+    @discardableResult
     func jcs_borderWidth(value: CGFloat) -> UIView {
-        self.layer.borderWidth = value
+        layer.borderWidth = value
         return self
     }
-    
-    //MARK: - 事件
-    
+
+    // MARK: - 事件
+
+    @discardableResult
     func jcs_tap(closures: @escaping (_ sender: UIView) -> Void) -> UIView {
         let tapGesture = UITapGestureRecognizer()
-        self.addGestureRecognizer(tapGesture)
+        addGestureRecognizer(tapGesture)
         _ = tapGesture.rx.event
             .subscribe(onNext: { [weak self] _ in
-            closures(self!)
+                closures(self!)
         })
         return self
     }
-    
-    //MARK: - 转换
+
+    // MARK: - 转换
+
+    @discardableResult
     func jcs_toLabel() -> UILabel {
         return self as! UILabel
     }
+
+    @discardableResult
     func jcs_toButton() -> UIButton {
         return self as! UIButton
     }
+
+    @discardableResult
     func jcs_toImageView() -> UIImageView {
         return self as! UIImageView
     }
+
+    @discardableResult
     func jcs_toControl() -> UIControl {
         return self as! UIControl
     }
+
+    @discardableResult
     func jcs_toCollectionView() -> UICollectionView {
         return self as! UICollectionView
     }
+
+    @discardableResult
     func jcs_toTableView() -> UITableView {
         return self as! UITableView
     }
+
+    @discardableResult
     func jcs_toScrollView() -> UIScrollView {
         return self as! UIScrollView
     }
+
+    @discardableResult
     func jcs_toStackView() -> UIStackView {
         return self as! UIStackView
     }
+
 //    @property (nonatomic,copy,readonly) UITextField*(^jcs_toTextField)(void);
 //    @property (nonatomic,copy,readonly) UITextView*(^jcs_toTextView)(void);
 //    @property (nonatomic,copy,readonly) UISegmentedControl*(^jcs_toSegmentedControl)(void);

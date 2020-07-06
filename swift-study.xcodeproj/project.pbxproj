@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		39CF15A097451749C4551DC2 /* Pods_swift_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */; };
+		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
+		7D197F6524AAC9BD00472625 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D197F6424AAC9BD00472625 /* UIView+Extension.swift */; };
+		7D197F7324AC275100472625 /* JCSOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D197F7224AC275100472625 /* JCSOperators.swift */; };
 		7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CC2473C42E000E6845 /* AppDelegate.swift */; };
 		7D3F13CF2473C42E000E6845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */; };
 		7D3F13D12473C42E000E6845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13D02473C42E000E6845 /* ViewController.swift */; };
@@ -41,9 +44,14 @@
 		7D52234E247BCA7C00B06978 /* ProcessViewOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52234D247BCA7C00B06978 /* ProcessViewOne.swift */; };
 		7D522350247BCF0E00B06978 /* ProcessViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D52234F247BCF0E00B06978 /* ProcessViewTwo.swift */; };
 		7D522354247CACDF00B06978 /* UIStackView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D522353247CACDF00B06978 /* UIStackView+JCS_Create.swift */; };
+		7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF277DB2492108400A1F7AA /* DemoReactorVC.swift */; };
+		7DF277DE2492154D00A1F7AA /* CounterViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF277DD2492154D00A1F7AA /* CounterViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
+		7D197F6424AAC9BD00472625 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7D197F7224AC275100472625 /* JCSOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSOperators.swift; sourceTree = "<group>"; };
 		7D3F13C92473C42E000E6845 /* swift-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F13CC2473C42E000E6845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,8 @@
 		7D52234D247BCA7C00B06978 /* ProcessViewOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewOne.swift; sourceTree = "<group>"; };
 		7D52234F247BCF0E00B06978 /* ProcessViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewTwo.swift; sourceTree = "<group>"; };
 		7D522353247CACDF00B06978 /* UIStackView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+JCS_Create.swift"; sourceTree = "<group>"; };
+		7DF277DB2492108400A1F7AA /* DemoReactorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoReactorVC.swift; sourceTree = "<group>"; };
+		7DF277DD2492154D00A1F7AA /* CounterViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewReactor.swift; sourceTree = "<group>"; };
 		9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_study.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798FA5143569CB7B1F8539D /* Pods-swift-study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-study.debug.xcconfig"; path = "Target Support Files/Pods-swift-study/Pods-swift-study.debug.xcconfig"; sourceTree = "<group>"; };
 		C34AFB96CEB9CBFAABF4D658 /* Pods-swift-study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-study.release.xcconfig"; path = "Target Support Files/Pods-swift-study/Pods-swift-study.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +113,14 @@
 				C34AFB96CEB9CBFAABF4D658 /* Pods-swift-study.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D197F7124AC274100472625 /* JCSOperators */ = {
+			isa = PBXGroup;
+			children = (
+				7D197F7224AC275100472625 /* JCSOperators.swift */,
+			);
+			name = JCSOperators;
 			sourceTree = "<group>";
 		};
 		7D3F13C02473C42E000E6845 = {
@@ -133,6 +151,7 @@
 				7D3F13E12473C463000E6845 /* Demo-Swift */,
 				7D5221EF2477DD8A00B06978 /* Demo-IG */,
 				7D3F148B2474C2C0000E6845 /* Demo-Moya */,
+				7DF277DA2492106B00A1F7AA /* Demo-Reactor */,
 				7D3F13E02473C452000E6845 /* Other */,
 			);
 			path = "swift-study";
@@ -144,6 +163,7 @@
 				7D3F13CC2473C42E000E6845 /* AppDelegate.swift */,
 				7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */,
 				7D3F13D02473C42E000E6845 /* ViewController.swift */,
+				7D1624022480A90F00987234 /* LSActivityExplodeView.swift */,
 				7D3F13D22473C42E000E6845 /* Main.storyboard */,
 				7D522343247B908B00B06978 /* SmallVC.swift */,
 				7D522299247B74B300B06978 /* Second.storyboard */,
@@ -238,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5221E224779E6A00B06978 /* UIColor+JCS_Extension.swift */,
+				7D197F6424AAC9BD00472625 /* UIView+Extension.swift */,
 			);
 			name = JCS_Extension;
 			sourceTree = "<group>";
@@ -245,11 +266,21 @@
 		7D522352247CAC8200B06978 /* JCS */ = {
 			isa = PBXGroup;
 			children = (
+				7D197F7124AC274100472625 /* JCSOperators */,
 				7D5221EC2477B8CC00B06978 /* JCS_Base */,
 				7D5221DD24777DBC00B06978 /* JCS_Create */,
 				7D522351247CAC6C00B06978 /* JCS_Extension */,
 			);
 			name = JCS;
+			sourceTree = "<group>";
+		};
+		7DF277DA2492106B00A1F7AA /* Demo-Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				7DF277DB2492108400A1F7AA /* DemoReactorVC.swift */,
+				7DF277DD2492154D00A1F7AA /* CounterViewReactor.swift */,
+			);
+			name = "Demo-Reactor";
 			sourceTree = "<group>";
 		};
 		AF01B330624906CB6B25B27A /* Frameworks */ = {
@@ -378,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D522344247B908B00B06978 /* SmallVC.swift in Sources */,
+				7D197F7324AC275100472625 /* JCSOperators.swift in Sources */,
 				7D52234B247BBC9800B06978 /* IBLabel.swift in Sources */,
 				7D3F13E32473C47A000E6845 /* Entry.swift in Sources */,
 				7D5221E92477B2BE00B06978 /* UIButton+JCS_Create.swift in Sources */,
@@ -387,6 +419,7 @@
 				7D522349247BA81900B06978 /* DemoItem.swift in Sources */,
 				7D5221D924777B2200B06978 /* BottomProcessView.swift in Sources */,
 				7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */,
+				7DF277DE2492154D00A1F7AA /* CounterViewReactor.swift in Sources */,
 				7D3F13D12473C42E000E6845 /* ViewController.swift in Sources */,
 				7D52229C247B74CC00B06978 /* SecondVC.swift in Sources */,
 				7D522350247BCF0E00B06978 /* ProcessViewTwo.swift in Sources */,
@@ -394,11 +427,14 @@
 				7D3F13CF2473C42E000E6845 /* SceneDelegate.swift in Sources */,
 				7D5221DF24777DD900B06978 /* UIVIew+JCS_Create.swift in Sources */,
 				7D5221E324779E6A00B06978 /* UIColor+JCS_Extension.swift in Sources */,
+				7D197F6524AAC9BD00472625 /* UIView+Extension.swift in Sources */,
 				7D5221E124777E1000B06978 /* UILabel+JCS_Create.swift in Sources */,
+				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
 				7D3F13E72473E0AF000E6845 /* Demo_RxSwift.swift in Sources */,
 				7D5221E72477B1B500B06978 /* UIControl+JCS_Create.swift in Sources */,
 				7D3F13E52473C4B1000E6845 /* Demo_ErrorHandler.swift in Sources */,
 				7D52234E247BCA7C00B06978 /* ProcessViewOne.swift in Sources */,
+				7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */,
 				7D5221DC24777C6A00B06978 /* UIViewFromNib.swift in Sources */,
 				7D522346247B971800B06978 /* CycleView.swift in Sources */,
 				7D5221EE2477B8DD00B06978 /* JCS_BaseVC.swift in Sources */,
@@ -549,15 +585,17 @@
 			baseConfigurationReference = B798FA5143569CB7B1F8539D /* Pods-swift-study.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY35RCZJHT;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SKB334AM79;
 				INFOPLIST_FILE = "swift-study/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mijin.app.test.qq;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yn.huayou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.*";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

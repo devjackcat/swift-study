@@ -9,15 +9,13 @@
 import UIKit
 
 class JCS_BaseVC: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.jcs_setup()
+        jcs_setup()
     }
-    
-    func jcs_setup() { }
-    func jcs_bindingSignal() { }
-    func jcs_registerNotifications() { }
-    func jcs_request() { }
-    
+
+    func jcs_setup() {}
+    func jcs_bindingSignal() {}
+    func jcs_registerNotifications() {}
+    func jcs_request() {}
 }
