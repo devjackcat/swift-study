@@ -12,73 +12,29 @@ import RxRelay
 import RxSwift
 import SnapKit
 import UIKit
-import UITableView_FDTemplateLayoutCell
 
-protocol SayHello {
-    associatedtype Item
-    func hello(value: Item)
-}
-
-class Cat {
-    var name: String = ""
-}
-
-extension Cat: SayHello {
-    func hello(value _: String) {}
-
-    typealias Item = String
-
-    func hello() {
-        print("Hello \(name)")
-    }
-}
-
-extension Array where Element: SayHello {
-    func helloList() {}
-}
-
-class PDemo {
-    func test() {
-        let cat1 = Cat()
-        let cat2 = Cat()
-        let array = [cat1, cat2]
-        array.helloList()
-    }
-}
-
-class ViewController: JCS_BaseVC, UITableViewDataSource, UITableViewDelegate {
+class ViewController_bak: JCS_BaseVC {
     var label: UILabel!
     var explodeView: LSActivityExplodeView!
     var count = 0
 
-    var bag = DisposeBag()
     var clickBag = DisposeBag()
-    @IBOutlet var ItemView1: IBButton!
-    @IBOutlet var itemView2: IBButton!
-    @IBOutlet var itemView3: IBButton!
 
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var textShadowView: UIView! {
-        didSet {
-            textShadowView.backgroundColor = .white
-            textShadowView.layer.cornerRadius = 12
-//            textShadowView.layer.masksToBounds = true
-            textShadowView.clipsToBounds = true
-            textShadowView.layer.shadowColor = UIColor(hex: 0x000000, alpha: 0.08).cgColor
-            textShadowView.layer.shadowOpacity = 0.8
-            textShadowView.layer.shadowRadius = 12
-//            textShadowView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
+//    @IBOutlet var textShadowView: UIView! {
+//        didSet {
+//            textShadowView.backgroundColor = .white
+//            textShadowView.layer.cornerRadius = 12
+////            textShadowView.layer.masksToBounds = true
+//            textShadowView.clipsToBounds = true
+//            textShadowView.layer.shadowColor = UIColor(hex: 0x000000, alpha: 0.08).cgColor
 //            textShadowView.layer.shadowOpacity = 0.8
 //            textShadowView.layer.shadowRadius = 12
-        }
-    }
+////            textShadowView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08).cgColor
+////            textShadowView.layer.shadowOpacity = 0.8
+////            textShadowView.layer.shadowRadius = 12
+//        }
+//    }
 
-    // 啦啦啦啦
-    var tableView: UITableView!
-
-    var event: Signal<Void>!
-//
 //    var single = Single<String>.create { _ in
 //        //        single.success("aaa")
 //        Disposables.create()
@@ -93,18 +49,10 @@ class ViewController: JCS_BaseVC, UITableViewDataSource, UITableViewDelegate {
     //    }
 
     override func viewDidLoad() {
-        UIColor(hex: 0xA4AFD8)
-            >>> ItemView1.backgroundColor
-            >>> itemView2.backgroundColor
-            >>> itemView3.backgroundColor
-
-
-        var bool1 = false
-        var bool2 = false
-
-        print("")
-
-        true >>> bool1 >>> bool2
+//        UIColor(hex: 0xA4AFD8)
+//            >>> ItemView1.backgroundColor
+//            >>> itemView2.backgroundColor
+//            >>> itemView3.backgroundColor
 
 //        view.backgroundColor = .systemPink
 //        let layerView = UIView()
@@ -434,54 +382,12 @@ class ViewController: JCS_BaseVC, UITableViewDataSource, UITableViewDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
-        if let vc = segue.destination as? SecondVC {
-            vc.title = "This is SecondVC"
-        }
-    }
-
-    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 20
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "democell", for: indexPath) as! AutoHeightDemoCell
-        var value = ""
-        for _ in 0 ..< indexPath.item {
-            value += "aaaaaaaaaa"
-        }
-        cell.titleLabel.text = value
-        return cell
-    }
-
-    func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = tableView.fd_heightForCell(withIdentifier: "democell", cacheBy: indexPath) { _ in
-        }
-
-        //        let height = self.tableView.fd_heightForCell(withIdentifier: "democell", configuration: nil)
-
-        return height + 20
+//        if let vc = segue.destination as? SecondVC {
+//            vc.title = "This is SecondVC"
+//        }
     }
 
     @IBAction func testButtonClick(_: Any) {
         print("\(arc4random())")
-    }
-}
-
-class AutoHeightDemoCell: UITableViewCell {
-    var titleLabel: UILabel!
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        titleLabel = UILabel(text: "", font: .systemFont(ofSize: 15), color: .black)
-            .jcs_layout(superView: contentView, layout: { make in
-                make.left.top.right.equalTo(0)
-            })
-            .jcs_toLabel()
-            .jcs_textAlignment_Center()
-            .jcs_numberOfLines_Zero()
-    }
-
-    required init?(coder _: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

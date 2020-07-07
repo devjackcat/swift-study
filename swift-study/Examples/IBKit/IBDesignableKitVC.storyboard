@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Designable KitVC-->
+        <scene sceneID="zdd-n6-cp1">
+            <objects>
+                <viewController storyboardIdentifier="IBDesignableKitVC" id="f12-bp-iaq" customClass="IBDesignableKitVC" customModule="swift_study" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Hd-By-ktY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McL-LG-oiN" customClass="IBGradientView" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="16" y="64" width="181.5" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="G2L-Ya-3IE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwK-WD-K4E" customClass="IBGradientView" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="212.5" y="64" width="181.5" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhs-3o-hCF" customClass="IBProgressView" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="15" y="184" width="181.5" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yf0-4J-AJP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
+                                        <color key="value" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
+                                        <color key="value" red="1" green="0.88235294119999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-0u-j6j" customClass="IBCornerRadiusMasksView" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="117" y="234" width="181.5" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="htH-rM-j5K"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskTopLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskTopRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskBottomLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskBottomRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vhs-3o-hCF" firstAttribute="top" secondItem="McL-LG-oiN" secondAttribute="bottom" constant="20" id="2EP-0U-05l"/>
+                            <constraint firstItem="McL-LG-oiN" firstAttribute="leading" secondItem="cSo-ib-nsj" secondAttribute="leading" constant="16" id="4b3-aJ-15t"/>
+                            <constraint firstItem="cSo-ib-nsj" firstAttribute="trailing" secondItem="XwK-WD-K4E" secondAttribute="trailing" constant="20" id="7Qw-Id-zKD"/>
+                            <constraint firstItem="XwK-WD-K4E" firstAttribute="height" secondItem="McL-LG-oiN" secondAttribute="height" id="C5D-NZ-uUj"/>
+                            <constraint firstItem="XwK-WD-K4E" firstAttribute="width" secondItem="McL-LG-oiN" secondAttribute="width" id="CDb-CR-Eg0"/>
+                            <constraint firstItem="McL-LG-oiN" firstAttribute="top" secondItem="cSo-ib-nsj" secondAttribute="top" constant="20" id="KMc-xf-S9x"/>
+                            <constraint firstItem="XwK-WD-K4E" firstAttribute="top" secondItem="McL-LG-oiN" secondAttribute="top" id="RtN-JW-T1h"/>
+                            <constraint firstItem="vhs-3o-hCF" firstAttribute="width" secondItem="McL-LG-oiN" secondAttribute="width" id="WoX-du-tED"/>
+                            <constraint firstItem="vhs-3o-hCF" firstAttribute="leading" secondItem="cSo-ib-nsj" secondAttribute="leading" constant="15" id="jWA-VC-qLs"/>
+                            <constraint firstItem="XwK-WD-K4E" firstAttribute="leading" secondItem="McL-LG-oiN" secondAttribute="trailing" constant="15" id="mF2-E9-WeT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cSo-ib-nsj"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradientView1" destination="McL-LG-oiN" id="vfb-Cx-hU4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJ3-ty-LJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="-107.14285714285714"/>
+        </scene>
+    </scenes>
+</document>

@@ -28,24 +28,23 @@ extension UIColor {
         let b = (CGFloat)(arc4random() % UInt32(255.0)) / 255.0
         return UIColor(red: r, green: g, blue: b, alpha: 1)
     }
-    
-    //渐变色
+
+    // 渐变色
     class func jcs_gradientColor(gradientStyle: JCSColorGradientStyle,
                                  size: CGSize,
                                  colors: [UIColor],
-                                 locations: [NSNumber]? = [0,1]) -> UIColor{
-        
-        let gradientLayer:CAGradientLayer = CAGradientLayer()
+                                 locations: [NSNumber]? = [0, 1]) -> UIColor {
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(origin: CGPoint.zero, size: size)
-        
-        //[UIColor] -> [CGColor]
+
+        // [UIColor] -> [CGColor]
         var cgcolors = [CGColor]()
-        colors.forEach { (color) in
+        colors.forEach { color in
             cgcolors.append(color.cgColor)
         }
-        gradientLayer.colors = cgcolors;
-        
-        //渐变方向
+        gradientLayer.colors = cgcolors
+
+        // 渐变方向
         switch gradientStyle {
         case .leftToRight:
             gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
@@ -53,17 +52,17 @@ extension UIColor {
         default:
             break
         }
-        
-        //渐变位置
+
+        // 渐变位置
         gradientLayer.locations = locations as [NSNumber]?
-        
-        UIGraphicsBeginImageContextWithOptions(gradientLayer.bounds.size,false,UIScreen.main.scale)
+
+        UIGraphicsBeginImageContextWithOptions(gradientLayer.bounds.size, false, UIScreen.main.scale)
         gradientLayer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+
         if let image = image {
-            return UIColor.init(patternImage: image)
+            return UIColor(patternImage: image)
         }
         return UIColor.clear
     }
