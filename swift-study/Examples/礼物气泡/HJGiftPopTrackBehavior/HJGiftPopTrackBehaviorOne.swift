@@ -10,7 +10,17 @@ import UIKit
 
 class HJGiftPopTrackBehaviorOne: HJGiftPopTrackBehavior {
     
-    override func playAnimation() {
+    typealias GiftPopViewItem = HJGiftPopViewModel.GiftPopViewItem
+    typealias Gift = HJGiftPopViewModel.Gift
+    typealias SendInfo = HJGiftPopViewModel.SendInfo
+    
+    private weak var viewModel: HJGiftPopViewModel?
+
+    required init(viewModel: HJGiftPopViewModel, giftVC: HJGiftPopDemoViewController) {
+        self.viewModel = viewModel
+    }
+    
+    func playAnimation() {
         
         guard let viewModel = viewModel else { return }
         

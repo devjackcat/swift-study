@@ -66,7 +66,7 @@ class HJGiftPopDemoViewController: UIViewController {
 
         if pandaMaster == .Anchor {
             trackBehavior = HJGiftPopTrackBehaviorOne(viewModel: viewModel, giftVC: self)
-        } else if pandaMaster == .Audience {            
+        } else if pandaMaster == .Audience {
             trackBehavior = HJGiftPopTrackBehaviorTwo(viewModel: viewModel, giftVC: self)
         }
     }

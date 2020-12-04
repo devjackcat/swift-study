@@ -10,10 +10,22 @@ import UIKit
 
 class HJGiftPopTrackBehaviorTwo: HJGiftPopTrackBehavior {
     
+    typealias GiftPopViewItem = HJGiftPopViewModel.GiftPopViewItem
+    typealias Gift = HJGiftPopViewModel.Gift
+    typealias SendInfo = HJGiftPopViewModel.SendInfo
+    
+    private weak var giftVC: HJGiftPopDemoViewController?
+    private weak var viewModel: HJGiftPopViewModel?
+
+    required init(viewModel: HJGiftPopViewModel, giftVC: HJGiftPopDemoViewController) {
+        self.viewModel = viewModel
+        self.giftVC = giftVC
+    }
+    
     private let startPointer = CGPoint(x: UIScreen.main.bounds.size.width / 2, y: 250)
     private let endPointer = CGPoint(x: 0, y: UIScreen.main.bounds.size.height)
     
-    override func playAnimation() {
+    func playAnimation() {
         
         guard let viewModel = viewModel else { return }
         

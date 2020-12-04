@@ -8,19 +8,7 @@
 
 import Foundation
 
-class HJGiftPopTrackBehavior {
- 
-    typealias GiftPopViewItem = HJGiftPopViewModel.GiftPopViewItem
-    typealias Gift = HJGiftPopViewModel.Gift
-    typealias SendInfo = HJGiftPopViewModel.SendInfo
-    
-    weak var giftVC: HJGiftPopDemoViewController?
-    weak var viewModel: HJGiftPopViewModel?
-
-    init(viewModel: HJGiftPopViewModel, giftVC: HJGiftPopDemoViewController) {
-        self.viewModel = viewModel
-        self.giftVC = giftVC
-    }
-    
-    func playAnimation() {}
+protocol HJGiftPopTrackBehavior {
+    init(viewModel: HJGiftPopViewModel, giftVC: HJGiftPopDemoViewController)
+    func playAnimation()
 }
