@@ -36,12 +36,64 @@
                                     <action selector="testLogin:" destination="Gce-6q-s3q" eventType="touchUpInside" id="cEN-A7-K02"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-ze-ycd" customClass="IBButton" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="20" y="118" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KEa-AI-TSV"/>
+                                    <constraint firstAttribute="width" constant="100" id="jlf-RA-fEK"/>
+                                </constraints>
+                                <state key="normal" title="Subject 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="gradient" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="mergeSubject1Click:" destination="Gce-6q-s3q" eventType="touchUpInside" id="b2N-za-5BQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJE-Mp-mxF" customClass="IBButton" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="294" y="118" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0w1-61-fTn"/>
+                                    <constraint firstAttribute="width" constant="100" id="Vcw-iX-0Hk"/>
+                                </constraints>
+                                <state key="normal" title="Subject 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="gradient" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="mergeSubject2Click:" destination="Gce-6q-s3q" eventType="touchUpInside" id="1j8-xg-BX9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-ui-qx8">
+                                <rect key="frame" x="182.5" y="129.5" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8dP-Wk-iik" firstAttribute="leading" secondItem="uPr-gU-DKL" secondAttribute="leading" constant="20" id="6ZW-RC-Mho"/>
+                            <constraint firstItem="jJE-Mp-mxF" firstAttribute="height" secondItem="V8S-ze-ycd" secondAttribute="height" id="Aww-p6-szc"/>
                             <constraint firstItem="uPr-gU-DKL" firstAttribute="trailing" secondItem="8dP-Wk-iik" secondAttribute="trailing" constant="20" id="Dcw-PJ-ltj"/>
+                            <constraint firstItem="jJE-Mp-mxF" firstAttribute="width" secondItem="V8S-ze-ycd" secondAttribute="width" id="IHf-q2-fp0"/>
+                            <constraint firstItem="7Yr-ui-qx8" firstAttribute="centerX" secondItem="7rB-KT-FLW" secondAttribute="centerX" id="MsP-6j-Tco"/>
+                            <constraint firstItem="7Yr-ui-qx8" firstAttribute="centerY" secondItem="V8S-ze-ycd" secondAttribute="centerY" id="PgS-wa-5I4"/>
+                            <constraint firstItem="V8S-ze-ycd" firstAttribute="leading" secondItem="8dP-Wk-iik" secondAttribute="leading" id="W4V-8h-q6E"/>
                             <constraint firstItem="8dP-Wk-iik" firstAttribute="top" secondItem="uPr-gU-DKL" secondAttribute="top" constant="20" id="XyB-3N-m93"/>
+                            <constraint firstItem="jJE-Mp-mxF" firstAttribute="centerY" secondItem="V8S-ze-ycd" secondAttribute="centerY" id="aTG-bY-w6W"/>
+                            <constraint firstItem="V8S-ze-ycd" firstAttribute="top" secondItem="8dP-Wk-iik" secondAttribute="bottom" constant="10" id="hl0-1U-gXZ"/>
+                            <constraint firstItem="jJE-Mp-mxF" firstAttribute="trailing" secondItem="8dP-Wk-iik" secondAttribute="trailing" id="y49-cC-dOU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uPr-gU-DKL"/>
                     </view>

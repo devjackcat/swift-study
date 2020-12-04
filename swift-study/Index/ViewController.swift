@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     private var bag = DisposeBag()
     private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
+    
+    enum TestEnum {
+        case demo(a: String, b: String? = nil, c: Int)
+    }
 
     var dict = [String: ImagePrefetcher]()
 
@@ -29,10 +33,28 @@ class ViewController: UIViewController {
         ExampleListItem(title: "IBDesignableKit", jumpClass: IBDesignableKitVC.self),
         ExampleListItem(title: "富文本", jumpClass: RichTextViewController.self),
         ExampleListItem(title: "Popver", jumpClass: PopverViewController.self),
+        ExampleListItem(title: "礼物气泡(样式1)", jumpClass: HJGiftPopDemoViewController.self),
+        ExampleListItem(title: "礼物气泡(样式2)", jumpClass: HJGiftPopDemoViewController.self),
+        ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
+        ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var params = ["userId":"123","username":"张三"]
+        
+        let testenum = TestEnum.demo(a: "aa",b: "bb", c: 0)
+        switch testenum {
+        case let .demo(a: a, b: b, c: c):
+            if let b = b {
+                params["b"] = b
+            }
+        default:
+            print("")
+        }
+        
+        print("")
 
 //        var limitDate = Date().adjust(.hour, offset: 22).adjust(.minute, offset: 0).adjust(.second, offset: 0)
 //        var nowDate = Date().adjust(.hour, offset: 20).adjust(.minute, offset: 0).adjust(.second, offset: 0)
@@ -119,7 +141,6 @@ class ViewController: UIViewController {
             let item = self.demoList[indexPath.item]
             if let vc = self.instanceJumpVC(item: item) {
                 vc.title = item.title
-                vc.view.backgroundColor = .white
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }).disposing(with: self)
@@ -139,8 +160,19 @@ class ViewController: UIViewController {
             return RichTextViewController.instantiateFromStoryboard()
         } else if item.jumpClass == PopverViewController.self {
             return PopverViewController.instantiateFromStoryboard()
+        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式1)" {
+            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
+            vc.pandaMaster = .Anchor
+            return vc
+        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式2)" {
+            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
+            vc.pandaMaster = .Audience
+            return vc
+        } else if item.jumpClass == ModalDemoViewController.self {
+            return ModalDemoViewController()
+        } else if item.jumpClass == DemoTouchTroughVC.self {
+            return DemoTouchTroughVC()
         }
-
         return nil
     }
 

@@ -49,25 +49,45 @@ class UserApi {
 }
 
 class ExampleRxSwiftVC: UIViewController {
+    private var mergeSubject1 = PublishRelay<DemoItem>()
+    private var mergeSubject2 = PublishRelay<DemoItem>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        Observable.of(mergeSubject1, mergeSubject2)
+            .merge()
+            .subscribe(onNext: { item in
+                print("---merge.item = \(item.title)")
+            })
+            .disposing(with: self)
     }
 
     @IBAction func testLogin(_: Any) {
         UserApi.login() // 登陆接口
-              .flatMap { _ in
-                  UserApi.getUserProfile() // 用户个人信息
-              }
-              .flatMap { _ in
-                  UserApi.getUserAssess() // 用户资产
-              }
-              .flatMap { _ in
-                  UserApi.getUserSetting() // 用户个性化
-              }
-              .subscribe(onNext: { _ in
-                  print("登陆成功")
+            .flatMap { _ in
+                UserApi.getUserProfile() // 用户个人信息
+            }
+            .flatMap { _ in
+                UserApi.getUserAssess() // 用户资产
+            }
+            .flatMap { _ in
+                UserApi.getUserSetting() // 用户个性化
+            }
+            .subscribe(onNext: { _ in
+                print("登陆成功")
               })
-              .disposing(with: self)
+            .disposing(with: self)
+    }
+
+    @IBAction func mergeSubject1Click(_: Any) {
+        let demoItem = DemoItem(title: "mergeSubject1Click")
+        mergeSubject1.accept(demoItem)
+    }
+
+    @IBAction func mergeSubject2Click(_: Any) {
+        let demoItem = DemoItem(title: "mergeSubject2Click")
+        mergeSubject1.accept(demoItem)
     }
 }
 

@@ -23,15 +23,11 @@
                                 </constraints>
                                 <state key="normal" title="Popver"/>
                                 <connections>
-                                    <action selector="showPopver1:" destination="MxZ-T3-lbM" eventType="touchUpInside" id="RCh-SJ-4Yx"/>
+                                    <action selector="showPopver1WithSender:" destination="MxZ-T3-lbM" eventType="touchUpInside" id="AXf-p7-j1Z"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="切片" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-wm-v8L">
-                                <rect key="frame" x="92" y="307" width="240" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iV6-2A-opi" firstAttribute="bottom" secondItem="6Y3-xm-40y" secondAttribute="bottom" constant="114" id="EzI-ZV-3kj"/>
                             <constraint firstItem="6Y3-xm-40y" firstAttribute="centerX" secondItem="TDu-h1-ybd" secondAttribute="centerX" id="yL8-6u-INV"/>
@@ -44,7 +40,4 @@
             <point key="canvasLocation" x="221.73913043478262" y="75"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="切片" width="231.5" height="113.5"/>
-    </resources>
 </document>
