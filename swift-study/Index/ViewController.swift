@@ -37,24 +37,29 @@ class ViewController: UIViewController {
         ExampleListItem(title: "礼物气泡(样式2)", jumpClass: HJGiftPopDemoViewController.self),
         ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
         ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
+        ExampleListItem(title: "倒计时", jumpClass: CountDownTimerExampleVC.self),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var params = ["userId":"123","username":"张三"]
+//        let stringFormat = "模板2 %@"
+//        let value = String(format: stringFormat, "内容")
+//        print("\(value)")
         
-        let testenum = TestEnum.demo(a: "aa",b: "bb", c: 0)
-        switch testenum {
-        case let .demo(a: a, b: b, c: c):
-            if let b = b {
-                params["b"] = b
-            }
-        default:
-            print("")
-        }
-        
-        print("")
+//        var params = ["userId":"123","username":"张三"]
+//
+//        let testenum = TestEnum.demo(a: "aa",b: "bb", c: 0)
+//        switch testenum {
+//        case let .demo(a: a, b: b, c: c):
+//            if let b = b {
+//                params["b"] = b
+//            }
+//        default:
+//            print("")
+//        }
+//
+//        print("")
 
 //        var limitDate = Date().adjust(.hour, offset: 22).adjust(.minute, offset: 0).adjust(.second, offset: 0)
 //        var nowDate = Date().adjust(.hour, offset: 20).adjust(.minute, offset: 0).adjust(.second, offset: 0)
@@ -172,7 +177,10 @@ class ViewController: UIViewController {
             return ModalDemoViewController()
         } else if item.jumpClass == DemoTouchTroughVC.self {
             return DemoTouchTroughVC()
+        } else if item.jumpClass == CountDownTimerExampleVC.self {
+            return CountDownTimerExampleVC.instantiateFromStoryboard()
         }
+        
         return nil
     }
 

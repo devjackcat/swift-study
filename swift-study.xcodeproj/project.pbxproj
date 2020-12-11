@@ -75,6 +75,10 @@
 		7DD7FE9624B45CFE00B9B43B /* UIColor+Similarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE9524B45CFE00B9B43B /* UIColor+Similarity.swift */; };
 		7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE9724B45DD400B9B43B /* IBDesignableKitVC.swift */; };
 		7DD7FE9A24B45DF800B9B43B /* IBDesignableKitVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7FE9924B45DF800B9B43B /* IBDesignableKitVC.storyboard */; };
+		7DE115B62583128200609CE7 /* TimerCountDownExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE115B52583128200609CE7 /* TimerCountDownExt.swift */; };
+		7DE115B92583135900609CE7 /* TimerScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE115B82583135900609CE7 /* TimerScheduler.swift */; };
+		7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE115BC2583140100609CE7 /* CountDownTimerExampleVC.swift */; };
+		7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE115C02583140900609CE7 /* CountDownTimerExampleVC.storyboard */; };
 		7DE1671D2554ED9200DB7FE3 /* ContainerTouchTroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE1671C2554ED9200DB7FE3 /* ContainerTouchTroughView.swift */; };
 		7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE167212554EDDF00DB7FE3 /* DemoTouchTroughVC.swift */; };
 		7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF277DB2492108400A1F7AA /* DemoReactorVC.swift */; };
@@ -154,6 +158,10 @@
 		7DD7FE9524B45CFE00B9B43B /* UIColor+Similarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Similarity.swift"; sourceTree = "<group>"; };
 		7DD7FE9724B45DD400B9B43B /* IBDesignableKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableKitVC.swift; sourceTree = "<group>"; };
 		7DD7FE9924B45DF800B9B43B /* IBDesignableKitVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IBDesignableKitVC.storyboard; sourceTree = "<group>"; };
+		7DE115B52583128200609CE7 /* TimerCountDownExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCountDownExt.swift; sourceTree = "<group>"; };
+		7DE115B82583135900609CE7 /* TimerScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerScheduler.swift; sourceTree = "<group>"; };
+		7DE115BC2583140100609CE7 /* CountDownTimerExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerExampleVC.swift; sourceTree = "<group>"; };
+		7DE115C02583140900609CE7 /* CountDownTimerExampleVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountDownTimerExampleVC.storyboard; sourceTree = "<group>"; };
 		7DE1671C2554ED9200DB7FE3 /* ContainerTouchTroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTouchTroughView.swift; sourceTree = "<group>"; };
 		7DE167212554EDDF00DB7FE3 /* DemoTouchTroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTouchTroughVC.swift; sourceTree = "<group>"; };
 		7DF277DB2492108400A1F7AA /* DemoReactorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoReactorVC.swift; sourceTree = "<group>"; };
@@ -301,6 +309,8 @@
 		7DD7FE4E24B2FBD000B9B43B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7DE115B82583135900609CE7 /* TimerScheduler.swift */,
+				7DE115B52583128200609CE7 /* TimerCountDownExt.swift */,
 				7DD7FE7E24B45B2800B9B43B /* ImageWithColor.swift */,
 				7DD7FE7D24B45B2800B9B43B /* ImageGradient.swift */,
 				7D5221DB24777C6A00B06978 /* UIViewFromNib.swift */,
@@ -372,6 +382,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7DE115BB258313DE00609CE7 /* 倒计时 */,
 				7DE167202554EDCD00DB7FE3 /* TouchTrough */,
 				7DAE3CD924E26EA300C64245 /* Modal */,
 				7DF397E724DA5B5D003E88F5 /* 礼物气泡 */,
@@ -492,6 +503,15 @@
 			path = DelayClosure;
 			sourceTree = "<group>";
 		};
+		7DE115BB258313DE00609CE7 /* 倒计时 */ = {
+			isa = PBXGroup;
+			children = (
+				7DE115BC2583140100609CE7 /* CountDownTimerExampleVC.swift */,
+				7DE115C02583140900609CE7 /* CountDownTimerExampleVC.storyboard */,
+			);
+			path = "倒计时";
+			sourceTree = "<group>";
+		};
 		7DE1671B2554ED7A00DB7FE3 /* ContainerTouchTroughView */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +615,7 @@
 				7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */,
 				7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */,
 				7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */,
+				7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */,
 				7DD7FE9A24B45DF800B9B43B /* IBDesignableKitVC.storyboard in Resources */,
 				7DF397EB24DA5B87003E88F5 /* HJGiftPopDemoViewController.storyboard in Resources */,
 				7DA1A10724D2BC3B00106D4B /* RichTextViewController.storyboard in Resources */,
@@ -655,6 +676,7 @@
 				7DD7FE9624B45CFE00B9B43B /* UIColor+Similarity.swift in Sources */,
 				7DD7FE8924B45B2800B9B43B /* IBTextView.swift in Sources */,
 				7DA1A25724D3E2B000106D4B /* PopverContentView.swift in Sources */,
+				7DE115B62583128200609CE7 /* TimerCountDownExt.swift in Sources */,
 				7D522354247CACDF00B06978 /* UIStackView+JCS_Create.swift in Sources */,
 				7DD7FE8724B45B2800B9B43B /* IBColorView.swift in Sources */,
 				7D5221E52477AEE700B06978 /* UIImageVIew+JCS_Create.swift in Sources */,
@@ -674,6 +696,7 @@
 				7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */,
 				7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */,
 				7D3F13CF2473C42E000E6845 /* SceneDelegate.swift in Sources */,
+				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DD7FE8F24B45B2800B9B43B /* ImageWithColor.swift in Sources */,
 				7D5221DF24777DD900B06978 /* UIVIew+JCS_Create.swift in Sources */,
 				7DE1671D2554ED9200DB7FE3 /* ContainerTouchTroughView.swift in Sources */,
@@ -705,6 +728,7 @@
 				7D5221EE2477B8DD00B06978 /* JCS_BaseVC.swift in Sources */,
 				7DD7FE8124B45B2800B9B43B /* IBColumnFlowLayout.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
+				7DE115B92583135900609CE7 /* TimerScheduler.swift in Sources */,
 				7DD7FE8A24B45B2800B9B43B /* IBTextField.swift in Sources */,
 				7DD7FE8B24B45B2800B9B43B /* IBButton.swift in Sources */,
 				7DD7FE9124B45B2800B9B43B /* IBCornerRadiusMasksView.swift in Sources */,

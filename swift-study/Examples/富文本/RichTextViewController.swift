@@ -25,22 +25,33 @@ class RichTextViewController: UIViewController {
 
         view.backgroundColor = .black
         
-        // 引导页
-        if UserDefaults.standard.bool(forKey: "panda_guide") {
-            guideView.removeFromSuperview()
-        }
-
-        testPop()
-        testGiftPop()
+//        // 引导页
+//        if UserDefaults.standard.bool(forKey: "panda_guide") {
+//            guideView.removeFromSuperview()
+//        }
+//
+//        testPop()
+//        testGiftPop()
+//
+//        let label = UILabel()
+//        let attrString = NSMutableAttributedString(string: "527589231")
+//        label.frame = CGRect(x: 157.5, y: 581.5, width: 125.5, height: 18)
+//        view.addSubview(label)
+//        let attr: [NSAttributedString.Key : Any] = [.font: UIFont.boldSystemFont(ofSize: 24),
+//                                                    .foregroundColor: UIColor(red: 1, green: 1, blue: 1,alpha:1),
+//                                                    .strokeColor: UIColor(red: 0.9,green: 0.54,blue: 0.2,alpha: 100), .strokeWidth: -6]
+//        attrString.addAttributes(attr, range: NSRange(location: 0, length: attrString.length))
+//        label.attributedText = attrString
+        
     }
 
-    override func viewDidAppear(_: Bool) {
-        view.backgroundColor = .black
-    }
-
-    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
-        testGiftPopAnim()
-    }
+//    override func viewDidAppear(_: Bool) {
+//        view.backgroundColor = .black
+//    }
+//
+//    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+//        testGiftPopAnim()
+//    }
 
     func testPop() {
         let prizeText = "定海神针(199花瓣)x3"
