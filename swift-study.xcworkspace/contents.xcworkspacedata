@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AppFoundation/AppFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:swift-study.xcodeproj">
    </FileRef>
    <FileRef

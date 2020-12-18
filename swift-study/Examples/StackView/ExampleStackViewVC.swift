@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppFoundation
 
 class ExampleStackViewVC: UIViewController {
     override func viewDidLoad() {

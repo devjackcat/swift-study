@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+import SnapKit
+
+import AppFoundation
 
 class CountDownTimerExampleVC: UIViewController {
     
@@ -30,6 +33,13 @@ class CountDownTimerExampleVC: UIViewController {
             self?.statusLabel.text = ""
             self?.processLabel.text = ""
         }
+        
+//        let v = JCDemoView.fromNib()
+//        view.addSubview(v)
+//        v.snp.makeConstraints { (make) in
+//            make.center.equalTo(self.view)
+//            make.width.height.equalTo(200)
+//        }
     }
         
     @IBAction func start(_ sender: Any) {

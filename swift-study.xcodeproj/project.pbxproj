@@ -21,7 +21,8 @@
 		7D3F13D62473C42F000E6845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D52473C42F000E6845 /* Assets.xcassets */; };
 		7D3F13D92473C42F000E6845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D72473C42F000E6845 /* LaunchScreen.storyboard */; };
 		7D3F148D2474C2DC000E6845 /* DemoMoya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F148C2474C2DC000E6845 /* DemoMoya.swift */; };
-		7D5221DC24777C6A00B06978 /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5221DB24777C6A00B06978 /* UIViewFromNib.swift */; };
+		7D4E4727258B4C4100C776DD /* AppFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4E46E1258B3BC400C776DD /* AppFoundation.framework */; };
+		7D4E4728258B4C4100C776DD /* AppFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4E46E1258B3BC400C776DD /* AppFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D5221DF24777DD900B06978 /* UIVIew+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5221DE24777DD900B06978 /* UIVIew+JCS_Create.swift */; };
 		7D5221E124777E1000B06978 /* UILabel+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5221E024777E1000B06978 /* UILabel+JCS_Create.swift */; };
 		7D5221E324779E6A00B06978 /* UIColor+JCS_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5221E224779E6A00B06978 /* UIColor+JCS_Extension.swift */; };
@@ -53,7 +54,6 @@
 		7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6624B4420D00B9B43B /* ExampleListCell.swift */; };
 		7DD7FE6924B44B1B00B9B43B /* AutoDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6824B44B1B00B9B43B /* AutoDisposable.swift */; };
 		7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6A24B4583300B9B43B /* ExampleStackViewVC.storyboard */; };
-		7DD7FE6D24B4587F00B9B43B /* UIViewControllerFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6C24B4587F00B9B43B /* UIViewControllerFromStoryboard.swift */; };
 		7DD7FE8124B45B2800B9B43B /* IBColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE7024B45B2800B9B43B /* IBColumnFlowLayout.swift */; };
 		7DD7FE8224B45B2800B9B43B /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE7124B45B2800B9B43B /* Toucan.swift */; };
 		7DD7FE8324B45B2800B9B43B /* IBFirstResponderAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE7224B45B2800B9B43B /* IBFirstResponderAction.swift */; };
@@ -88,6 +88,20 @@
 		7DF397EB24DA5B87003E88F5 /* HJGiftPopDemoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DF397EA24DA5B87003E88F5 /* HJGiftPopDemoViewController.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7DDFFBA7258B29A600286A59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D4E4728258B4C4100C776DD /* AppFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7D01009124C6E73D00C3A6FC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleRxSwiftVC.storyboard; sourceTree = "<group>"; };
@@ -104,7 +118,7 @@
 		7D3F13D82473C42F000E6845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D3F13DA2473C42F000E6845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D3F148C2474C2DC000E6845 /* DemoMoya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMoya.swift; sourceTree = "<group>"; };
-		7D5221DB24777C6A00B06978 /* UIViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
+		7D4E46E1258B3BC400C776DD /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5221DE24777DD900B06978 /* UIVIew+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5221E024777E1000B06978 /* UILabel+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5221E224779E6A00B06978 /* UIColor+JCS_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+JCS_Extension.swift"; sourceTree = "<group>"; };
@@ -136,7 +150,6 @@
 		7DD7FE6624B4420D00B9B43B /* ExampleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListCell.swift; sourceTree = "<group>"; };
 		7DD7FE6824B44B1B00B9B43B /* AutoDisposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDisposable.swift; sourceTree = "<group>"; };
 		7DD7FE6A24B4583300B9B43B /* ExampleStackViewVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleStackViewVC.storyboard; sourceTree = "<group>"; };
-		7DD7FE6C24B4587F00B9B43B /* UIViewControllerFromStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFromStoryboard.swift; sourceTree = "<group>"; };
 		7DD7FE7024B45B2800B9B43B /* IBColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBColumnFlowLayout.swift; sourceTree = "<group>"; };
 		7DD7FE7124B45B2800B9B43B /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toucan.swift; sourceTree = "<group>"; };
 		7DD7FE7224B45B2800B9B43B /* IBFirstResponderAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBFirstResponderAction.swift; sourceTree = "<group>"; };
@@ -180,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39CF15A097451749C4551DC2 /* Pods_swift_study.framework in Frameworks */,
+				7D4E4727258B4C4100C776DD /* AppFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +327,7 @@
 				7DE115B52583128200609CE7 /* TimerCountDownExt.swift */,
 				7DD7FE7E24B45B2800B9B43B /* ImageWithColor.swift */,
 				7DD7FE7D24B45B2800B9B43B /* ImageGradient.swift */,
-				7D5221DB24777C6A00B06978 /* UIViewFromNib.swift */,
 				7DD7FE6824B44B1B00B9B43B /* AutoDisposable.swift */,
-				7DD7FE6C24B4587F00B9B43B /* UIViewControllerFromStoryboard.swift */,
 				7D01009124C6E73D00C3A6FC /* DateExtension.swift */,
 			);
 			path = Extension;
@@ -542,6 +554,7 @@
 		AF01B330624906CB6B25B27A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D4E46E1258B3BC400C776DD /* AppFoundation.framework */,
 				9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */,
 			);
 			name = Frameworks;
@@ -559,6 +572,7 @@
 				7D3F13C62473C42E000E6845 /* Frameworks */,
 				7D3F13C72473C42E000E6845 /* Resources */,
 				00486AC0F85ADFE53E842B26 /* [CP] Embed Pods Frameworks */,
+				7DDFFBA7258B29A600286A59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -714,7 +728,6 @@
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
 				7DD7FE8C24B45B2800B9B43B /* ColorHex.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
-				7DD7FE6D24B4587F00B9B43B /* UIViewControllerFromStoryboard.swift in Sources */,
 				7D5221E72477B1B500B06978 /* UIControl+JCS_Create.swift in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,
@@ -724,7 +737,6 @@
 				7DD7FE8824B45B2800B9B43B /* IBGradientView.swift in Sources */,
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
 				7DD7FE8224B45B2800B9B43B /* Toucan.swift in Sources */,
-				7D5221DC24777C6A00B06978 /* UIViewFromNib.swift in Sources */,
 				7D5221EE2477B8DD00B06978 /* JCS_BaseVC.swift in Sources */,
 				7DD7FE8124B45B2800B9B43B /* IBColumnFlowLayout.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,

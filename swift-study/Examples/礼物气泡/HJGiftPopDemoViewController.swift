@@ -8,6 +8,8 @@
 
 import UIKit
 
+import AppFoundation
+
 class HJGiftPopDemoViewController: UIViewController {
     
     typealias GiftPopViewItem = HJGiftPopViewModel.GiftPopViewItem

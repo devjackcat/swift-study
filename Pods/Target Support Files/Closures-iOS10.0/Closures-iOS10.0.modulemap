@@ -1,0 +1,6 @@
+framework module Closures {
+  umbrella header "Closures-iOS10.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

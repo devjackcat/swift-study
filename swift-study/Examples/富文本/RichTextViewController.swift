@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppFoundation
 
 class RichTextViewController: UIViewController {
     @IBOutlet var label: UILabel!
