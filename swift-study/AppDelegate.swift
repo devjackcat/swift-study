@@ -15,15 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        JCURLNavigator.loadRouters()
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ViewController.instantiateFromStoryboard()
         window?.rootViewController = UINavigationController(rootViewController: vc)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
+        // 加载路由
+        loadRoutes()
+        
         return true
+    }
+    
+    private func loadRoutes() {
+        JCRouter.loadRoutes(router: XXRouter.self)
+        JCRouter.loadRoutes(router: ExampleRouter.self)
     }
 
 }

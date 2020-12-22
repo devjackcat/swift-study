@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		39CF15A097451749C4551DC2 /* Pods_swift_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */; };
 		7D01FFD324B807E500C3A6FC /* ExampleRxSwiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */; };
-		7D01FFE024BD88C100C3A6FC /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FFDF24BD88C100C3A6FC /* note.swift */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
 		7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CC2473C42E000E6845 /* AppDelegate.swift */; };
 		7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D22473C42E000E6845 /* Main.storyboard */; };
@@ -32,6 +31,7 @@
 		7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE3D7F24E39F2600C64245 /* Media.xcassets */; };
 		7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387572591CF9C00E7058A /* GlobalImport.swift */; };
 		7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */; };
+		7DB387F7259201B600E7058A /* ExampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387F6259201B600E7058A /* ExampleRouter.swift */; };
 		7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0B3872579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift */; };
 		7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */; };
 		7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */; };
@@ -69,7 +69,6 @@
 
 /* Begin PBXFileReference section */
 		7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleRxSwiftVC.storyboard; sourceTree = "<group>"; };
-		7D01FFDF24BD88C100C3A6FC /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
 		7D3F13C92473C42E000E6845 /* swift-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F13CC2473C42E000E6845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		7DAE3D7F24E39F2600C64245 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		7DB387572591CF9C00E7058A /* GlobalImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImport.swift; sourceTree = "<group>"; };
 		7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyConsoleDemoVC.swift; sourceTree = "<group>"; };
+		7DB387F6259201B600E7058A /* ExampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRouter.swift; sourceTree = "<group>"; };
 		7DC0B3872579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehavior.swift; sourceTree = "<group>"; };
 		7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorTwo.swift; sourceTree = "<group>"; };
 		7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorOne.swift; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 				7D3F13D22473C42E000E6845 /* Main.storyboard */,
 				7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */,
 				7DD7FE6624B4420D00B9B43B /* ExampleListCell.swift */,
-				7D01FFDF24BD88C100C3A6FC /* note.swift */,
+				7DB387F6259201B600E7058A /* ExampleRouter.swift */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -519,11 +519,11 @@
 				7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */,
 				7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */,
 				7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */,
+				7DB387F7259201B600E7058A /* ExampleRouter.swift in Sources */,
 				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DF3974324DA55AB003E88F5 /* DemoChildViewController.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
 				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
-				7D01FFE024BD88C100C3A6FC /* note.swift in Sources */,
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,

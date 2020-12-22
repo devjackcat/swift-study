@@ -15,7 +15,7 @@ import URLNavigator
 
 struct ExampleListItem {
     var title: String = ""
-    var jumpClass: UIViewController.Type = UIViewController.self
+    var route: String = ""
 }
 
 class ViewController: UIViewController {
@@ -23,31 +23,31 @@ class ViewController: UIViewController {
     private var bag = DisposeBag()
     private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
     
-    private let navigator = Navigator()
-
     private let demoList: [ExampleListItem] = [
-        ExampleListItem(title: "TinyConsole", jumpClass: UIViewController.self),
-        ExampleListItem(title: "UIStackView", jumpClass: ExampleStackViewVC.self),
-        ExampleListItem(title: "RxSwift", jumpClass: ExampleRxSwiftVC.self),
-        ExampleListItem(title: "IBDesignableKit", jumpClass: IBDesignableKitVC.self),
-        ExampleListItem(title: "富文本", jumpClass: RichTextViewController.self),
-        ExampleListItem(title: "Popver", jumpClass: PopverViewController.self),
-        ExampleListItem(title: "礼物气泡(样式1)", jumpClass: HJGiftPopDemoViewController.self),
-        ExampleListItem(title: "礼物气泡(样式2)", jumpClass: HJGiftPopDemoViewController.self),
-        ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
-        ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
-        ExampleListItem(title: "倒计时", jumpClass: CountDownTimerExampleVC.self),
+//        ExampleListItem(title: "TinyConsole", jumpClass: UIViewController.self),
+//        ExampleListItem(title: "UIStackView", jumpClass: ExampleStackViewVC.self),
+//        ExampleListItem(title: "RxSwift", jumpClass: ExampleRxSwiftVC.self),
+//        ExampleListItem(title: "IBDesignableKit", jumpClass: IBDesignableKitVC.self),
+//        ExampleListItem(title: "富文本", jumpClass: RichTextViewController.self),
+//        ExampleListItem(title: "Popver", jumpClass: PopverViewController.self),
+//        ExampleListItem(title: "礼物气泡(样式1)", jumpClass: HJGiftPopDemoViewController.self),
+//        ExampleListItem(title: "礼物气泡(样式2)", jumpClass: HJGiftPopDemoViewController.self),
+//        ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
+//        ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
+//        ExampleListItem(title: "倒计时", jumpClass: CountDownTimerExampleVC.self),
+        
+        ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"),
+        ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
+        ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configURLRouter()
 
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
             cell.titleLabel.text = model.title
-            cell.jumpClassLabel.text = NSStringFromClass(model.jumpClass)
+            cell.jumpClassLabel.text = model.route
         }.disposing(with: self)
 
         // table 点击事件
@@ -56,68 +56,13 @@ class ViewController: UIViewController {
             let item = self.demoList[indexPath.item]
 
             TinyConsole.print("进入 \(item.title)", color: .red)
-
-            // 日志
-            if item.title == "TinyConsole" {
-                TinyConsole.toggleWindowMode()
-
-                return
-            }
-            if let vc = self.instanceJumpVC(item: item) {
-                vc.title = item.title
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
+            JCRouter.route(url: item.route)
+            
         }).disposing(with: self)
 
         // 触发数据
         datasource.accept(demoList)
     }
-
-    private func instanceJumpVC(item: ExampleListItem) -> UIViewController? {
-        if item.jumpClass == ExampleStackViewVC.self {
-            return ExampleStackViewVC.instantiateFromStoryboard()
-        } else if item.jumpClass == IBDesignableKitVC.self {
-            return IBDesignableKitVC.instantiateFromStoryboard()
-        } else if item.jumpClass == ExampleRxSwiftVC.self {
-            return ExampleRxSwiftVC.instantiateFromStoryboard()
-        } else if item.jumpClass == RichTextViewController.self {
-            return RichTextViewController.instantiateFromStoryboard()
-        } else if item.jumpClass == PopverViewController.self {
-            return PopverViewController.instantiateFromStoryboard()
-        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式1)" {
-//            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
-//            vc.pandaMaster = .Anchor
-//            return vc
-            
-            navigator.push(URL(string: "jackcat://jumpGiftPopVC/1")!)
-            
-        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式2)" {
-//            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
-//            vc.pandaMaster = .Audience
-//            return vc
-            navigator.push(URL(string: "jackcat://jumpGiftPopVC/2")!)
-        } else if item.jumpClass == ModalDemoViewController.self {
-            return ModalDemoViewController()
-        } else if item.jumpClass == DemoTouchTroughVC.self {
-            return DemoTouchTroughVC()
-        } else if item.jumpClass == CountDownTimerExampleVC.self {
-            return CountDownTimerExampleVC.instantiateFromStoryboard()
-        }
-
-        return nil
-    }
-
-    private func configURLRouter() {
-        navigator.register("jackcat://jumpGiftPopVC/<int:id>") { (url, values, context) -> UIViewController? in
-            if let id = values["id"] as? Int {
-                let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
-                vc.pandaMaster = id == 1 ? .Audience : .Anchor
-                return vc
-            }
-            return UIViewController()
-        }
-    }
-
 }
 
 
