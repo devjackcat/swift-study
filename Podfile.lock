@@ -30,6 +30,7 @@ PODS:
   - Then (2.7.0)
   - TinyConsole (2.0.1)
   - "UITableView+FDTemplateLayoutCell (1.6)"
+  - URLNavigator (2.3.0)
   - WeakMapTable (1.1.0)
 
 DEPENDENCIES:
@@ -49,6 +50,7 @@ DEPENDENCIES:
   - Then
   - TinyConsole (from `https://gitee.com/winddpan/TinyConsole`)
   - "UITableView+FDTemplateLayoutCell"
+  - URLNavigator
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - SwiftyAttributes
     - Then
     - "UITableView+FDTemplateLayoutCell"
+    - URLNavigator
     - WeakMapTable
 
 EXTERNAL SOURCES:
@@ -101,8 +104,9 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   TinyConsole: 8372bc065ff95c4e50bc9f4b1cec806be8b8a9a6
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
 
-PODFILE CHECKSUM: 4211cdc57c14311bbf0db787bca0b09b9c8b6b1d
+PODFILE CHECKSUM: eae72f846ac62474b2a493441bd6daa07aa3b4d6
 
 COCOAPODS: 1.9.1

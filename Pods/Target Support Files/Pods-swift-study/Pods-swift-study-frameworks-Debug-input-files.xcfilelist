@@ -18,4 +18,5 @@ ${BUILT_PRODUCTS_DIR}/SwiftyAttributes-iOS13.1/SwiftyAttributes.framework
 ${BUILT_PRODUCTS_DIR}/Then-iOS13.1/Then.framework
 ${BUILT_PRODUCTS_DIR}/TinyConsole-iOS13.1/TinyConsole.framework
 ${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework
+${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework
 ${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework

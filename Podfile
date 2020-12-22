@@ -20,6 +20,7 @@ def app_foundation_depency
   pod 'Then'
   pod 'Kingfisher'
   pod 'ReactorKit'
+  pod 'URLNavigator'
   
   pod 'Cache'
   pod 'SwiftyAttributes'

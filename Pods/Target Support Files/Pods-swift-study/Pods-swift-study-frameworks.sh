@@ -216,6 +216,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Then-iOS13.1/Then.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TinyConsole-iOS13.1/TinyConsole.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -237,6 +238,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyAttributes-iOS13.1/SwiftyAttributes.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then-iOS13.1/Then.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
