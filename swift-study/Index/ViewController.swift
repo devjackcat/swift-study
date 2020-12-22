@@ -11,6 +11,8 @@ import RxCocoa
 import RxSwift
 import UIKit
 
+import URLNavigator
+
 struct ExampleListItem {
     var title: String = ""
     var jumpClass: UIViewController.Type = UIViewController.self
@@ -20,12 +22,8 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     private var bag = DisposeBag()
     private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
-
-    enum TestEnum {
-        case demo(a: String, b: String? = nil, c: Int)
-    }
-
-    var dict = [String: ImagePrefetcher]()
+    
+    private let navigator = Navigator()
 
     private let demoList: [ExampleListItem] = [
         ExampleListItem(title: "TinyConsole", jumpClass: UIViewController.self),
@@ -43,6 +41,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configURLRouter()
 
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         datasource.accept(demoList)
     }
 
-    func instanceJumpVC(item: ExampleListItem) -> UIViewController? {
+    private func instanceJumpVC(item: ExampleListItem) -> UIViewController? {
         if item.jumpClass == ExampleStackViewVC.self {
             return ExampleStackViewVC.instantiateFromStoryboard()
         } else if item.jumpClass == IBDesignableKitVC.self {
@@ -85,13 +85,17 @@ class ViewController: UIViewController {
         } else if item.jumpClass == PopverViewController.self {
             return PopverViewController.instantiateFromStoryboard()
         } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式1)" {
-            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
-            vc.pandaMaster = .Anchor
-            return vc
+//            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
+//            vc.pandaMaster = .Anchor
+//            return vc
+            
+            navigator.push(URL(string: "jackcat://jumpGiftPopVC/1")!)
+            
         } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式2)" {
-            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
-            vc.pandaMaster = .Audience
-            return vc
+//            let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
+//            vc.pandaMaster = .Audience
+//            return vc
+            navigator.push(URL(string: "jackcat://jumpGiftPopVC/2")!)
         } else if item.jumpClass == ModalDemoViewController.self {
             return ModalDemoViewController()
         } else if item.jumpClass == DemoTouchTroughVC.self {
@@ -103,62 +107,83 @@ class ViewController: UIViewController {
         return nil
     }
 
-    fileprivate let tempQueue = DispatchQueue(label: "Com.BigNerdCoding.SafeArray", attributes: .concurrent)
-
-    let group = DispatchGroup()
-    let signal = DispatchSemaphore(value: 1)
-
-    func safeDictAdd(key _: String, wrapper: CountWrapper, p _: ImagePrefetcher? = nil) {
-        Thread.sleep(forTimeInterval: 0.01)
-//        objc_sync_enter(self)
-//        queue.sync {
-//            dict[key] = p
-//        }
-//        objc_sync_exit(dict)
-
-        signal.wait()
-        wrapper.count += 1
-        signal.signal()
-
-//        group.enter()
-//        wrapper.count += 1
-//        group.leave()
-
-//        objc_sync_enter(dict)
-//        wrapper.count += 1
-//        objc_sync_exit(dict)
+    private func configURLRouter() {
+        navigator.register("jackcat://jumpGiftPopVC/<int:id>") { (url, values, context) -> UIViewController? in
+            if let id = values["id"] as? Int {
+                let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
+                vc.pandaMaster = id == 1 ? .Audience : .Anchor
+                return vc
+            }
+            return UIViewController()
+        }
     }
 
-    func safeDictRemove(key _: String, wrapper: CountWrapper) {
-        signal.wait()
-        wrapper.count -= 1
-        signal.signal()
-
-//        group.enter()
-//        wrapper.count -= 1
-//        group.leave()
-
-//        objc_sync_enter(dict)
-//        wrapper.count -= 1
-//        objc_sync_exit(dict)
-    }
-
-    func safeCount(wrapper: CountWrapper) {
-//        signal.wait()
-//        print("---count = \(wrapper.count)")
-//        signal.signal()
-
-//        objc_sync_enter(dict)
-        print("---count = \(wrapper.count)")
-//        objc_sync_exit(dict)
-    }
 }
+
+
+extension ViewController: StoryboardIdentifiable {
+    static var storyboardName: String = "Main"
+    static var storyboardIdentifier: String = "ViewController"
+}
+
+
+
 
 class CountWrapper {
     var count = 0
 }
 
-extension ViewController: StoryboardIdentifiable {
-    static var storyboardName: String = "Main"
-    static var storyboardIdentifier: String = "ViewController"
+extension ViewController {
+//    enum TestEnum {
+//        case demo(a: String, b: String? = nil, c: Int)
+//    }
+//    var dict = [String: ImagePrefetcher]()
+//    fileprivate let tempQueue = DispatchQueue(label: "Com.BigNerdCoding.SafeArray", attributes: .concurrent)
+//    let group = DispatchGroup()
+//    let signal = DispatchSemaphore(value: 1)
+//
+//    func safeDictAdd(key _: String, wrapper: CountWrapper, p _: ImagePrefetcher? = nil) {
+//        Thread.sleep(forTimeInterval: 0.01)
+////        objc_sync_enter(self)
+////        queue.sync {
+////            dict[key] = p
+////        }
+////        objc_sync_exit(dict)
+//
+//        signal.wait()
+//        wrapper.count += 1
+//        signal.signal()
+//
+////        group.enter()
+////        wrapper.count += 1
+////        group.leave()
+//
+////        objc_sync_enter(dict)
+////        wrapper.count += 1
+////        objc_sync_exit(dict)
+//    }
+//
+//    func safeDictRemove(key _: String, wrapper: CountWrapper) {
+//        signal.wait()
+//        wrapper.count -= 1
+//        signal.signal()
+//
+////        group.enter()
+////        wrapper.count -= 1
+////        group.leave()
+//
+////        objc_sync_enter(dict)
+////        wrapper.count -= 1
+////        objc_sync_exit(dict)
+//    }
+//
+//    func safeCount(wrapper: CountWrapper) {
+////        signal.wait()
+////        print("---count = \(wrapper.count)")
+////        signal.signal()
+//
+////        objc_sync_enter(dict)
+//        print("---count = \(wrapper.count)")
+////        objc_sync_exit(dict)
+//    }
 }

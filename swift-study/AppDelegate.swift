@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        JCURLNavigator.loadRouters()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ViewController.instantiateFromStoryboard()
         window?.rootViewController = UINavigationController(rootViewController: vc)

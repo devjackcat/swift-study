@@ -217,6 +217,13 @@
 			path = TinyConsole;
 			sourceTree = "<group>";
 		};
+		7DB387E02591E78D00E7058A /* URLNavigator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = URLNavigator;
+			sourceTree = "<group>";
+		};
 		7DC57B342579DBC1000F0CDA /* HJGiftPopTrackBehavior */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +254,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7DB387E02591E78D00E7058A /* URLNavigator */,
 				7DB387842591D44700E7058A /* TinyConsole */,
 				7DE115BB258313DE00609CE7 /* 倒计时 */,
 				7DE167202554EDCD00DB7FE3 /* TouchTrough */,

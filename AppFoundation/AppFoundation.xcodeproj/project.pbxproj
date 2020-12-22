@@ -49,6 +49,11 @@
 		7DB386AF2591CAD200E7058A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386A92591CAD200E7058A /* DateExtension.swift */; };
 		7DB386B32591CAF600E7058A /* UIViewControllerFromStoryboardWithArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386B22591CAF600E7058A /* UIViewControllerFromStoryboardWithArgs.swift */; };
 		7DB3874F2591CE2700E7058A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3874E2591CE2700E7058A /* StringExtension.swift */; };
+		7DB387E32591EC1A00E7058A /* JCURLNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387E22591EC1A00E7058A /* JCURLNavigator.swift */; };
+		7DB387EC2591EDCE00E7058A /* NSSwiftLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB387EA2591EDCE00E7058A /* NSSwiftLoader.h */; };
+		7DB387ED2591EDCE00E7058A /* NSSwiftLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387EB2591EDCE00E7058A /* NSSwiftLoader.m */; };
+		7DB387F12591EEE400E7058A /* JCURLNavigatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB387EF2591EEE400E7058A /* JCURLNavigatorProtocol.h */; };
+		7DB387F22591EEE400E7058A /* JCURLNavigatorProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387F02591EEE400E7058A /* JCURLNavigatorProtocol.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +100,11 @@
 		7DB386A92591CAD200E7058A /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7DB386B22591CAF600E7058A /* UIViewControllerFromStoryboardWithArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFromStoryboardWithArgs.swift; sourceTree = "<group>"; };
 		7DB3874E2591CE2700E7058A /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7DB387E22591EC1A00E7058A /* JCURLNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCURLNavigator.swift; sourceTree = "<group>"; };
+		7DB387EA2591EDCE00E7058A /* NSSwiftLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSwiftLoader.h; sourceTree = "<group>"; };
+		7DB387EB2591EDCE00E7058A /* NSSwiftLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSwiftLoader.m; sourceTree = "<group>"; };
+		7DB387EF2591EEE400E7058A /* JCURLNavigatorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCURLNavigatorProtocol.h; sourceTree = "<group>"; };
+		7DB387F02591EEE400E7058A /* JCURLNavigatorProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCURLNavigatorProtocol.m; sourceTree = "<group>"; };
 		965CF7C4D3AD0BCC9B4C7E03 /* Pods-AppFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFoundation.debug.xcconfig"; path = "Target Support Files/Pods-AppFoundation/Pods-AppFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		B72E3E47771422947E5B4C97 /* Pods-AppFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppFoundation.release.xcconfig"; path = "Target Support Files/Pods-AppFoundation/Pods-AppFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		D33F884A16B9FE66CFCA9C69 /* Pods_AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +164,7 @@
 		7D4E464B258B375000C776DD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7DB387E12591EBFB00E7058A /* Tool */,
 				7DB386562591CAC700E7058A /* Lib */,
 				7D4E4729258B51B300C776DD /* Extension */,
 			);
@@ -293,6 +304,18 @@
 			path = UIViewControllerFromStoryboard;
 			sourceTree = "<group>";
 		};
+		7DB387E12591EBFB00E7058A /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				7DB387E22591EC1A00E7058A /* JCURLNavigator.swift */,
+				7DB387EF2591EEE400E7058A /* JCURLNavigatorProtocol.h */,
+				7DB387F02591EEE400E7058A /* JCURLNavigatorProtocol.m */,
+				7DB387EA2591EDCE00E7058A /* NSSwiftLoader.h */,
+				7DB387EB2591EDCE00E7058A /* NSSwiftLoader.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		B75B3AFED510FFE89AA665ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +331,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB387EC2591EDCE00E7058A /* NSSwiftLoader.h in Headers */,
+				7DB387F12591EEE400E7058A /* JCURLNavigatorProtocol.h in Headers */,
 				7D4E4644258B374900C776DD /* AppFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +434,7 @@
 			files = (
 				7DB386922591CAC700E7058A /* JCSOperators.swift in Sources */,
 				7DB386862591CAC700E7058A /* ToucanExtension.swift in Sources */,
+				7DB387E32591EC1A00E7058A /* JCURLNavigator.swift in Sources */,
 				7DB386AA2591CAD200E7058A /* TimerScheduler.swift in Sources */,
 				7DB3868E2591CAC700E7058A /* ColorHex.swift in Sources */,
 				7DB386852591CAC700E7058A /* IBFirstResponderAction.swift in Sources */,
@@ -442,7 +468,9 @@
 				7DB3869D2591CAC700E7058A /* ContainerTouchTroughView.swift in Sources */,
 				7DB386AD2591CAD200E7058A /* AutoDisposable.swift in Sources */,
 				7DB386AB2591CAD200E7058A /* ImageGradient.swift in Sources */,
+				7DB387ED2591EDCE00E7058A /* NSSwiftLoader.m in Sources */,
 				7DB386912591CAC700E7058A /* IBCornerRadiusMasksView.swift in Sources */,
+				7DB387F22591EEE400E7058A /* JCURLNavigatorProtocol.m in Sources */,
 				7DB386902591CAC700E7058A /* IBProgressView.swift in Sources */,
 				7DB3868A2591CAC700E7058A /* IBGradientView.swift in Sources */,
 				7D4E472D258B51D500C776DD /* UIViewControllerFromStoryboard.swift in Sources */,
