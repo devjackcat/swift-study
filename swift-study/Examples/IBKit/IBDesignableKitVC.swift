@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AppFoundation
 
 class IBDesignableKitVC: UIViewController {
     

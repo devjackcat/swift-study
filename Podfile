@@ -12,18 +12,26 @@ workspace 'swift-study.xcworkspace'
 
 def app_foundation_depency
   pod 'SnapKit'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxRelay'
-  pod 'Moya'
-  pod 'Moya/RxSwift'
-  pod 'HandyJSON'
+  pod 'RxSwift', '~> 5.0'
+  pod 'RxCocoa', '~> 5.0'
+  pod 'Moya/RxSwift', '~> 14.0.0-alpha.1'
+  pod 'HandyJSON', '~> 5.0.3-beta'
   pod 'Closures'
+  pod 'Then'
   pod 'Kingfisher'
   pod 'ReactorKit'
   
+  pod 'Cache'
+  pod 'SwiftyAttributes'
+  pod 'GzipSwift'
+  
   pod 'IGListKit'
   pod 'UITableView+FDTemplateLayoutCell'
+  
+#  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug', 'DevelopArchive']
+  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug']
+  
+  pod 'Result'
   
 end
 

@@ -11,8 +11,6 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-import AppFoundation
-
 struct ExampleListItem {
     var title: String = ""
     var jumpClass: UIViewController.Type = UIViewController.self
@@ -40,13 +38,10 @@ class ViewController: UIViewController {
         ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
         ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
         ExampleListItem(title: "倒计时", jumpClass: CountDownTimerExampleVC.self),
-        ExampleListItem(title: "XXVC", jumpClass: XXVC.self),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        JCLog.sayHello()
         
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
@@ -93,8 +88,6 @@ class ViewController: UIViewController {
             return DemoTouchTroughVC()
         } else if item.jumpClass == CountDownTimerExampleVC.self {
             return CountDownTimerExampleVC.instantiateFromStoryboard()
-        } else if item.jumpClass == XXVC.self {
-            return XXVC.instantiateFromStoryboard()
         }
         
         return nil

@@ -9,7 +9,6 @@
 import RxRelay
 import RxSwift
 import UIKit
-import AppFoundation
 
 class UserApi {
     class func login() -> Observable<Bool> {

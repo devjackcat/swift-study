@@ -12,7 +12,7 @@ import UIKit
 class IGDemoVC: JCS_BaseVC, ListAdapterDataSource {
     var collectionView: UICollectionView!
     var adapter: ListAdapter!
-
+    
     override func jcs_setup() {
         _ = view.jcs_backgroundColor_White()
 

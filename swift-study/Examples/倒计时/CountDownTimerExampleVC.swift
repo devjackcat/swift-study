@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-import AppFoundation
-
 class CountDownTimerExampleVC: UIViewController {
     
     @IBOutlet var statusLabel: UILabel!
