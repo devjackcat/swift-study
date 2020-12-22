@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class IBGradientView: UIView {
-    @IBInspectable var startColor: UIColor = .clear {
+open class IBGradientView: UIView {
+    @IBInspectable public var startColor: UIColor = .clear {
         didSet {
             setNeedsLayout()
         }
     }
 
-    @IBInspectable var endColor: UIColor = .clear {
+    @IBInspectable public var endColor: UIColor = .clear {
         didSet {
             setNeedsLayout()
         }

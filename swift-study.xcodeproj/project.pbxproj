@@ -12,7 +12,6 @@
 		7D01FFE024BD88C100C3A6FC /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FFDF24BD88C100C3A6FC /* note.swift */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
 		7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CC2473C42E000E6845 /* AppDelegate.swift */; };
-		7D3F13CF2473C42E000E6845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */; };
 		7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D22473C42E000E6845 /* Main.storyboard */; };
 		7D3F13D62473C42F000E6845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D52473C42F000E6845 /* Assets.xcassets */; };
 		7D3F13D92473C42F000E6845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D72473C42F000E6845 /* LaunchScreen.storyboard */; };
@@ -32,6 +31,7 @@
 		7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE3CDA24E26EB900C64245 /* ModalDemoViewController.swift */; };
 		7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE3D7F24E39F2600C64245 /* Media.xcassets */; };
 		7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387572591CF9C00E7058A /* GlobalImport.swift */; };
+		7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */; };
 		7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0B3872579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift */; };
 		7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */; };
 		7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */; };
@@ -73,7 +73,6 @@
 		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
 		7D3F13C92473C42E000E6845 /* swift-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F13CC2473C42E000E6845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7D3F13D32473C42E000E6845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D3F13D52473C42F000E6845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D3F13D82473C42F000E6845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		7DAE3CDA24E26EB900C64245 /* ModalDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDemoViewController.swift; sourceTree = "<group>"; };
 		7DAE3D7F24E39F2600C64245 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		7DB387572591CF9C00E7058A /* GlobalImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImport.swift; sourceTree = "<group>"; };
+		7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyConsoleDemoVC.swift; sourceTree = "<group>"; };
 		7DC0B3872579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehavior.swift; sourceTree = "<group>"; };
 		7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorTwo.swift; sourceTree = "<group>"; };
 		7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorOne.swift; sourceTree = "<group>"; };
@@ -173,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				7D3F13CC2473C42E000E6845 /* AppDelegate.swift */,
-				7D3F13CE2473C42E000E6845 /* SceneDelegate.swift */,
 				7D3F13D72473C42F000E6845 /* LaunchScreen.storyboard */,
 				7D3F13DA2473C42F000E6845 /* Info.plist */,
 				7DB387572591CF9C00E7058A /* GlobalImport.swift */,
@@ -210,6 +209,14 @@
 			path = Modal;
 			sourceTree = "<group>";
 		};
+		7DB387842591D44700E7058A /* TinyConsole */ = {
+			isa = PBXGroup;
+			children = (
+				7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */,
+			);
+			path = TinyConsole;
+			sourceTree = "<group>";
+		};
 		7DC57B342579DBC1000F0CDA /* HJGiftPopTrackBehavior */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +247,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7DB387842591D44700E7058A /* TinyConsole */,
 				7DE115BB258313DE00609CE7 /* 倒计时 */,
 				7DE167202554EDCD00DB7FE3 /* TouchTrough */,
 				7DAE3CD924E26EA300C64245 /* Modal */,
@@ -503,7 +511,6 @@
 				7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */,
 				7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */,
 				7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */,
-				7D3F13CF2473C42E000E6845 /* SceneDelegate.swift in Sources */,
 				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DF3974324DA55AB003E88F5 /* DemoChildViewController.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
@@ -515,6 +522,7 @@
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,
 				7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */,
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
+				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
 				7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */,

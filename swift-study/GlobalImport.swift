@@ -9,6 +9,7 @@
 
 @_exported import AppFoundation
 
+@_exported import TinyConsole
 
 //import ModuleName
 //public typealias ClassName = ModuleName.ClassName

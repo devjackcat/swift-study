@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     private var bag = DisposeBag()
     private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
-    
+
     enum TestEnum {
         case demo(a: String, b: String? = nil, c: Int)
     }
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var dict = [String: ImagePrefetcher]()
 
     private let demoList: [ExampleListItem] = [
+        ExampleListItem(title: "TinyConsole", jumpClass: UIViewController.self),
         ExampleListItem(title: "UIStackView", jumpClass: ExampleStackViewVC.self),
         ExampleListItem(title: "RxSwift", jumpClass: ExampleRxSwiftVC.self),
         ExampleListItem(title: "IBDesignableKit", jumpClass: IBDesignableKitVC.self),
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
             cell.titleLabel.text = model.title
@@ -53,6 +54,15 @@ class ViewController: UIViewController {
         tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             guard let self = self else { return }
             let item = self.demoList[indexPath.item]
+
+            TinyConsole.print("进入 \(item.title)", color: .red)
+
+            // 日志
+            if item.title == "TinyConsole" {
+                TinyConsole.toggleWindowMode()
+
+                return
+            }
             if let vc = self.instanceJumpVC(item: item) {
                 vc.title = item.title
                 self.navigationController?.pushViewController(vc, animated: true)
@@ -89,7 +99,7 @@ class ViewController: UIViewController {
         } else if item.jumpClass == CountDownTimerExampleVC.self {
             return CountDownTimerExampleVC.instantiateFromStoryboard()
         }
-        
+
         return nil
     }
 
@@ -146,4 +156,9 @@ class ViewController: UIViewController {
 
 class CountWrapper {
     var count = 0
+}
+
+extension ViewController: StoryboardIdentifiable {
+    static var storyboardName: String = "Main"
+    static var storyboardIdentifier: String = "ViewController"
 }
