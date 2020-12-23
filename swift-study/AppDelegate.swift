@@ -8,6 +8,8 @@
 
 import UIKit
 
+import HandyJSON
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -24,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 加载路由
         loadRoutes()
         
+        test()
+        
         return true
     }
     
@@ -31,5 +35,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JCRouter.loadRoutes(router: XXRouter.self)
         JCRouter.loadRoutes(router: ExampleRouter.self)
     }
-
+    
+    func test() {
+        
+        let data: [String : Any] = [
+            "msgType":1001,
+            "subType":100101,
+            "msgJson": [
+                "username": "Jack",
+                "nickname": "Jack猫",
+                "age": 22
+            ]
+        ]
+        let attachment = IMAttachment<PersonVO>(data: data)
+        if let vo = attachment.wrapper.vo {
+            print(vo.username)
+        }
+    }
 }
