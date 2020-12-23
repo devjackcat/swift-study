@@ -15,6 +15,7 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
+  - NIMSDK_LITE (8.1.5)
   - ReactorKit (2.1.0):
     - RxSwift (~> 5.0)
     - WeakMapTable (~> 1.1)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - IGListKit
   - Kingfisher
   - Moya/RxSwift (~> 14.0.0-alpha.1)
+  - NIMSDK_LITE
   - ReactorKit
   - Result
   - RxCocoa (~> 5.0)
@@ -63,6 +65,7 @@ SPEC REPOS:
     - IGListKit
     - Kingfisher
     - Moya
+    - NIMSDK_LITE
     - ReactorKit
     - Result
     - RxCocoa
@@ -94,6 +97,7 @@ SPEC CHECKSUMS:
   IGListKit: fd5a5d21935298f5849fa49d426843cff97b77c7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  NIMSDK_LITE: 05a7c1102a7040db1769f99d25109087652f2872
   ReactorKit: 12a93358c554bb3f167b16b14c40374fa9cd5acd
   Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -107,6 +111,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
 
-PODFILE CHECKSUM: eae72f846ac62474b2a493441bd6daa07aa3b4d6
+PODFILE CHECKSUM: 145d4626f9b9d022c330cac15f1048ece1bc7c91
 
 COCOAPODS: 1.9.1

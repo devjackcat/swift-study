@@ -45,5 +45,6 @@ target 'swift-study' do
   project 'swift-study.xcodeproj'
   
   app_foundation_depency
+  pod 'NIMSDK_LITE'
   
 end

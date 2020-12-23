@@ -218,6 +218,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
+  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS13.1/Alamofire.framework"
@@ -240,6 +241,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
+  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

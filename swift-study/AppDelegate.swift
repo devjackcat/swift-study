@@ -36,7 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JCRouter.loadRoutes(router: ExampleRouter.self)
     }
     
+    let nimdemo = NIMDemo()
+    
     func test() {
+        
+        nimdemo.test()
         
         let data: [String : Any] = [
             "msgType":1001,
