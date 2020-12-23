@@ -36,6 +36,7 @@
 		7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */; };
 		7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */; };
 		7DC57B362579DC09000F0CDA /* HJGiftPopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B352579DC09000F0CDA /* HJGiftPopViewModel.swift */; };
+		7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB8AD25933C8C007D8AD9 /* ExampleViewModel.swift */; };
 		7DD7FE5F24B2FDF600B9B43B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */; };
 		7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */; };
 		7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */; };
@@ -97,6 +98,7 @@
 		7DC0B38A2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorTwo.swift; sourceTree = "<group>"; };
 		7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorOne.swift; sourceTree = "<group>"; };
 		7DC57B352579DC09000F0CDA /* HJGiftPopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopViewModel.swift; sourceTree = "<group>"; };
+		7DCBB8AD25933C8C007D8AD9 /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStackViewVC.swift; sourceTree = "<group>"; };
 		7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRxSwiftVC.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */,
 				7DD7FE6624B4420D00B9B43B /* ExampleListCell.swift */,
 				7DB387F6259201B600E7058A /* ExampleRouter.swift */,
+				7DCBB8AD25933C8C007D8AD9 /* ExampleViewModel.swift */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
+				7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */,
 				7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */,
 				7D5221F12477DD9B00B06978 /* IGDemoVC.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,

@@ -10,33 +10,51 @@ import Foundation
 import URLNavigator
 
 class ExampleRouter: JCRouterProtocol {
+    
+    static var bundleName: String {
+        let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleName")! as! String
+        return name.replacingOccurrences(of: "-", with: "_")
+    }
+    
     static func register(navigator: Navigator) {
         
-        //        if item.jumpClass == ExampleStackViewVC.self {
-        //            return ExampleStackViewVC.instantiateFromStoryboard()
-        //        } else if item.jumpClass == IBDesignableKitVC.self {
-        //            return IBDesignableKitVC.instantiateFromStoryboard()
-        //        } else if item.jumpClass == ExampleRxSwiftVC.self {
-        //            return ExampleRxSwiftVC.instantiateFromStoryboard()
-        //        } else if item.jumpClass == RichTextViewController.self {
-        //            return RichTextViewController.instantiateFromStoryboard()
-        //        } else if item.jumpClass == PopverViewController.self {
-        //            return PopverViewController.instantiateFromStoryboard()
-        //        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式1)" {
-        //
-        //            JCRouter.handle(url: "jackcat://jumpGiftPopVC/1")
-        //
-        //        } else if item.jumpClass == HJGiftPopDemoViewController.self, item.title == "礼物气泡(样式2)" {
-        //
-        //            JCRouter.handle(url: "jackcat://jumpGiftPopVC/2")
-        //        } else if item.jumpClass == ModalDemoViewController.self {
-        //            return ModalDemoViewController()
-        //        } else if item.jumpClass == DemoTouchTroughVC.self {
-        //            return DemoTouchTroughVC()
-        //        } else if item.jumpClass == CountDownTimerExampleVC.self {
-        //            return CountDownTimerExampleVC.instantiateFromStoryboard()
-        //        }
-        
+        // HJGiftPopDemoViewController
+        navigator.register("jackcat://push/HJGiftPopDemoViewController") { (_, _, _) -> UIViewController? in
+            return HJGiftPopDemoViewController.instantiateFromStoryboard()
+        }
+        // ExampleStackViewVC
+        navigator.register("jackcat://push/ExampleStackViewVC") { (_, _, _) -> UIViewController? in
+            return ExampleStackViewVC.instantiateFromStoryboard()
+        }
+        // IBDesignableKitVC
+        navigator.register("jackcat://push/IBDesignableKitVC") { (_, _, _) -> UIViewController? in
+            return IBDesignableKitVC.instantiateFromStoryboard()
+        }
+        // ExampleRxSwiftVC
+        navigator.register("jackcat://push/ExampleRxSwiftVC") { (_, _, _) -> UIViewController? in
+            return ExampleRxSwiftVC.instantiateFromStoryboard()
+        }
+        // RichTextViewController
+        navigator.register("jackcat://push/RichTextViewController") { (_, _, _) -> UIViewController? in
+            return RichTextViewController.instantiateFromStoryboard()
+        }
+        // PopverViewController
+        navigator.register("jackcat://push/PopverViewController") { (_, _, _) -> UIViewController? in
+            return PopverViewController.instantiateFromStoryboard()
+        }
+        // CountDownTimerExampleVC
+        navigator.register("jackcat://push/CountDownTimerExampleVC") { (_, _, _) -> UIViewController? in
+            return CountDownTimerExampleVC.instantiateFromStoryboard()
+        }
+        // ModalDemoViewController
+        navigator.register("jackcat://push/ModalDemoViewController") { (_, _, _) -> UIViewController? in
+            return ModalDemoViewController()
+        }
+        // DemoTouchTroughVC
+        navigator.register("jackcat://push/DemoTouchTroughVC") { (_, _, _) -> UIViewController? in
+            return DemoTouchTroughVC()
+        }
+        // HJGiftPopDemoViewController
         navigator.register("jackcat://jumpGiftPopVC/<int:id>") { (url, values, context) -> UIViewController? in
             if let id = values["id"] as? Int {
                 let vc = HJGiftPopDemoViewController.instantiateFromStoryboard()
@@ -45,7 +63,6 @@ class ExampleRouter: JCRouterProtocol {
             }
             return UIViewController()
         }
-    
     }
     
     static func handle(navigator: Navigator) {

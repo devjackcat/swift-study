@@ -13,33 +13,15 @@ import UIKit
 
 import URLNavigator
 
-struct ExampleListItem {
-    var title: String = ""
-    var route: String = ""
-}
-
 class ViewController: UIViewController {
+    
+    typealias ExampleListItem = ExampleViewModel.ExampleListItem
+    
     @IBOutlet var tableView: UITableView!
     private var bag = DisposeBag()
     private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
     
-    private let demoList: [ExampleListItem] = [
-//        ExampleListItem(title: "TinyConsole", jumpClass: UIViewController.self),
-//        ExampleListItem(title: "UIStackView", jumpClass: ExampleStackViewVC.self),
-//        ExampleListItem(title: "RxSwift", jumpClass: ExampleRxSwiftVC.self),
-//        ExampleListItem(title: "IBDesignableKit", jumpClass: IBDesignableKitVC.self),
-//        ExampleListItem(title: "富文本", jumpClass: RichTextViewController.self),
-//        ExampleListItem(title: "Popver", jumpClass: PopverViewController.self),
-//        ExampleListItem(title: "礼物气泡(样式1)", jumpClass: HJGiftPopDemoViewController.self),
-//        ExampleListItem(title: "礼物气泡(样式2)", jumpClass: HJGiftPopDemoViewController.self),
-//        ExampleListItem(title: "Modal", jumpClass: ModalDemoViewController.self),
-//        ExampleListItem(title: "TouchTrough", jumpClass: DemoTouchTroughVC.self),
-//        ExampleListItem(title: "倒计时", jumpClass: CountDownTimerExampleVC.self),
-        
-        ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"),
-        ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
-        ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
-    ]
+    private let viewModel = ExampleViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +35,7 @@ class ViewController: UIViewController {
         // table 点击事件
         tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             guard let self = self else { return }
-            let item = self.demoList[indexPath.item]
+            let item = self.viewModel.demoList[indexPath.item]
 
             TinyConsole.print("进入 \(item.title)", color: .red)
             JCRouter.route(url: item.route)
@@ -61,7 +43,7 @@ class ViewController: UIViewController {
         }).disposing(with: self)
 
         // 触发数据
-        datasource.accept(demoList)
+        datasource.accept(viewModel.demoList)
     }
 }
 

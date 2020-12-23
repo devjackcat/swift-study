@@ -24,6 +24,10 @@ public class JCRouter: NSObject {
     public static func route(url: String, content: Any? = nil) {
         if let url = URL(string: url) {
             if let _ = navigator.push(url, context: content) { return }
+            if let vc = navigator.present(url, context: content) {
+                // 设置返回按钮
+                return
+            }
             _ = navigator.open(url, context: content)
         }
     }
