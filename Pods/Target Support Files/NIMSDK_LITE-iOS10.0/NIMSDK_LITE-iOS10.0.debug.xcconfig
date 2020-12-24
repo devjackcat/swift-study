@@ -1,4 +1,4 @@
-CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/NIMSDK_LITE
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/NIMSDK_LITE-iOS10.0
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/NIMSDK_LITE/NIMSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -l"c++" -l"sqlite3.0" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "CoreTelephony" -framework "SystemConfiguration" -framework "VideoToolbox"

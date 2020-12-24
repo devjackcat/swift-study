@@ -9,6 +9,7 @@
 import UIKit
 
 import HandyJSON
+import OrderModule
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,8 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 加载路由
         loadRoutes()
+        // 注册三方库
+        registerThirdParty()
         
-        test()
+//        test()
         
         return true
     }
@@ -34,26 +37,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func loadRoutes() {
         JCRouter.loadRoutes(router: XXRouter.self)
         JCRouter.loadRoutes(router: ExampleRouter.self)
+        JCRouter.loadRoutes(router: OrderRouter.self)
     }
     
-    let nimdemo = NIMDemo()
-    
-    func test() {
-        
-        nimdemo.test()
-        
-        let data: [String : Any] = [
-            "msgType":1001,
-            "subType":100101,
-            "msgJson": [
-                "username": "Jack",
-                "nickname": "Jack猫",
-                "age": 22
-            ]
-        ]
-        let attachment = IMAttachment<PersonVO>(data: data)
-        if let vo = attachment.wrapper.vo {
-            print(vo.username)
-        }
+    private func registerThirdParty() {
+        IMEngine.shared.register(appKey: "848e7084284a6c8374182ced5a0604a3")
+        IMEngine.shared.login(account: "jackcat", token: "jackcat-token")
     }
+    
+//    func test() {
+//
+//        nimdemo.test()
+//
+//        let data: [String : Any] = [
+//            "msgType":1001,
+//            "subType":100101,
+//            "msgJson": [
+//                "username": "Jack",
+//                "nickname": "Jack猫",
+//                "age": 22
+//            ]
+//        ]
+//        let attachment = IMAttachment<PersonVO>(data: data)
+//        if let vo = attachment.wrapper.vo {
+//            print(vo.username)
+//        }
+//    }
 }

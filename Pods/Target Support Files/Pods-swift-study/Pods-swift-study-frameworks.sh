@@ -206,6 +206,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit-iOS13.1/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher-iOS13.1/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya-iOS13.1/Moya.framework"
+  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactorKit-iOS13.1/ReactorKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result-iOS13.1/Result.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-iOS13.1/RxCocoa.framework"
@@ -218,7 +219,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
-  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS13.1/Alamofire.framework"
@@ -230,6 +230,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit-iOS13.1/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher-iOS13.1/Kingfisher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya-iOS13.1/Moya.framework"
+  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactorKit-iOS13.1/ReactorKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result-iOS13.1/Result.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-iOS13.1/RxCocoa.framework"
@@ -241,7 +242,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework"
-  install_framework "${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

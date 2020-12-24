@@ -8,6 +8,7 @@ ${BUILT_PRODUCTS_DIR}/IGListDiffKit-iOS13.1/IGListDiffKit.framework
 ${BUILT_PRODUCTS_DIR}/IGListKit-iOS13.1/IGListKit.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher-iOS13.1/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/Moya-iOS13.1/Moya.framework
+${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework
 ${BUILT_PRODUCTS_DIR}/ReactorKit-iOS13.1/ReactorKit.framework
 ${BUILT_PRODUCTS_DIR}/Result-iOS13.1/Result.framework
 ${BUILT_PRODUCTS_DIR}/RxCocoa-iOS13.1/RxCocoa.framework
@@ -19,4 +20,3 @@ ${BUILT_PRODUCTS_DIR}/Then-iOS13.1/Then.framework
 ${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell-iOS13.1/UITableView_FDTemplateLayoutCell.framework
 ${BUILT_PRODUCTS_DIR}/URLNavigator-iOS13.1/URLNavigator.framework
 ${BUILT_PRODUCTS_DIR}/WeakMapTable-iOS13.1/WeakMapTable.framework
-${PODS_ROOT}/NIMSDK_LITE/NIMSDK/NIMSDK.framework

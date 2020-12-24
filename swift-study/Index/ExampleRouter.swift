@@ -31,6 +31,14 @@ class ExampleRouter: JCRouterProtocol {
         registerSbVC(navigator: navigator, route: "jackcat://push/PopverViewController", cls: PopverViewController.self)
 
         // ModalDemoViewController
+        navigator.register("jackcat://push/<string:vc>") { (_, values, _) -> UIViewController? in
+            if let vcName = values["vc"] as? String, let cls = NSClassFromString(vcName) as? UIViewController.Type {
+                return cls.init()
+            }
+            return nil
+        }
+        
+        // ModalDemoViewController
         navigator.register("jackcat://push/ModalDemoViewController") { (_, _, _) -> UIViewController? in
             return ModalDemoViewController()
         }

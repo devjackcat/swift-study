@@ -1,0 +1,6 @@
+framework module Pods_swift_study_OrderModule {
+  umbrella header "Pods-swift-study-OrderModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

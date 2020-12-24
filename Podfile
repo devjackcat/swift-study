@@ -33,6 +33,7 @@ def app_foundation_depency
   pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug']
   
   pod 'Result'
+  pod 'NIMSDK_LITE'
   
 end
 
@@ -45,6 +46,7 @@ target 'swift-study' do
   project 'swift-study.xcodeproj'
   
   app_foundation_depency
-  pod 'NIMSDK_LITE'
+  
+  target 'OrderModule'
   
 end

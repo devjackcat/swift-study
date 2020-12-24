@@ -17,6 +17,8 @@ class ExampleViewModel {
     
     let demoList: [ExampleListItem] = [
         ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"),
+        ExampleListItem(title: "IMDemo(主工程)",route: "jackcat://push/swift_study.IMDemoVC"),
+        ExampleListItem(title: "IMDemo(Order)",route: "jackcat://push/OrderModule.OrderVC"),
         ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
         ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
         ExampleListItem(title: "倒计时", route: "jackcat://push/CountDownTimerExampleVC"),
