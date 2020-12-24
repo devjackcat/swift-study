@@ -13,12 +13,12 @@ class IMDemoVC: UIViewController {
     let chatManager = IMChatManager(sessionId: "111111")
     
     override func viewDidLoad() {
-        chatManager.rx.attachmentSignal(IMChatAttachment<PersonVO>.self)
+        // {"type":2022,"data":{"msgType":100101,"msgJson":{"name":"皮皮"}}}
+        chatManager.rx.attachmentSignal(IMChatAttachment<AnimationVO>.self)
             .emit(onNext: {message in
-                print(message.attachment.wrapper.vo?.nickname)
+                print(message.attachment.wrapper.vo?.name)
             })
             .disposing(with: self)
-
     }
     
 }

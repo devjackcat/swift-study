@@ -1,5 +1,5 @@
 //
-//  OrderVO.swift
+//  AnimationVO.swift
 //  swift-study
 //
 //  Created by 永平 on 2020/12/24.
@@ -8,12 +8,11 @@
 
 import Foundation
 
-class OrderVO: IMChatAttachmentProtocol {
+class AnimationVO: IMChatAttachmentProtocol {
     static var identifier: (type: Int, keyPath: String) {
-        return (2021,"msgJson")
+        return (0,"msgJson")
     }
-    var orderNo: String?
-    var price: String?
+    var name: String?
     
     required init() {}
 }

@@ -48,5 +48,6 @@ target 'swift-study' do
   app_foundation_depency
   
   target 'OrderModule'
+  target 'PersonModule'
   
 end

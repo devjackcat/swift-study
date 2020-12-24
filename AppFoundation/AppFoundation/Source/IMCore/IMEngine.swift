@@ -111,9 +111,6 @@ public class IMChatModule {
     public static func login(account: String, token: String) {
         IMEngine.shared.login(account: account, token: token)
     }
-    public static func registerCustomDecoder(_ decoder: NIMCustomAttachmentCoding) {
-        NIMCustomObject.registerCustomDecoder(decoder)
-    }
 }
 
 class IMEngine: NSObject {

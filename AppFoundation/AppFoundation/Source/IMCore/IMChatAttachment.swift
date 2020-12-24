@@ -16,17 +16,17 @@ public protocol IMChatAttachmentProtocol: HandyJSON {
 
 public class IMChatAttachment<T: IMChatAttachmentProtocol>: NSObject, NIMCustomAttachment {
     
-    class Wrapper: HandyJSON {
-        var type = 0
-        var msgType = 0
-        var vo: T?
-        required init() {}
+    public class Wrapper: HandyJSON {
+        public var type = 0
+        public var msgType = 0
+        public var vo: T?
+        public required init() {}
     }
     
-    private(set) var wrapper = Wrapper()
+    public private(set) var wrapper = Wrapper()
     private var decodeKeyPath: String?
     
-    init(type: Int, data: [String: Any]) {
+    public init(type: Int, data: [String: Any]) {
         var reData = data
         for keyPath in ["commonMsgJson", T.identifier.keyPath] {
             if let vo = data[keyPath] {

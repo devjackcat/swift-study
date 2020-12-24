@@ -10,7 +10,7 @@ import Foundation
 
 class PersonVO: IMChatAttachmentProtocol {
     static var identifier: (type: Int, keyPath: String) {
-        return (2020,"msgJson")
+        return (0,"msgJson")
     }
     var username: String?
     var nickname: String?

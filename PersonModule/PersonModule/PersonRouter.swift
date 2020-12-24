@@ -1,15 +1,15 @@
 //
-//  OrderRouter.swift
-//  Order
+//  PersonRouter.swift
+//  PersonModule
 //
 //  Created by 永平 on 2020/12/24.
 //  Copyright © 2020 永平. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import URLNavigator
 
-public class OrderRouter: JCRouterProtocol {
+public class PersonRouter: JCRouterProtocol {
     public static func register(navigator: Navigator) {
     }
     

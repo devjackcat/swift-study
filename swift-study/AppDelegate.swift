@@ -8,9 +8,6 @@
 
 import UIKit
 
-import HandyJSON
-import OrderModule
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -43,25 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func registerThirdParty() {
         IMChatModule.register(appKey: "848e7084284a6c8374182ced5a0604a3")
         IMChatModule.login(account: "jackcat", token: "jackcat-token")
-        IMChatModule.registerCustomDecoder(HJNIMAttachmentDecoder())
+        IMChatModule.registerCustomDecoder([
+            OrderAttachmentDecoder(),
+            PersonAttachmentDecoder(),
+            MainAttachmentDecoder()
+        ])
     }
-    
-//    func test() {
-//
-//        nimdemo.test()
-//
-//        let data: [String : Any] = [
-//            "msgType":1001,
-//            "subType":100101,
-//            "msgJson": [
-//                "username": "Jack",
-//                "nickname": "Jack猫",
-//                "age": 22
-//            ]
-//        ]
-//        let attachment = IMAttachment<PersonVO>(data: data)
-//        if let vo = attachment.wrapper.vo {
-//            print(vo.username)
-//        }
-//    }
 }
+
+

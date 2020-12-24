@@ -10,5 +10,11 @@
 @_exported import AppFoundation
 @_exported import TinyConsole
 
+@_exported import NIMSDK
+@_exported import HandyJSON
+
+@_exported import OrderModule
+@_exported import PersonModule
+
 //import ModuleName
 //public typealias ClassName = ModuleName.ClassName
