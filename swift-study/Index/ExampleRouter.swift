@@ -16,36 +16,20 @@ class ExampleRouter: JCRouterProtocol {
         return name.replacingOccurrences(of: "-", with: "_")
     }
     
+    private static func registerSbVC<T: UIViewController>(navigator: Navigator, route: String, cls: T.Type) where T: StoryboardIdentifiable {
+        navigator.register(route) { (_, _, _) -> UIViewController? in
+            return T.instantiateFromStoryboard()
+        }
+    }
+    
     static func register(navigator: Navigator) {
-        
-        // HJGiftPopDemoViewController
-        navigator.register("jackcat://push/HJGiftPopDemoViewController") { (_, _, _) -> UIViewController? in
-            return HJGiftPopDemoViewController.instantiateFromStoryboard()
-        }
-        // ExampleStackViewVC
-        navigator.register("jackcat://push/ExampleStackViewVC") { (_, _, _) -> UIViewController? in
-            return ExampleStackViewVC.instantiateFromStoryboard()
-        }
-        // IBDesignableKitVC
-        navigator.register("jackcat://push/IBDesignableKitVC") { (_, _, _) -> UIViewController? in
-            return IBDesignableKitVC.instantiateFromStoryboard()
-        }
-        // ExampleRxSwiftVC
-        navigator.register("jackcat://push/ExampleRxSwiftVC") { (_, _, _) -> UIViewController? in
-            return ExampleRxSwiftVC.instantiateFromStoryboard()
-        }
-        // RichTextViewController
-        navigator.register("jackcat://push/RichTextViewController") { (_, _, _) -> UIViewController? in
-            return RichTextViewController.instantiateFromStoryboard()
-        }
-        // PopverViewController
-        navigator.register("jackcat://push/PopverViewController") { (_, _, _) -> UIViewController? in
-            return PopverViewController.instantiateFromStoryboard()
-        }
-        // CountDownTimerExampleVC
-        navigator.register("jackcat://push/CountDownTimerExampleVC") { (_, _, _) -> UIViewController? in
-            return CountDownTimerExampleVC.instantiateFromStoryboard()
-        }
+        registerSbVC(navigator: navigator, route: "jackcat://push/CountDownTimerExampleVC", cls: CountDownTimerExampleVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://push/ExampleStackViewVC", cls: ExampleStackViewVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://push/IBDesignableKitVC", cls: IBDesignableKitVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://push/ExampleRxSwiftVC", cls: ExampleRxSwiftVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://push/RichTextViewController", cls: RichTextViewController.self)
+        registerSbVC(navigator: navigator, route: "jackcat://push/PopverViewController", cls: PopverViewController.self)
+
         // ModalDemoViewController
         navigator.register("jackcat://push/ModalDemoViewController") { (_, _, _) -> UIViewController? in
             return ModalDemoViewController()
