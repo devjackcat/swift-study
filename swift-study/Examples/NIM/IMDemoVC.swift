@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import NIMSDK
 
 class IMDemoVC: UIViewController {
+    let chatManager = IMChatManager(sessionId: "111111")
+    
     override func viewDidLoad() {
-        IMEngine.shared.addMessageListener(listener: IMListener(receive: { text in
-            print("1 号 收到消息 \(text)")
-        }))
-        
-        IMEngine.shared.addMessageListener(listener: IMListener(receive: { text in
-            print("2 号 收到消息 \(text)")
-        }))
+        chatManager.rx.attachmentSignal(IMChatAttachment<PersonVO>.self)
+            .emit(onNext: {message in
+                print(message.attachment.wrapper.vo?.nickname)
+            })
+            .disposing(with: self)
+
     }
+    
 }

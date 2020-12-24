@@ -37,7 +37,7 @@
 		7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */; };
 		7DC57B362579DC09000F0CDA /* HJGiftPopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC57B352579DC09000F0CDA /* HJGiftPopViewModel.swift */; };
 		7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB8AD25933C8C007D8AD9 /* ExampleViewModel.swift */; };
-		7DCBB8B125934919007D8AD9 /* IMAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB8B025934919007D8AD9 /* IMAttachment.swift */; };
+		7DCBB8B125934919007D8AD9 /* IMChatAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB8B025934919007D8AD9 /* IMChatAttachment.swift */; };
 		7DCBB8E1259349B5007D8AD9 /* PersonVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB8E0259349B5007D8AD9 /* PersonVO.swift */; };
 		7DCBB94E25943AA7007D8AD9 /* IMDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB94D25943AA7007D8AD9 /* IMDemoVC.swift */; };
 		7DCBB9DB259440BA007D8AD9 /* OrderModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DCBB9D9259440BA007D8AD9 /* OrderModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +49,8 @@
 		7DCBBA1C25944145007D8AD9 /* Pods_swift_study_OrderModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53B9D9950BDCCBA127803CA9 /* Pods_swift_study_OrderModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DCBBA4D25944183007D8AD9 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB96125943C49007D8AD9 /* OrderVC.swift */; };
 		7DCBBA4E25944183007D8AD9 /* OrderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBB96425943C58007D8AD9 /* OrderRouter.swift */; };
+		7DCBBA5325946EFA007D8AD9 /* NIMAttachmentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBA5225946EFA007D8AD9 /* NIMAttachmentDecoder.swift */; };
+		7DCBBA552594706B007D8AD9 /* OrderVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBA542594706B007D8AD9 /* OrderVO.swift */; };
 		7DD7FE5F24B2FDF600B9B43B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */; };
 		7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */; };
 		7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */; };
@@ -138,7 +140,7 @@
 		7DC57B312579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopTrackBehaviorOne.swift; sourceTree = "<group>"; };
 		7DC57B352579DC09000F0CDA /* HJGiftPopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HJGiftPopViewModel.swift; sourceTree = "<group>"; };
 		7DCBB8AD25933C8C007D8AD9 /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
-		7DCBB8B025934919007D8AD9 /* IMAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAttachment.swift; sourceTree = "<group>"; };
+		7DCBB8B025934919007D8AD9 /* IMChatAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMChatAttachment.swift; sourceTree = "<group>"; };
 		7DCBB8E0259349B5007D8AD9 /* PersonVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVO.swift; sourceTree = "<group>"; };
 		7DCBB94D25943AA7007D8AD9 /* IMDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDemoVC.swift; sourceTree = "<group>"; };
 		7DCBB96125943C49007D8AD9 /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
@@ -148,6 +150,8 @@
 		7DCBB9D9259440BA007D8AD9 /* OrderModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderModule.h; sourceTree = "<group>"; };
 		7DCBB9DA259440BA007D8AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DCBB9E7259440E4007D8AD9 /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCBBA5225946EFA007D8AD9 /* NIMAttachmentDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIMAttachmentDecoder.swift; sourceTree = "<group>"; };
+		7DCBBA542594706B007D8AD9 /* OrderVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVO.swift; sourceTree = "<group>"; };
 		7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStackViewVC.swift; sourceTree = "<group>"; };
 		7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRxSwiftVC.swift; sourceTree = "<group>"; };
@@ -308,7 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				7DCBB8DF2593499D007D8AD9 /* CustomAttachment */,
-				7DCBB8B025934919007D8AD9 /* IMAttachment.swift */,
+				7DCBB8B025934919007D8AD9 /* IMChatAttachment.swift */,
+				7DCBBA5225946EFA007D8AD9 /* NIMAttachmentDecoder.swift */,
 			);
 			name = IMAttachment;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				7DCBB8E0259349B5007D8AD9 /* PersonVO.swift */,
+				7DCBBA542594706B007D8AD9 /* OrderVO.swift */,
 			);
 			name = CustomAttachment;
 			sourceTree = "<group>";
@@ -698,7 +704,7 @@
 				7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */,
 				7DF277DE2492154D00A1F7AA /* CounterViewReactor.swift in Sources */,
 				7DD7FE5F24B2FDF600B9B43B /* ViewController.swift in Sources */,
-				7DCBB8B125934919007D8AD9 /* IMAttachment.swift in Sources */,
+				7DCBB8B125934919007D8AD9 /* IMChatAttachment.swift in Sources */,
 				7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */,
 				7DA1A1B024D2C3F300106D4B /* PopverViewController.swift in Sources */,
 				7DC57B362579DC09000F0CDA /* HJGiftPopViewModel.swift in Sources */,
@@ -719,6 +725,7 @@
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
 				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
+				7DCBBA5325946EFA007D8AD9 /* NIMAttachmentDecoder.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
 				7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */,
 				7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */,
@@ -726,6 +733,7 @@
 				7DCBB94E25943AA7007D8AD9 /* IMDemoVC.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,
 				7D3F148D2474C2DC000E6845 /* DemoMoya.swift in Sources */,
+				7DCBBA552594706B007D8AD9 /* OrderVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

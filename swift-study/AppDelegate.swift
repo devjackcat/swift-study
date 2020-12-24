@@ -41,8 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerThirdParty() {
-        IMEngine.shared.register(appKey: "848e7084284a6c8374182ced5a0604a3")
-        IMEngine.shared.login(account: "jackcat", token: "jackcat-token")
+        IMChatModule.register(appKey: "848e7084284a6c8374182ced5a0604a3")
+        IMChatModule.login(account: "jackcat", token: "jackcat-token")
+        IMChatModule.registerCustomDecoder(HJNIMAttachmentDecoder())
     }
     
 //    func test() {

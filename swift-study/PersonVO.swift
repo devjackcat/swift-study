@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonVO: IMAttachmentProtocol {
+class PersonVO: IMChatAttachmentProtocol {
     static var identifier: (type: Int, keyPath: String) {
         return (2020,"msgJson")
     }

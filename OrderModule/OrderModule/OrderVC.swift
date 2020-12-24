@@ -11,12 +11,7 @@ import UIKit
 import AppFoundation
 
 class OrderVC: UIViewController {
+    
+    let chatManager = IMChatManager(sessionId: "22222")
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        IMEngine.shared.addMessageListener(listener: IMListener(receive: { text in
-            print("3 号 收到消息 \(text)")
-        }))
-    }
 }
