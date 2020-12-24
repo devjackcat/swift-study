@@ -42,6 +42,11 @@ target 'AppFoundation' do
   app_foundation_depency
 end
 
+target 'IMChat' do
+  project 'IMChat/IMChat.xcodeproj'
+  app_foundation_depency
+end
+
 target 'swift-study' do
   project 'swift-study.xcodeproj'
   

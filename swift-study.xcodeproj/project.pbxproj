@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39CF15A097451749C4551DC2 /* Pods_swift_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */; };
 		57AC2D29B759D752F1FE9F7E /* Pods_swift_study_PersonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79BFE65063D1CFD9D60664B /* Pods_swift_study_PersonModule.framework */; };
 		7D01FFD324B807E500C3A6FC /* ExampleRxSwiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
@@ -61,6 +60,15 @@
 		7DCBBABA25947F71007D8AD9 /* PersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBAB925947F71007D8AD9 /* PersonVC.swift */; };
 		7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBABC25947FD1007D8AD9 /* AnimationVO.swift */; };
 		7DCBBAC225948013007D8AD9 /* MainAttachmentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBAC125948013007D8AD9 /* MainAttachmentDecoder.swift */; };
+		7DCBBB862594850D007D8AD9 /* IMChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB852594850D007D8AD9 /* IMChat.framework */; };
+		7DCBBB872594850D007D8AD9 /* IMChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB852594850D007D8AD9 /* IMChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCBBB8825948510007D8AD9 /* Pods_swift_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */; };
+		7DCBBB8925948510007D8AD9 /* Pods_swift_study.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B00D0C26461627BB630AD20 /* Pods_swift_study.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCBBB8B25948517007D8AD9 /* IMChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB8A25948517007D8AD9 /* IMChat.framework */; };
+		7DCBBB8C25948517007D8AD9 /* IMChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB8A25948517007D8AD9 /* IMChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCBBB8E25948520007D8AD9 /* IMChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB8D25948520007D8AD9 /* IMChat.framework */; };
+		7DCBBB8F25948520007D8AD9 /* IMChat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCBBB8D25948520007D8AD9 /* IMChat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCBBB91259486AA007D8AD9 /* __AppSetup.swift */; };
 		7DD7FE5F24B2FDF600B9B43B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */; };
 		7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */; };
 		7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */; };
@@ -104,6 +112,18 @@
 			files = (
 				7DCBB9E9259440E4007D8AD9 /* AppFoundation.framework in Embed Frameworks */,
 				7DCBBA1C25944145007D8AD9 /* Pods_swift_study_OrderModule.framework in Embed Frameworks */,
+				7DCBBB8C25948517007D8AD9 /* IMChat.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCBBB9025948520007D8AD9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7DCBBB8F25948520007D8AD9 /* IMChat.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,8 +134,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7DCBBB8925948510007D8AD9 /* Pods_swift_study.framework in Embed Frameworks */,
 				7DCBBA7325947E27007D8AD9 /* PersonModule.framework in Embed Frameworks */,
 				7D4E4728258B4C4100C776DD /* AppFoundation.framework in Embed Frameworks */,
+				7DCBBB872594850D007D8AD9 /* IMChat.framework in Embed Frameworks */,
 				7DCBB9DF259440BA007D8AD9 /* OrderModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -181,6 +203,10 @@
 		7DCBBAB925947F71007D8AD9 /* PersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVC.swift; sourceTree = "<group>"; };
 		7DCBBABC25947FD1007D8AD9 /* AnimationVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVO.swift; sourceTree = "<group>"; };
 		7DCBBAC125948013007D8AD9 /* MainAttachmentDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAttachmentDecoder.swift; sourceTree = "<group>"; };
+		7DCBBB852594850D007D8AD9 /* IMChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCBBB8A25948517007D8AD9 /* IMChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCBBB8D25948520007D8AD9 /* IMChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IMChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCBBB91259486AA007D8AD9 /* __AppSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __AppSetup.swift; sourceTree = "<group>"; };
 		7DD7FE5E24B2FDF600B9B43B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DD7FE6124B3000A00B9B43B /* ExampleStackViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStackViewVC.swift; sourceTree = "<group>"; };
 		7DD7FE6424B3006100B9B43B /* ExampleRxSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRxSwiftVC.swift; sourceTree = "<group>"; };
@@ -209,8 +235,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39CF15A097451749C4551DC2 /* Pods_swift_study.framework in Frameworks */,
+				7DCBBB8825948510007D8AD9 /* Pods_swift_study.framework in Frameworks */,
 				7D4E4727258B4C4100C776DD /* AppFoundation.framework in Frameworks */,
+				7DCBBB862594850D007D8AD9 /* IMChat.framework in Frameworks */,
 				7DCBB9DE259440BA007D8AD9 /* OrderModule.framework in Frameworks */,
 				7DCBBA7225947E27007D8AD9 /* PersonModule.framework in Frameworks */,
 			);
@@ -222,6 +249,7 @@
 			files = (
 				7DCBB9E8259440E4007D8AD9 /* AppFoundation.framework in Frameworks */,
 				7DCBBA1B25944145007D8AD9 /* Pods_swift_study_OrderModule.framework in Frameworks */,
+				7DCBBB8B25948517007D8AD9 /* IMChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCBBB8E25948520007D8AD9 /* IMChat.framework in Frameworks */,
 				57AC2D29B759D752F1FE9F7E /* Pods_swift_study_PersonModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3F13CC2473C42E000E6845 /* AppDelegate.swift */,
+				7DCBBB91259486AA007D8AD9 /* __AppSetup.swift */,
 				7D3F13D72473C42F000E6845 /* LaunchScreen.storyboard */,
 				7D3F13DA2473C42F000E6845 /* Info.plist */,
 				7DB387572591CF9C00E7058A /* GlobalImport.swift */,
@@ -581,6 +611,9 @@
 		AF01B330624906CB6B25B27A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DCBBB8D25948520007D8AD9 /* IMChat.framework */,
+				7DCBBB8A25948517007D8AD9 /* IMChat.framework */,
+				7DCBBB852594850D007D8AD9 /* IMChat.framework */,
 				7DCBB9E7259440E4007D8AD9 /* AppFoundation.framework */,
 				7DCBB9CC25943E8A007D8AD9 /* AppFoundation.framework */,
 				7D4E46E1258B3BC400C776DD /* AppFoundation.framework */,
@@ -665,6 +698,7 @@
 				7DCBBA6725947E27007D8AD9 /* Sources */,
 				7DCBBA6825947E27007D8AD9 /* Frameworks */,
 				7DCBBA6925947E27007D8AD9 /* Resources */,
+				7DCBBB9025948520007D8AD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -860,6 +894,7 @@
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
 				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
+				7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */,
 				7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,

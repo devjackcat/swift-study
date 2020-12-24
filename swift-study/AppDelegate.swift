@@ -21,30 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         
-        // 加载路由
-        loadRoutes()
-        // 注册三方库
-        registerThirdParty()
-        
-//        test()
+        AppSetup.shared.setup()
         
         return true
-    }
-    
-    private func loadRoutes() {
-        JCRouter.loadRoutes(router: XXRouter.self)
-        JCRouter.loadRoutes(router: ExampleRouter.self)
-        JCRouter.loadRoutes(router: OrderRouter.self)
-    }
-    
-    private func registerThirdParty() {
-        IMChatModule.register(appKey: "848e7084284a6c8374182ced5a0604a3")
-        IMChatModule.login(account: "jackcat", token: "jackcat-token")
-        IMChatModule.registerCustomDecoder([
-            OrderAttachmentDecoder(),
-            PersonAttachmentDecoder(),
-            MainAttachmentDecoder()
-        ])
     }
 }
 

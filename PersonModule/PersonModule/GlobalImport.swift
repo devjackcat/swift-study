@@ -7,5 +7,6 @@
 //
 
 @_exported import AppFoundation
+@_exported import IMChat
 @_exported import NIMSDK
 @_exported import HandyJSON
