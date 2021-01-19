@@ -57,8 +57,8 @@ class DemoReactorVC: UIViewController, View {
         view.jcs_backgroundColor_White()
 
         plusBtn = UIButton()
-            .jcs_title(title: "Plus")
-            .jcs_titleColor(hex: 0x000000)
+            .jcs_title("Plus")
+            .jcs_titleColor(0x000000)
             .jcs_layout(superView: self, layout: { make in
                 make.left.equalTo(20)
                 make.width.equalTo(100)
@@ -67,8 +67,8 @@ class DemoReactorVC: UIViewController, View {
             })
 
         minusBtn = UIButton()
-            .jcs_title(title: "Minus")
-            .jcs_titleColor(hex: 0x000000)
+            .jcs_title("Minus")
+            .jcs_titleColor(0x000000)
             .jcs_layout(superView: self, layout: { make in
                 make.right.equalTo(-20)
                 make.width.equalTo(100)

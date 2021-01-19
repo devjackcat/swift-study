@@ -22,8 +22,8 @@ class DemoTouchTroughVC: UIViewController {
             self.count += 1
             print("----click count = \(self.count)")
             if let touchTroughView = self.touchTroughView, self.count == 5 {
-                let redView = UIView().jcs_backgroundColor(color: .red)
-                    .jcs_userInteractionEnabled(value: true)
+                let redView = UIView().jcs_backgroundColor(.red)
+                    .jcs_userInteractionEnabled(true)
                     .jcs_layout(superView: touchTroughView) { make in
                         make.width.equalTo(200)
                         make.height.equalTo(200)

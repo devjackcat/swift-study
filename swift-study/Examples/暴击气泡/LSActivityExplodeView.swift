@@ -16,8 +16,8 @@ class LSActivityExplodeCellView: UIView {
             .jcs_layout(superView: self, layout: { make in
                 make.left.top.right.bottom.equalTo(self)
             })
-            .jcs_cornerRadius(value: 7)
-            .jcs_backgroundColor(color: .blue)
+            .jcs_cornerRadius(7)
+            .jcs_backgroundColor(.blue)
             .jcs_toLabel()
             .jcs_textAlignment_Center()
     }

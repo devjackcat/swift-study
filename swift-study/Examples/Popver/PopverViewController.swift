@@ -42,8 +42,8 @@ class PopverViewController: UIViewController {
             make.left.top.bottom.equalTo(processContainerView)
             make.width.equalTo(50)
         }
-        .jcs_backgroundColor(hex: 0xFF0000)
-        .jcs_cornerRadius(value: 25)
+        .jcs_backgroundColor(0xFF0000)
+        .jcs_cornerRadius(25)
 
         processMaskView = UIView()
         processMaskView.backgroundColor = .black

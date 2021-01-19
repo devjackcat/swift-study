@@ -11,8 +11,7 @@ import Closures
 import UIKit
 
 public extension UIControl {
-    @discardableResult
-    func jcs_touchUpInside(closures: @escaping (_ sender: UIControl) -> Void) -> Self {
+    @discardableResult func jcs_touchUpInside(closures: @escaping (_ sender: UIControl) -> Void) -> Self {
         addTapGesture { [weak self] _ in
             closures(self!)
         }
