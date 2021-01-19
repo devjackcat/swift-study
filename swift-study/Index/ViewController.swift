@@ -50,6 +50,16 @@ class ViewController: UIViewController {
             .jcs_backgroundColor(color: .blue)
             .jcs_text(text: "张三")
             .jcs_textAlignment_Center()
+        
+        UIButton().jcs_layout(superView: self) { (make) in
+            make.center.equalTo(self.view)
+            make.width.height.equalTo(200)
+        }
+        .jcs_backgroundColor_Random()
+        .jcs_title(title: "点我呀")
+        .jcs_tap { sender in
+            print("---sender = \(sender)")
+        }
     }
 }
 
