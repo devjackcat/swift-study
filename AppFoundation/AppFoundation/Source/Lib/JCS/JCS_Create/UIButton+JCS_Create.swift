@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Closures
 
 public extension UIButton {
     // MARK: - 文字
@@ -58,7 +59,7 @@ public extension UIButton {
 
     // MARK: - 背景图
     @discardableResult
-    func jcs_backgroundImage(image: UIImage, state: UIControl.State = .normal) -> Self {
+    func jcs_backgroundImage(image: UIImage?, state: UIControl.State = .normal) -> Self {
         setBackgroundImage(image, for: state)
         return self
     }

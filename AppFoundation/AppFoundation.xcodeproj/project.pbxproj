@@ -12,6 +12,9 @@
 		7D4E46E7258B3D4100C776DD /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E46E6258B3D4100C776DD /* Media1.xcassets */; };
 		7D4E472D258B51D500C776DD /* UIViewControllerFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4E472B258B51D500C776DD /* UIViewControllerFromStoryboard.swift */; };
 		7D4E472E258B51D500C776DD /* UIViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4E472C258B51D500C776DD /* UIViewFromNib.swift */; };
+		7D5A4A3125B6AA0600BE2A57 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D5A4A3025B6AA0600BE2A57 /* Readme.md */; };
+		7D5A4A3425B6AF5600BE2A57 /* UITableView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A3325B6AF5600BE2A57 /* UITableView+JCS_Create.swift */; };
+		7D5A4A3725B6AF8300BE2A57 /* UICollectionView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A3625B6AF8300BE2A57 /* UICollectionView+JCS_Create.swift */; };
 		7DB386822591CAC700E7058A /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386572591CAC700E7058A /* Popover.swift */; };
 		7DB386832591CAC700E7058A /* IBColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */; };
 		7DB386842591CAC700E7058A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3865A2591CAC700E7058A /* Toucan.swift */; };
@@ -60,6 +63,9 @@
 		7D4E46E6258B3D4100C776DD /* Media1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media1.xcassets; sourceTree = "<group>"; };
 		7D4E472B258B51D500C776DD /* UIViewControllerFromStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerFromStoryboard.swift; sourceTree = "<group>"; };
 		7D4E472C258B51D500C776DD /* UIViewFromNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewFromNib.swift; sourceTree = "<group>"; };
+		7D5A4A3025B6AA0600BE2A57 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		7D5A4A3325B6AF5600BE2A57 /* UITableView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+JCS_Create.swift"; sourceTree = "<group>"; };
+		7D5A4A3625B6AF8300BE2A57 /* UICollectionView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+JCS_Create.swift"; sourceTree = "<group>"; };
 		7DB386572591CAC700E7058A /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 		7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBColumnFlowLayout.swift; sourceTree = "<group>"; };
 		7DB3865A2591CAC700E7058A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toucan.swift; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 				7DB3866B2591CAC700E7058A /* JCS_Create */,
 				7DB386722591CAC700E7058A /* JCS_Base */,
 				7DB386742591CAC700E7058A /* JCS_Extension */,
+				7D5A4A3025B6AA0600BE2A57 /* Readme.md */,
 			);
 			path = JCS;
 			sourceTree = "<group>";
@@ -245,6 +252,8 @@
 				7DB3866F2591CAC700E7058A /* UIImageVIew+JCS_Create.swift */,
 				7DB386702591CAC700E7058A /* UIButton+JCS_Create.swift */,
 				7DB386712591CAC700E7058A /* UIVIew+JCS_Create.swift */,
+				7D5A4A3325B6AF5600BE2A57 /* UITableView+JCS_Create.swift */,
+				7D5A4A3625B6AF8300BE2A57 /* UICollectionView+JCS_Create.swift */,
 			);
 			path = JCS_Create;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5A4A3125B6AA0600BE2A57 /* Readme.md in Resources */,
 				7D4E46E7258B3D4100C776DD /* Media1.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +440,7 @@
 				7DB386972591CAC700E7058A /* UIButton+JCS_Create.swift in Sources */,
 				7DB386AC2591CAD200E7058A /* ImageWithColor.swift in Sources */,
 				7DB386982591CAC700E7058A /* UIVIew+JCS_Create.swift in Sources */,
+				7D5A4A3725B6AF8300BE2A57 /* UICollectionView+JCS_Create.swift in Sources */,
 				7DB386992591CAC700E7058A /* JCS_BaseVC.swift in Sources */,
 				7DB386942591CAC700E7058A /* UIStackView+JCS_Create.swift in Sources */,
 				7DB3868B2591CAC700E7058A /* IBTextView.swift in Sources */,
@@ -459,6 +470,7 @@
 				7DB386AD2591CAD200E7058A /* AutoDisposable.swift in Sources */,
 				7DB386AB2591CAD200E7058A /* ImageGradient.swift in Sources */,
 				7DB386912591CAC700E7058A /* IBCornerRadiusMasksView.swift in Sources */,
+				7D5A4A3425B6AF5600BE2A57 /* UITableView+JCS_Create.swift in Sources */,
 				7DB386902591CAC700E7058A /* IBProgressView.swift in Sources */,
 				7DB3868A2591CAC700E7058A /* IBGradientView.swift in Sources */,
 				7D4E472D258B51D500C776DD /* UIViewControllerFromStoryboard.swift in Sources */,

@@ -7,8 +7,6 @@
 //
 
 import Closures
-import RxCocoa
-import RxSwift
 import SnapKit
 import UIKit
 
@@ -170,13 +168,10 @@ public extension UIView {
     // MARK: - 事件
 
     @discardableResult
-    func jcs_tap(closures: @escaping (_ sender: UIView) -> Void) -> Self {
-        let tapGesture = UITapGestureRecognizer()
-        addGestureRecognizer(tapGesture)
-        _ = tapGesture.rx.event
-            .subscribe(onNext: { [weak self] _ in
-                closures(self!)
-        })
+    func jcs_click(closures: @escaping (_ sender: Self) -> Void) -> Self {
+        addTapGesture { [weak self] _ in
+            closures(self!)
+        }
         return self
     }
 

@@ -7,15 +7,15 @@
 //
 
 import RxCocoa
-import RxSwift
+import Closures
 import UIKit
 
 public extension UIControl {
     @discardableResult
     func jcs_touchUpInside(closures: @escaping (_ sender: UIControl) -> Void) -> Self {
-        _ = rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] _ in
+        addTapGesture { [weak self] _ in
             closures(self!)
-        })
+        }
         return self
     }
 }

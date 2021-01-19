@@ -45,21 +45,51 @@ class ViewController: UIViewController {
 //        // 触发数据
 //        datasource.accept(viewModel.demoList)
         
-        UILabel(text: "哈哈哈", font: .systemFont(ofSize: 12), color: .red)
-            .jcs_layout(superView: self.view, frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-            .jcs_backgroundColor(color: .blue)
-            .jcs_text(text: "张三")
-            .jcs_textAlignment_Center()
+//        let label = UILabel()
+//        label.text = "用户昵称"
+//        label.font = .systemFont(ofSize: 12)
+//        label.textColor = .red
+//        label.backgroundColor = .blue
+//        label.textAlignment = .center
+//        self.view.addSubview(label)
+//        label.snp.makeConstraints { make in
+//            make.leading.trailing.equalTo(10)
+//            make.top.equalTo(100)
+//        }
+//
+//        let label = UILabel(text: "用户昵称", font: .systemFont(ofSize: 12), color: .red)
+//            .jcs_textAlignment_Center()
+//            .jcs_backgroundColor(color: .blue)
+//            .jcs_layout(superView: self) { (make) in
+//                make.leading.trailing.equalTo(10)
+//                make.top.equalTo(100)
+//            }
         
-        UIButton().jcs_layout(superView: self) { (make) in
-            make.center.equalTo(self.view)
-            make.width.height.equalTo(200)
-        }
-        .jcs_backgroundColor_Random()
-        .jcs_title(title: "点我呀")
-        .jcs_tap { sender in
-            print("---sender = \(sender)")
-        }
+//        let button = UIButton()
+//        button.setTitle("登陆", for: .normal)
+//        button.setTitleColor(.red, for: .normal)
+//        button.setBackgroundImage(UIImage(named: "login_bg"), for: .normal)
+//        button.rx.controlEvent(.touchUpInside).subscribe(onNext: {
+//            print("执行登陆1")
+//        }).disposing(with: self)
+//        self.view.addSubview(button)
+//        button.snp.makeConstraints { (make) in
+//            make.center.equalTo(self.view)
+//            make.width.height.equalTo(100)
+//        }
+        
+        UIButton()
+            .jcs_title(title: "登陆2")
+            .jcs_titleColor(color: .red)
+            .jcs_backgroundImage(image: UIImage(named: "login_bg"))
+            .jcs_click { sender in
+                print("执行登陆")
+            }
+            .jcs_layout(superView: self) { (make) in
+                make.center.equalTo(self.view)
+                make.width.height.equalTo(100)
+            }
+        
     }
 }
 
