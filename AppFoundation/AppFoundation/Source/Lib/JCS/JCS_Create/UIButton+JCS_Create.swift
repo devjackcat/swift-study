@@ -11,78 +11,83 @@ import UIKit
 public extension UIButton {
     // MARK: - 文字
 
-    func jcs_title(title: String, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_title(title: String, state: UIControl.State = .normal) -> Self {
         setTitle(title, for: state)
         return self
     }
 
     // MARK: - 文字颜色
 
-    func jcs_titleColor(color: UIColor, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_titleColor(color: UIColor, state: UIControl.State = .normal) -> Self {
         setTitleColor(color, for: state)
         return self
     }
 
-    func jcs_titleColor(hex: Int, state: UIControl.State  = .normal ) -> UIButton {
+    @discardableResult
+    func jcs_titleColor(hex: Int, state: UIControl.State  = .normal ) -> Self {
         setTitleColor(UIColor(hex: hex), for: state)
         return self
     }
 
     // MAKR: - 字体
-    func jcs_font(font: UIFont) -> UIButton {
+    @discardableResult
+    func jcs_font(font: UIFont) -> Self {
         titleLabel?.font = font
         return self
     }
 
-    func jcs_font(fontSize: CGFloat) -> UIButton {
+    @discardableResult
+    func jcs_font(fontSize: CGFloat) -> Self {
         titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         return self
     }
 
     // MARK: - 图标
-
-    func jcs_image(image: UIImage, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_image(image: UIImage, state: UIControl.State = .normal) -> Self {
         setImage(image, for: state)
         return self
     }
-
-    func jcs_image(imageName: String, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_image(imageName: String, state: UIControl.State = .normal) -> Self {
         setImage(UIImage(named: imageName), for: state)
         return self
     }
 
     // MARK: - 背景图
-
-    func jcs_backgroundImage(image: UIImage, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_backgroundImage(image: UIImage, state: UIControl.State = .normal) -> Self {
         setBackgroundImage(image, for: state)
         return self
     }
-
-    func jcs_backgroundImage(imageName: String, state: UIControl.State = .normal) -> UIButton {
+    @discardableResult
+    func jcs_backgroundImage(imageName: String, state: UIControl.State = .normal) -> Self {
         setBackgroundImage(UIImage(named: imageName), for: state)
         return self
     }
 
     // MARK: - adjustsImage
-
-    func jcs_adjustsImageWhenHighlighted(value: Bool) -> UIButton {
+    @discardableResult
+    func jcs_adjustsImageWhenHighlighted(value: Bool) -> Self {
         adjustsImageWhenHighlighted = value
         return self
     }
-
-    func jcs_adjustsImageWhenDisabled(value: Bool) -> UIButton {
+    @discardableResult
+    func jcs_adjustsImageWhenDisabled(value: Bool) -> Self {
         adjustsImageWhenDisabled = value
         return self
     }
 
     // MARK: - EdgeInsets
-
-    func jcs_imageEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> UIButton {
+    @discardableResult
+    func jcs_imageEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> Self {
         imageEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }
-
-    func jcs_contentEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> UIButton {
+    @discardableResult
+    func jcs_contentEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> Self {
         contentEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }

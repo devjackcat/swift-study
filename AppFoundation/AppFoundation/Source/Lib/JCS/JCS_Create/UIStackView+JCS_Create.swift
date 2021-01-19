@@ -21,27 +21,32 @@ public extension UIStackView {
         self.spacing = spacing ?? 0
     }
 
-    func jcs_axis_Vertical() -> UIStackView {
+    @discardableResult
+    func jcs_axis_Vertical() -> Self {
         axis = .vertical
         return self
     }
 
-    func jcs_axis_Horizontal() -> UIStackView {
+    @discardableResult
+    func jcs_axis_Horizontal() -> Self {
         axis = .horizontal
         return self
     }
 
-    func jcs_alignment(_ alignment: UIStackView.Alignment) -> UIStackView {
+    @discardableResult
+    func jcs_alignment(_ alignment: UIStackView.Alignment) -> Self {
         self.alignment = alignment
         return self
     }
 
-    func jcs_distribution(_ distribution: UIStackView.Distribution) -> UIStackView {
+    @discardableResult
+    func jcs_distribution(_ distribution: UIStackView.Distribution) -> Self {
         self.distribution = distribution
         return self
     }
 
-    func jcs_spacing(_ spacing: CGFloat) -> UIStackView {
+    @discardableResult
+    func jcs_spacing(_ spacing: CGFloat) -> Self {
         self.spacing = spacing
         return self
     }

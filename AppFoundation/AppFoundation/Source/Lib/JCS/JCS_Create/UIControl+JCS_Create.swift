@@ -11,7 +11,8 @@ import RxSwift
 import UIKit
 
 public extension UIControl {
-    func jcs_click(closures: @escaping (_ sender: UIControl) -> Void) -> UIControl {
+    @discardableResult
+    func jcs_touchUpInside(closures: @escaping (_ sender: UIControl) -> Void) -> Self {
         _ = rx.controlEvent(.touchUpInside).subscribe(onNext: { [weak self] _ in
             closures(self!)
         })

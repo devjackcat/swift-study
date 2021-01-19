@@ -15,21 +15,25 @@ public extension UIImageView {
         image = UIImage(named: imageName)
     }
 
-    func jcs_image(image: UIImage) -> UIImageView {
+    @discardableResult
+    func jcs_image(image: UIImage) -> Self {
         self.image = image
         return self
     }
 
-    func jcs_image(imageName: String) -> UIImageView {
+    @discardableResult
+    func jcs_image(imageName: String) -> Self {
         image = UIImage(named: imageName)
         return self
     }
 
-    func jcs_image(imageUrl: String, placeHolder: UIImage? = nil) -> UIImageView {
+    @discardableResult
+    func jcs_image(imageUrl: String, placeHolder: UIImage? = nil) -> Self {
         return jcs_image(imageUrl: URL(string: imageUrl)!, placeHolder: placeHolder)
     }
 
-    func jcs_image(imageUrl: URL, placeHolder: UIImage? = nil) -> UIImageView {
+    @discardableResult
+    func jcs_image(imageUrl: URL, placeHolder: UIImage? = nil) -> Self {
         kf.setImage(with: imageUrl, placeholder: placeHolder)
         return self
     }

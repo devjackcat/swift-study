@@ -18,58 +18,64 @@ public extension UILabel {
     }
 
     // MARK: - Text
-
-    func jcs_text(text: String?) -> UILabel {
+    @discardableResult
+    func jcs_text(text: String?) -> Self {
         self.text = text
         return self
     }
 
     // MARK: - 颜色
-
-    func jcs_textColor(color: UIColor) -> UILabel {
+    @discardableResult
+    func jcs_textColor(color: UIColor) -> Self {
         textColor = color
         return self
     }
 
-    func jcs_textColor(hex: Int, alpha: CGFloat = 1) -> UILabel {
+    @discardableResult
+    func jcs_textColor(hex: Int, alpha: CGFloat = 1) -> Self {
         textColor = UIColor(hex: hex, alpha: alpha)
         return self
     }
 
     // MAKR: - 字体
-    func jcs_font(font: UIFont) -> UILabel {
+    @discardableResult
+    func jcs_font(font: UIFont) -> Self {
         self.font = font
         return self
     }
 
-    func jcs_font(fontSize: CGFloat) -> UILabel {
+    @discardableResult
+    func jcs_font(fontSize: CGFloat) -> Self {
         font = UIFont.systemFont(ofSize: fontSize)
         return self
     }
 
     // numberOfLines
-    func jcs_numberOfLines(numberOfLines: Int) -> UILabel {
+    @discardableResult
+    func jcs_numberOfLines(numberOfLines: Int) -> Self {
         self.numberOfLines = numberOfLines
         return self
     }
 
-    func jcs_numberOfLines_Zero() -> UILabel {
+    @discardableResult
+    func jcs_numberOfLines_Zero() -> Self {
         numberOfLines = 0
         return self
     }
 
     // 对齐方式
-    func jcs_textAlignment_Left() -> UILabel {
+    @discardableResult
+    func jcs_textAlignment_Left() -> Self {
         textAlignment = .left
         return self
     }
-
-    func jcs_textAlignment_Right() -> UILabel {
+    @discardableResult
+    func jcs_textAlignment_Right() -> Self {
         textAlignment = .right
         return self
     }
-
-    func jcs_textAlignment_Center() -> UILabel {
+    @discardableResult
+    func jcs_textAlignment_Center() -> Self {
         textAlignment = .center
         return self
     }

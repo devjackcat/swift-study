@@ -27,23 +27,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // cell 赋值
-        datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
-            cell.titleLabel.text = model.title
-            cell.jumpClassLabel.text = model.route
-        }.disposing(with: self)
-
-        // table 点击事件
-        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            guard let self = self else { return }
-            let item = self.viewModel.demoList[indexPath.item]
-
-            TinyConsole.print("进入 \(item.title)", color: .red)
-            JCRouter.route(url: item.route)
-            
-        }).disposing(with: self)
-
-        // 触发数据
-        datasource.accept(viewModel.demoList)
+//        datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
+//            cell.titleLabel.text = model.title
+//            cell.jumpClassLabel.text = model.route
+//        }.disposing(with: self)
+//
+//        // table 点击事件
+//        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
+//            guard let self = self else { return }
+//            let item = self.viewModel.demoList[indexPath.item]
+//
+//            TinyConsole.print("进入 \(item.title)", color: .red)
+//            JCRouter.route(url: item.route)
+//
+//        }).disposing(with: self)
+//
+//        // 触发数据
+//        datasource.accept(viewModel.demoList)
+        
+        UILabel(text: "哈哈哈", font: .systemFont(ofSize: 12), color: .red)
+            .jcs_layout(superView: self.view, frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+            .jcs_backgroundColor(color: .blue)
+            .jcs_text(text: "张三")
+            .jcs_textAlignment_Center()
     }
 }
 
