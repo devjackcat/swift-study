@@ -11,41 +11,24 @@ import URLNavigator
 
 class ExampleRouter: JCRouterProtocol {
     
-    static var bundleName: String {
-        let name = Bundle.main.object(forInfoDictionaryKey: "CFBundleName")! as! String
-        return name.replacingOccurrences(of: "-", with: "_")
-    }
-    
     private static func registerSbVC<T: UIViewController>(navigator: Navigator, route: String, cls: T.Type) where T: StoryboardIdentifiable {
-        navigator.register(route) { (_, _, _) -> UIViewController? in
-            return T.instantiateFromStoryboard()
+        navigator.register(route) { (_, _, context) -> UIViewController? in
+            let vc = T.instantiateFromStoryboard()
+            if let context = context as? [String: String], let title = context["title"] {
+                vc.title = title
+            }
+            return vc
         }
     }
     
     static func register(navigator: Navigator) {
-        registerSbVC(navigator: navigator, route: "jackcat://push/CountDownTimerExampleVC", cls: CountDownTimerExampleVC.self)
-        registerSbVC(navigator: navigator, route: "jackcat://push/ExampleStackViewVC", cls: ExampleStackViewVC.self)
-        registerSbVC(navigator: navigator, route: "jackcat://push/IBDesignableKitVC", cls: IBDesignableKitVC.self)
-        registerSbVC(navigator: navigator, route: "jackcat://push/ExampleRxSwiftVC", cls: ExampleRxSwiftVC.self)
-        registerSbVC(navigator: navigator, route: "jackcat://push/RichTextViewController", cls: RichTextViewController.self)
-        registerSbVC(navigator: navigator, route: "jackcat://push/PopverViewController", cls: PopverViewController.self)
-
-        // ModalDemoViewController
-        navigator.register("jackcat://push/<string:vc>") { (_, values, _) -> UIViewController? in
-            if let vcName = values["vc"] as? String, let cls = NSClassFromString(vcName) as? UIViewController.Type {
-                return cls.init()
-            }
-            return nil
-        }
+        registerSbVC(navigator: navigator, route: "jackcat://sb/CountDownTimerExampleVC", cls: CountDownTimerExampleVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/ExampleStackViewVC", cls: ExampleStackViewVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/IBDesignableKitVC", cls: IBDesignableKitVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/ExampleRxSwiftVC", cls: ExampleRxSwiftVC.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/RichTextViewController", cls: RichTextViewController.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/PopverViewController", cls: PopverViewController.self)
         
-        // ModalDemoViewController
-        navigator.register("jackcat://push/ModalDemoViewController") { (_, _, _) -> UIViewController? in
-            return ModalDemoViewController()
-        }
-        // DemoTouchTroughVC
-        navigator.register("jackcat://push/DemoTouchTroughVC") { (_, _, _) -> UIViewController? in
-            return DemoTouchTroughVC()
-        }
         // HJGiftPopDemoViewController
         navigator.register("jackcat://jumpGiftPopVC/<int:id>") { (url, values, context) -> UIViewController? in
             if let id = values["id"] as? Int {
@@ -53,8 +36,22 @@ class ExampleRouter: JCRouterProtocol {
                 vc.pandaMaster = id == 1 ? .Audience : .Anchor
                 return vc
             }
-            return UIViewController()
+            return nil
         }
+        
+        // ModalDemoViewController
+        navigator.register("jackcat://runtime/<string:vc>") { (_, values, context) -> UIViewController? in
+            if let vcName = values["vc"] as? String,
+               let obj = JCSRuntime.createInstance(for: vcName) as? UIViewController {
+                if let context = context as? [String: String], let title = context["title"] {
+                    obj.title = title
+                }
+                return obj
+            }
+            
+            return nil
+        }
+    
     }
     
     static func handle(navigator: Navigator) {

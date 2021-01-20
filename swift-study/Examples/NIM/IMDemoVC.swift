@@ -13,6 +13,9 @@ class IMDemoVC: UIViewController {
     let chatManager = IMChatManager(sessionId: "111111")
     
     override func viewDidLoad() {
+        
+        view.jcs_backgroundColor_White()
+        
         // {"type":2022,"data":{"msgType":100101,"msgJson":{"name":"皮皮"}}}
         chatManager.rx.attachmentSignal(IMChatAttachment<AnimationVO>.self)
             .emit(onNext: {message in

@@ -12,6 +12,7 @@ class PersonVC: UIViewController {
     let chatManager = IMChatManager(sessionId: "111111")
     
     override func viewDidLoad() {
+        view.jcs_backgroundColor_White()
         // {"type":2020,"data":{"msgType":100101,"msgJson":{"username":"Jack","nickname":"Jack猫","age":22}}}
         chatManager.rx.attachmentSignal(IMChatAttachment<PersonVO>.self)
             .emit(onNext: {message in

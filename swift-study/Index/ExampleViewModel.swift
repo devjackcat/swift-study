@@ -16,20 +16,28 @@ class ExampleViewModel {
     }
     
     let demoList: [ExampleListItem] = [
+        
+        // 单独
         ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"),
-        ExampleListItem(title: "IMDemo(主工程)",route: "jackcat://push/swift_study.IMDemoVC"),
-        ExampleListItem(title: "IMDemo(Order)",route: "jackcat://push/OrderModule.OrderVC"),
-        ExampleListItem(title: "IMDemo(Person)",route: "jackcat://push/PersonModule.PersonVC"),
         ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
         ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
-        ExampleListItem(title: "倒计时", route: "jackcat://push/CountDownTimerExampleVC"),
-        ExampleListItem(title: "UIStackView",route: "jackcat://push/ExampleStackViewVC"),
-        ExampleListItem(title: "RxSwift",route: "jackcat://push/ExampleRxSwiftVC"),
-        ExampleListItem(title: "IBDesignableKit",route: "jackcat://push/IBDesignableKitVC"),
-        ExampleListItem(title: "富文本",route: "jackcat://push/RichTextViewController"),
-        ExampleListItem(title: "Popver",route: "jackcat://push/PopverViewController"),
-        ExampleListItem(title: "Modal",route: "jackcat://push/ModalDemoViewController"),
-        ExampleListItem(title: "TouchTrough",route: "jackcat://push/DemoTouchTroughVC"),
+        
+        // runtime
+        ExampleListItem(title: "IMDemo(主工程)",route: "jackcat://runtime/IMDemoVC"),
+        ExampleListItem(title: "IMDemo(Order)",route: "jackcat://runtime/OrderVC"),
+        ExampleListItem(title: "IMDemo(Person)",route: "jackcat://runtime/PersonVC"),
+        ExampleListItem(title: "JCS", route: "jackcat://runtime/JCSDemoVC"),
+        ExampleListItem(title: "Modal",route: "jackcat://runtime/ModalDemoViewController"),
+        ExampleListItem(title: "TouchTrough",route: "jackcat://runtime/DemoTouchTroughVC"),
+        
+        // sb
+        ExampleListItem(title: "倒计时", route: "jackcat://sb/CountDownTimerExampleVC"),
+        ExampleListItem(title: "UIStackView",route: "jackcat://sb/ExampleStackViewVC"),
+        ExampleListItem(title: "RxSwift",route: "jackcat://sb/ExampleRxSwiftVC"),
+        ExampleListItem(title: "IBDesignableKit",route: "jackcat://sb/IBDesignableKitVC"),
+        ExampleListItem(title: "富文本",route: "jackcat://sb/RichTextViewController"),
+        ExampleListItem(title: "Popver",route: "jackcat://sb/PopverViewController"),
+        
     ]
     
 }

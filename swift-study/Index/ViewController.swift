@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             let item = self.viewModel.demoList[indexPath.item]
 
             TinyConsole.print("进入 \(item.title)", color: .red)
-            JCRouter.route(url: item.route)
+            JCRouter.route(url: item.route, content: ["title":item.title])
 
         }).disposing(with: self)
 

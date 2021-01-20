@@ -17,6 +17,9 @@ class AppSetup {
         loadRoutes()
         // 注册三方库
         registerThirdParty()
+        
+        // 加载需要runtime创建的class
+        JCSRuntime.loadRuntimeClasses()
     }
     
     private func loadRoutes() {

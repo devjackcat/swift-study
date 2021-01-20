@@ -12,6 +12,7 @@
 		7D01021925B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021825B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift */; };
 		7D01021C25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021B25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift */; };
 		7D01021F25B6DCBC00A2D359 /* UICollectionView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021E25B6DCBC00A2D359 /* UICollectionView+JCS_Create.swift */; };
+		7D01022B25B7C96F00A2D359 /* JCSRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01022A25B7C96F00A2D359 /* JCSRuntime.swift */; };
 		7D4E4644258B374900C776DD /* AppFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D4E4642258B374900C776DD /* AppFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D4E46E7258B3D4100C776DD /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E46E6258B3D4100C776DD /* Media1.xcassets */; };
 		7D4E472D258B51D500C776DD /* UIViewControllerFromStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4E472B258B51D500C776DD /* UIViewControllerFromStoryboard.swift */; };
@@ -67,6 +68,7 @@
 		7D01021825B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D01021B25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D01021E25B6DCBC00A2D359 /* UICollectionView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+JCS_Create.swift"; sourceTree = "<group>"; };
+		7D01022A25B7C96F00A2D359 /* JCSRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSRuntime.swift; sourceTree = "<group>"; };
 		7D4E463F258B374900C776DD /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4E4642258B374900C776DD /* AppFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFoundation.h; sourceTree = "<group>"; };
 		7D4E4643258B374900C776DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB387E22591EC1A00E7058A /* JCRouter.swift */,
+				7D01022A25B7C96F00A2D359 /* JCSRuntime.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				7DB386882591CAC700E7058A /* IBLabel.swift in Sources */,
 				7DB3869B2591CAC700E7058A /* UIView+Extension.swift in Sources */,
 				7DB386932591CAC700E7058A /* UILabel+JCS_Create.swift in Sources */,
+				7D01022B25B7C96F00A2D359 /* JCSRuntime.swift in Sources */,
 				7DB386AE2591CAD200E7058A /* TimerCountDownExt.swift in Sources */,
 				7D01021F25B6DCBC00A2D359 /* UICollectionView+JCS_Create.swift in Sources */,
 				7DB3869D2591CAC700E7058A /* ContainerTouchTroughView.swift in Sources */,

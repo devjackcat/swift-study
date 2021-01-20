@@ -13,6 +13,7 @@ class OrderVC: UIViewController {
     let chatManager = IMChatManager(sessionId: "111111")
 
     override func viewDidLoad() {
+        view.jcs_backgroundColor_White()
         // {"type":2021,"data":{"msgType":100101,"msgJson":{"orderNo":"ORDER000000001","price":400.2}}}
         chatManager.rx.attachmentSignal(IMChatAttachment<OrderVO>.self)
             .emit(onNext: {message in

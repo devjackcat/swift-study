@@ -17,12 +17,12 @@
 		<key>OrderModule.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>52</integer>
+			<integer>53</integer>
 		</dict>
 		<key>PersonModule.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>50</integer>
+			<integer>52</integer>
 		</dict>
 		<key>swift-study.xcscheme_^#shared#^_</key>
 		<dict>
