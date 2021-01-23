@@ -23,6 +23,7 @@ class ExampleViewModel {
         ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
         
         // runtime
+        ExampleListItem(title: "JCSNavigator",route: "jackcat://runtime/JCSNavigatorVC"),
         ExampleListItem(title: "IMDemo(主工程)",route: "jackcat://runtime/IMDemoVC"),
         ExampleListItem(title: "IMDemo(Order)",route: "jackcat://runtime/OrderVC"),
         ExampleListItem(title: "IMDemo(Person)",route: "jackcat://runtime/PersonVC"),

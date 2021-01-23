@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A4ACC5486231594A67F156C /* Pods_AppFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33F884A16B9FE66CFCA9C69 /* Pods_AppFoundation.framework */; };
+		280836A625BBA6B000DD0389 /* JCSNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280836A525BBA6B000DD0389 /* JCSNavigationViewController.swift */; };
 		7D01021425B6DC5600A2D359 /* UICollectionViewCell+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021325B6DC5600A2D359 /* UICollectionViewCell+JCS_Create.swift */; };
 		7D01021925B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021825B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift */; };
 		7D01021C25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01021B25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280836A525BBA6B000DD0389 /* JCSNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNavigationViewController.swift; sourceTree = "<group>"; };
 		7D01021325B6DC5600A2D359 /* UICollectionViewCell+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D01021825B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D01021B25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+JCS_Create.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		280836A425BBA69F00DD0389 /* JCSNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				280836A525BBA6B000DD0389 /* JCSNavigationViewController.swift */,
+			);
+			path = JCSNavigation;
+			sourceTree = "<group>";
+		};
 		7D01021225B6DC4200A2D359 /* UICollectionView+JCSCreate */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		7DB386562591CAC700E7058A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				280836A425BBA69F00DD0389 /* JCSNavigation */,
 				7DB386572591CAC700E7058A /* Popover.swift */,
 				7DB386582591CAC700E7058A /* IBDesignableKit */,
 				7DB386682591CAC700E7058A /* JCS */,
@@ -510,6 +521,7 @@
 				7DB386902591CAC700E7058A /* IBProgressView.swift in Sources */,
 				7DB3868A2591CAC700E7058A /* IBGradientView.swift in Sources */,
 				7D4E472D258B51D500C776DD /* UIViewControllerFromStoryboard.swift in Sources */,
+				280836A625BBA6B000DD0389 /* JCSNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

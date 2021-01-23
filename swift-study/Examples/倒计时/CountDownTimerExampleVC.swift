@@ -21,16 +21,16 @@ class CountDownTimerExampleVC: UIViewController {
     let duration: TimeInterval = 30
     
     override func viewDidLoad() {
-        timer = CountDownTimer(total: duration, repeat: 1) { [weak self] (timer, interval) in
-            self?.statusLabel.text = "进行中"
-            self?.processLabel.text = ""
-        } handler: { [weak self]  (timer, interval) in
-            guard let self = self else { return }
-            self.processLabel.text = "总时长\(self.duration)s, 当前\(Int(interval))s"
-        } timeOut: { [weak self]  (timer, interval) in
-            self?.statusLabel.text = ""
-            self?.processLabel.text = ""
-        }
+//        timer = CountDownTimer(total: duration, repeat: 1) { [weak self] (timer, interval) in
+//            self?.statusLabel.text = "进行中"
+//            self?.processLabel.text = ""
+//        } handler: { [weak self]  (timer, interval) in
+//            guard let self = self else { return }
+//            self.processLabel.text = "总时长\(self.duration)s, 当前\(Int(interval))s"
+//        } timeOut: { [weak self]  (timer, interval) in
+//            self?.statusLabel.text = ""
+//            self?.processLabel.text = ""
+//        }
         
 //        let v = JCDemoView.fromNib()
 //        view.addSubview(v)

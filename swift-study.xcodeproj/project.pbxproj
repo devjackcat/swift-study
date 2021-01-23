@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280836A925BBA70E00DD0389 /* JCSNavigatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280836A825BBA70E00DD0389 /* JCSNavigatorVC.swift */; };
+		280836AB25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280836AA25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift */; };
 		57AC2D29B759D752F1FE9F7E /* Pods_swift_study_PersonModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79BFE65063D1CFD9D60664B /* Pods_swift_study_PersonModule.framework */; };
 		7D01022625B7C52C00A2D359 /* JCSDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01022525B7C52C00A2D359 /* JCSDemoVC.swift */; };
 		7D01022825B7C6A600A2D359 /* jcs_runtime_classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D01022725B7C6A600A2D359 /* jcs_runtime_classes.plist */; };
@@ -149,6 +151,8 @@
 
 /* Begin PBXFileReference section */
 		1C38A148C02555E13B77275F /* Pods-swift-study-PersonModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-study-PersonModule.debug.xcconfig"; path = "Target Support Files/Pods-swift-study-PersonModule/Pods-swift-study-PersonModule.debug.xcconfig"; sourceTree = "<group>"; };
+		280836A825BBA70E00DD0389 /* JCSNavigatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNavigatorVC.swift; sourceTree = "<group>"; };
+		280836AA25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNavigatorDemoVC.swift; sourceTree = "<group>"; };
 		53B9D9950BDCCBA127803CA9 /* Pods_swift_study_OrderModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_study_OrderModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		559AB5D24DDA67BD519A9A46 /* Pods-swift-study-Order.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-study-Order.release.xcconfig"; path = "Target Support Files/Pods-swift-study-Order/Pods-swift-study-Order.release.xcconfig"; sourceTree = "<group>"; };
 		5D0C7BB0DC07EC9CACCC48D2 /* Pods-swift-study-Order.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-study-Order.debug.xcconfig"; path = "Target Support Files/Pods-swift-study-Order/Pods-swift-study-Order.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +286,15 @@
 				6C34BFB704F91A4A870DD27F /* Pods-swift-study-PersonModule.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		280836A725BBA6D400DD0389 /* JCS_Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				280836A825BBA70E00DD0389 /* JCSNavigatorVC.swift */,
+				280836AA25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift */,
+			);
+			path = JCS_Navigator;
 			sourceTree = "<group>";
 		};
 		7D01022425B7C41E00A2D359 /* JCS */ = {
@@ -499,6 +512,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				280836A725BBA6D400DD0389 /* JCS_Navigator */,
 				7D01022425B7C41E00A2D359 /* JCS */,
 				7DCBB91125934BBF007D8AD9 /* NIM */,
 				7DB387E02591E78D00E7058A /* URLNavigator */,
@@ -895,6 +909,7 @@
 				7DA1A25724D3E2B000106D4B /* PopverContentView.swift in Sources */,
 				7D522349247BA81900B06978 /* DemoItem.swift in Sources */,
 				7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */,
+				280836AB25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift in Sources */,
 				7DF277DE2492154D00A1F7AA /* CounterViewReactor.swift in Sources */,
 				7DD7FE5F24B2FDF600B9B43B /* ViewController.swift in Sources */,
 				7DC57B322579DBA6000F0CDA /* HJGiftPopTrackBehaviorOne.swift in Sources */,
@@ -923,6 +938,7 @@
 				7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */,
 				7DC0B38B2579EB6A00BE5165 /* HJGiftPopTrackBehaviorTwo.swift in Sources */,
 				7D5221F12477DD9B00B06978 /* IGDemoVC.swift in Sources */,
+				280836A925BBA70E00DD0389 /* JCSNavigatorVC.swift in Sources */,
 				7DCBB94E25943AA7007D8AD9 /* IMDemoVC.swift in Sources */,
 				7D01022625B7C52C00A2D359 /* JCSDemoVC.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,
