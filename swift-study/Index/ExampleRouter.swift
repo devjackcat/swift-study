@@ -28,6 +28,8 @@ class ExampleRouter: JCRouterProtocol {
         registerSbVC(navigator: navigator, route: "jackcat://sb/ExampleRxSwiftVC", cls: ExampleRxSwiftVC.self)
         registerSbVC(navigator: navigator, route: "jackcat://sb/RichTextViewController", cls: RichTextViewController.self)
         registerSbVC(navigator: navigator, route: "jackcat://sb/PopverViewController", cls: PopverViewController.self)
+        registerSbVC(navigator: navigator, route: "jackcat://sb/PushHalfVC", cls: PushHalfVC.self)
+        
         
         // HJGiftPopDemoViewController
         navigator.register("jackcat://jumpGiftPopVC/<int:id>") { (url, values, context) -> UIViewController? in

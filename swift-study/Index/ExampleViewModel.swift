@@ -30,6 +30,7 @@ class ExampleViewModel {
         ExampleListItem(title: "JCS", route: "jackcat://runtime/JCSDemoVC"),
         ExampleListItem(title: "Modal",route: "jackcat://runtime/ModalDemoViewController"),
         ExampleListItem(title: "TouchTrough",route: "jackcat://runtime/DemoTouchTroughVC"),
+        ExampleListItem(title: "PushHalfVC",route: "jackcat://sb/PushHalfVC"),
         
         // sb
         ExampleListItem(title: "倒计时", route: "jackcat://sb/CountDownTimerExampleVC"),

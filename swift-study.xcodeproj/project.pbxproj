@@ -14,6 +14,8 @@
 		7D01022825B7C6A600A2D359 /* jcs_runtime_classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D01022725B7C6A600A2D359 /* jcs_runtime_classes.plist */; };
 		7D01FFD324B807E500C3A6FC /* ExampleRxSwiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
+		7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */; };
+		7D2FC41A25BAB2A400CD700D /* PushHalfVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */; };
 		7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CC2473C42E000E6845 /* AppDelegate.swift */; };
 		7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D22473C42E000E6845 /* Main.storyboard */; };
 		7D3F13D62473C42F000E6845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3F13D52473C42F000E6845 /* Assets.xcassets */; };
@@ -162,6 +164,8 @@
 		7D01022725B7C6A600A2D359 /* jcs_runtime_classes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = jcs_runtime_classes.plist; sourceTree = "<group>"; };
 		7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleRxSwiftVC.storyboard; sourceTree = "<group>"; };
 		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
+		7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushHalfVC.swift; sourceTree = "<group>"; };
+		7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushHalfVC.storyboard; sourceTree = "<group>"; };
 		7D3F13C92473C42E000E6845 /* swift-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3F13CC2473C42E000E6845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3F13D32473C42E000E6845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -303,6 +307,15 @@
 				7D01022525B7C52C00A2D359 /* JCSDemoVC.swift */,
 			);
 			path = JCS;
+			sourceTree = "<group>";
+		};
+		7D2FC41625BAB1E500CD700D /* PushHalf */ = {
+			isa = PBXGroup;
+			children = (
+				7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */,
+				7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */,
+			);
+			path = PushHalf;
 			sourceTree = "<group>";
 		};
 		7D3F13C02473C42E000E6845 = {
@@ -513,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				280836A725BBA6D400DD0389 /* JCS_Navigator */,
+				7D2FC41625BAB1E500CD700D /* PushHalf */,
 				7D01022425B7C41E00A2D359 /* JCS */,
 				7DCBB91125934BBF007D8AD9 /* NIM */,
 				7DB387E02591E78D00E7058A /* URLNavigator */,
@@ -793,6 +807,7 @@
 				7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */,
 				7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */,
 				7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */,
+				7D2FC41A25BAB2A400CD700D /* PushHalfVC.storyboard in Resources */,
 				7DD7FE9A24B45DF800B9B43B /* IBDesignableKitVC.storyboard in Resources */,
 				7DF397EB24DA5B87003E88F5 /* HJGiftPopDemoViewController.storyboard in Resources */,
 				7DA1A10724D2BC3B00106D4B /* RichTextViewController.storyboard in Resources */,
@@ -926,6 +941,7 @@
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
 				7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */,
 				7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */,
+				7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,

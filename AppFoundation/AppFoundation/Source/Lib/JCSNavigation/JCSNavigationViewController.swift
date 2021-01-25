@@ -131,6 +131,10 @@ public class JCSNavigationViewController: UIViewController {
             }
         }
         
+        if let lastOne = lastOne {
+            rootVC.transition(from: lastOne, to: vc, duration: 0, options: .allowAnimatedContent, animations: nil, completion: nil)
+        }
+        
         return self
     }
     @discardableResult public func pop(animated: Bool) -> Self{

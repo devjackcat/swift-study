@@ -65,4 +65,32 @@ class JCSNavigatorVC: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("------ JCSNavigatorVC viewWillAppear")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("------ JCSNavigatorVC viewDidAppear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("------ JCSNavigatorVC viewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("------ JCSNavigatorVC viewDidDisappear")
+    }
+    
+    // Push JCSNavigatorVC
+//    ------ Index viewWillDisappear
+//    ------ JCSNavigatorVC viewWillAppear
+//    ------ Index viewDidDisappear
+//    ------ JCSNavigatorVC viewDidAppear
+    
+    // Pop 
+//    ------ JCSNavigatorVC viewWillDisappear
+//    ------ Index viewWillAppear
+//    ------ JCSNavigatorVC viewDidDisappear
+//    ------ Index viewDidAppear
 }
