@@ -94,13 +94,12 @@ public class JCSNavigationViewController: UIViewController {
         
         self.hostVC = hostVC
         
-        hostVC.viewWillDisappear(animated)
-        
+        hostVC.beginAppearanceTransition(true, animated: animated)
         hostVC.addChild(self)
         hostVC.view.addSubview(view)
         view.frame = hostVC.view.bounds
         enterAnimateClosure?(self.view, {
-            hostVC.viewDidDisappear(animated)
+            hostVC.endAppearanceTransition()
             completion?()
         })
         
@@ -119,23 +118,25 @@ public class JCSNavigationViewController: UIViewController {
         
         guard let lastOne = viewControlers.last else { return self }
         
-        lastOne.viewWillDisappear(animated)
-        
         _pushVC(vc: vc)
         
         if animated {
             vc.view.frame = willShowFrame
             lastOne.view.frame = showingFrame
-            
-            UIView.animate(withDuration: 0.25) {
-                lastOne.viewDidDisappear(animated)
+        
+            UIView.animate(withDuration: 0.25, animations: {
                 vc.view.frame = self.showingFrame
                 lastOne.view.frame = self.hiddenFrame
-            }
+            }, completion: { _ in
+                lastOne.view.removeFromSuperview()
+                lastOne.removeFromParent()
+            })
+
         } else {
-            lastOne.viewDidDisappear(animated)
             vc.view.frame = self.showingFrame
             lastOne.view.frame = self.hiddenFrame
+            lastOne.view.removeFromSuperview()
+            lastOne.removeFromParent()
         }
         
         return self
@@ -145,8 +146,9 @@ public class JCSNavigationViewController: UIViewController {
         if viewControlers.count > 1 { // 堆栈有至少2个，则pop
             let willShowOne = viewControlers[viewControlers.count - 2]
             let willPopOne = viewControlers[viewControlers.count - 1]
-            
-            self.hostVC?.viewWillAppear(animated)
+
+            addChild(willShowOne)
+            view.addSubview(willShowOne.view)
             
             if animated {
                 willShowOne.view.frame = hiddenFrame
@@ -157,13 +159,11 @@ public class JCSNavigationViewController: UIViewController {
                     willPopOne.view.frame = self.willShowFrame
                 }, completion: { _ in
                     self._pop(vc: willPopOne)
-                    self.hostVC?.viewDidAppear(animated)
                 })
             } else {
                 willShowOne.view.frame = self.showingFrame
                 willPopOne.view.frame = self.willShowFrame
                 self._pop(vc: willPopOne)
-                self.hostVC?.viewDidAppear(animated)
             }
         }
         else { // 就一个了，则pop后销毁
@@ -177,7 +177,8 @@ public class JCSNavigationViewController: UIViewController {
         if viewControlers.count > 1 { // 堆栈有至少2个，则pop
             let willPopOne = viewControlers[viewControlers.count - 1]
             
-            self.hostVC?.viewWillAppear(animated)
+            addChild(rootVC)
+            view.addSubview(rootVC.view)
             
             if animated {
                 rootVC.view.frame = hiddenFrame
@@ -187,37 +188,58 @@ public class JCSNavigationViewController: UIViewController {
                     willPopOne.view.frame = self.willShowFrame
                 }, completion: { _ in
                     self._popToRoot()
-                    self.hostVC?.viewDidAppear(animated)
                 })
             } else {
                 self.rootVC.view.frame = self.showingFrame
                 self._popToRoot()
-                self.hostVC?.viewDidAppear(animated)
             }
         }
         
         return self
     }
     @discardableResult public func hidden(completion: (() -> Void)? = nil) -> Self{
+        guard let lastOne = viewControlers.last else { return self }
+        
+        lastOne.removeFromParent()
+        
+        hostVC?.beginAppearanceTransition(true, animated: true)
+        self.hostVC?.endAppearanceTransition()
+        
         leaveAnimateClosure?(self.view, {
+            lastOne.view.removeFromSuperview()
             completion?()
         })
+        
         return self
     }
     @discardableResult public func show(completion: (() -> Void)? = nil) -> Self{
+        guard let lastOne = viewControlers.last else { return self }
+        
+        hostVC?.beginAppearanceTransition(false, animated: true)
+        self.hostVC?.endAppearanceTransition()
+        
+        addChild(lastOne)
+        view.addSubview(lastOne.view)
+        lastOne.view.frame = showingFrame
+        
         enterAnimateClosure?(self.view, {
             completion?()
         })
+        
         return self
     }
     @discardableResult public func distory(animated: Bool, completion: (() -> Void)? = nil) -> Self{
-        hostVC?.viewWillAppear(animated)
+        
+        self.removeFromParent()
+        
+        self.hostVC?.beginAppearanceTransition(true, animated: animated)
+        self.hostVC?.endAppearanceTransition()
+        
         leaveAnimateClosure?(self.view, {
             self.view.removeFromSuperview()
-            self.removeFromParent()
-            self.hostVC?.viewDidAppear(animated)
             completion?()
         })
+        
         return self
     }
     

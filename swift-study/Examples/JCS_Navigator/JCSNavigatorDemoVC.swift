@@ -49,7 +49,7 @@ class JCSNavigatorDemoVC: UIViewController {
             .jcs_backgroundColor_Random()
             .jcs_click(closures: { [weak self] sender in
                 guard let self = self else { return }
-                self.jcs_navigator?.pop(animated: false)
+                self.jcs_navigator?.pop(animated: true)
             })
             .jcs_layout(superView: self) { (make) in
                 make.width.equalTo(100)
