@@ -36,7 +36,7 @@ class JCSNavigatorDemoVC: UIViewController {
             .jcs_backgroundColor_Random()
             .jcs_click(closures: { [weak self] sender in
                 guard let self = self, let newTitle = JCSNavigatorTitles.popLast() else { return }
-                self.jcs_navigator?.push(vc: JCSNavigatorDemoVC(title: newTitle), animated: false)
+                self.jcs_navigator?.push(vc: JCSNavigatorDemoVC(title: newTitle), animated: true)
             })
             .jcs_layout(superView: self) { (make) in
                 make.width.equalTo(100)
@@ -100,19 +100,19 @@ class JCSNavigatorDemoVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("------ JCSNavigatorDemoVC viewWillAppear")
+        print("------ JCSNavigatorDemoVC (\(myTitle) viewWillAppear")
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("------ JCSNavigatorDemoVC viewDidAppear")
+        print("------ JCSNavigatorDemoVC (\(myTitle) viewDidAppear")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("------ JCSNavigatorDemoVC viewWillDisappear")
+        print("------ JCSNavigatorDemoVC (\(myTitle) viewWillDisappear")
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("------ JCSNavigatorDemoVC viewDidDisappear")
+        print("------ JCSNavigatorDemoVC (\(myTitle) viewDidDisappear")
     }
     
 }

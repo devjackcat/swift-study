@@ -14,6 +14,10 @@ class JCSNavigatorVC: UIViewController {
 
     weak var navi: JCSNavigationViewController?
     
+    deinit {
+        print("----JCSNavigatorVC deinit")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +27,6 @@ class JCSNavigatorVC: UIViewController {
             "Demo VC 2",
             "Demo VC 1",
         ]
-
 
         view.jcs_backgroundColor(.red)
         
@@ -35,6 +38,10 @@ class JCSNavigatorVC: UIViewController {
                 if let navi = self.navi {
                     navi.show()
                 } else {
+//                    let vc = JCSNavigatorDemoVC(title: "哈哈")
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true, completion: nil)
+                    
                     let title = JCSNavigatorTitles.popLast()
                     self.navi = JCSNavigationViewController(rootVC: JCSNavigatorDemoVC(title: title!))
 //                        .jcs_enterAnimate({ (contentView, completion) in
@@ -82,13 +89,25 @@ class JCSNavigatorVC: UIViewController {
         print("------ JCSNavigatorVC viewDidDisappear")
     }
     
+    // rootVC present JCSNavigatorDemoVC ---------- OK
+//    ------ JCSNavigatorVC viewWillDisappear
+//    ------ JCSNavigatorDemoVC viewWillAppear
+//    ------ JCSNavigatorDemoVC viewDidAppear
+//    ------ JCSNavigatorVC viewDidDisappear
+    
+    // JCSNavigatorDemoVC dismiss
+//    ------ JCSNavigatorDemoVC viewWillDisappear
+//    ------ JCSNavigatorVC viewWillAppear
+//    ------ JCSNavigatorVC viewDidAppear
+//    ------ JCSNavigatorDemoVC viewDidDisappear
+    
     // Push JCSNavigatorVC
 //    ------ Index viewWillDisappear
 //    ------ JCSNavigatorVC viewWillAppear
 //    ------ Index viewDidDisappear
 //    ------ JCSNavigatorVC viewDidAppear
     
-    // Pop 
+    // Pop
 //    ------ JCSNavigatorVC viewWillDisappear
 //    ------ Index viewWillAppear
 //    ------ JCSNavigatorVC viewDidDisappear
