@@ -22,7 +22,7 @@ public extension UITableView {
         self.delegate = delegate
         return self
     }
-    @discardableResult func jcs_delegate(_ dataSource: UITableViewDataSource) -> Self {
+    @discardableResult func jcs_dataSource(_ dataSource: UITableViewDataSource) -> Self {
         self.dataSource = dataSource
         return self
     }

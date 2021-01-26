@@ -18,7 +18,6 @@ class LSActivityExplodeCellView: UIView {
             })
             .jcs_cornerRadius(7)
             .jcs_backgroundColor(.blue)
-            .jcs_toLabel()
             .jcs_textAlignment_Center()
     }
 

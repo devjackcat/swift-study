@@ -18,7 +18,7 @@ public extension UITextField {
         textColor = color
         return self
     }
-    @discardableResult func jcs_textColor(_ hex: Int, alpha: CGFloat = 1) -> Self {
+    @discardableResult func jcs_textColor(_ hex: UInt, alpha: CGFloat = 1) -> Self {
         textColor = UIColor(hex: hex, alpha: alpha)
         return self
     }

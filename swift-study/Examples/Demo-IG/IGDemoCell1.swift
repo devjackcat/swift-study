@@ -17,7 +17,6 @@ class IGDemoCell1: UICollectionViewCell {
             .jcs_layout(superView: contentView, layout: { make in
                 make.center.equalTo(self.contentView)
             })
-            .jcs_toLabel()
     }
 
     required init?(coder _: NSCoder) {

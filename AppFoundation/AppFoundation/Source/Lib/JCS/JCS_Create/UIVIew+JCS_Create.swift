@@ -12,24 +12,22 @@ import UIKit
 
 public extension UIView {
     // MARK: - - 布局
-
-    @discardableResult func jcs_layout(superView: AnyObject, layout: (ConstraintMaker) -> Void) -> Self {
-        if let parentView = superView as? UIView {
+    private func jcs_layout(superView: AnyObject) {
+        if let parentView = superView as? UIStackView {
+            parentView.addArrangedSubview(self)
+        } else if let parentView = superView as? UIView {
             parentView.addSubview(self)
-        }
-        if let parentView = superView as? UIViewController {
+        } else if let parentView = superView as? UIViewController {
             parentView.view.addSubview(self)
         }
+    }
+    @discardableResult func jcs_layout(superView: AnyObject, layout: (ConstraintMaker) -> Void) -> Self {
+        jcs_layout(superView: superView)
         snp.makeConstraints(layout)
         return self
     }
     @discardableResult func jcs_layout(superView: AnyObject, frame: CGRect) -> Self {
-        if let parentView = superView as? UIView {
-            parentView.addSubview(self)
-        }
-        if let parentView = superView as? UIViewController {
-            parentView.view.addSubview(self)
-        }
+        jcs_layout(superView: superView)
         self.frame = frame
         return self
     }
@@ -56,7 +54,7 @@ public extension UIView {
         backgroundColor = color
         return self
     }
-    @discardableResult func jcs_backgroundColor(_ hex: Int, alpha: CGFloat = 1) -> Self {
+    @discardableResult func jcs_backgroundColor(_ hex: UInt, alpha: CGFloat = 1) -> Self {
         backgroundColor = UIColor(hex: hex, alpha: alpha)
         return self
     }
@@ -107,15 +105,15 @@ public extension UIView {
     // MAKR: - CGLayer
     
     @discardableResult func jcs_cornerRadius(_ radius: CGFloat) -> Self {
-    layer.cornerRadius = radius
-    layer.masksToBounds = true
-    return self
-}
+        layer.cornerRadius = radius
+        layer.masksToBounds = true
+        return self
+    }
     @discardableResult func jcs_borderColor(_ color: UIColor) -> Self {
         layer.borderColor = color.cgColor
         return self
     }
-    @discardableResult func jcs_borderColor(_ hex: Int, alpha: CGFloat = 1) -> Self {
+    @discardableResult func jcs_borderColor(_ hex: UInt, alpha: CGFloat = 1) -> Self {
         layer.borderColor = UIColor(hex: hex, alpha: alpha).cgColor
         return self
     }
@@ -152,33 +150,6 @@ public extension UIView {
             closures(self!)
         }
         return self
-    }
-
-    // MARK: - 转换
-
-    @discardableResult func jcs_toLabel() -> UILabel {
-        return self as! UILabel
-    }
-    @discardableResult func jcs_toButton() -> UIButton {
-        return self as! UIButton
-    }
-    @discardableResult func jcs_toImageView() -> UIImageView {
-        return self as! UIImageView
-    }
-    @discardableResult func jcs_toControl() -> UIControl {
-        return self as! UIControl
-    }
-    @discardableResult func jcs_toCollectionView() -> UICollectionView {
-        return self as! UICollectionView
-    }
-    @discardableResult func jcs_toTableView() -> UITableView {
-        return self as! UITableView
-    }
-    @discardableResult func jcs_toScrollView() -> UIScrollView {
-        return self as! UIScrollView
-    }
-    @discardableResult func jcs_toStackView() -> UIStackView {
-        return self as! UIStackView
     }
 
 }

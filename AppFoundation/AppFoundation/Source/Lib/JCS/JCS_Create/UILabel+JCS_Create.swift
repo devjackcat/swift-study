@@ -22,13 +22,16 @@ public extension UILabel {
         self.text = text
         return self
     }
-
+    @discardableResult func jcs_attributedText(_ attrText: NSAttributedString?) -> Self {
+        attributedText = attrText
+        return self
+    }
     // MARK: - 颜色
     @discardableResult func jcs_textColor(_ color: UIColor) -> Self {
         textColor = color
         return self
     }
-    @discardableResult func jcs_textColor(_ hex: Int, alpha: CGFloat = 1) -> Self {
+    @discardableResult func jcs_textColor(_ hex: UInt, alpha: CGFloat = 1) -> Self {
         textColor = UIColor(hex: hex, alpha: alpha)
         return self
     }

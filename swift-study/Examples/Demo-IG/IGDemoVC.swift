@@ -22,7 +22,6 @@ class IGDemoVC: JCS_BaseVC, ListAdapterDataSource {
                 make.left.top.right.bottom.equalTo(0)
             })
             .jcs_backgroundColor_White()
-            .jcs_toCollectionView()
 
         let updater = ListAdapterUpdater()
         adapter = ListAdapter(updater: updater, viewController: self)

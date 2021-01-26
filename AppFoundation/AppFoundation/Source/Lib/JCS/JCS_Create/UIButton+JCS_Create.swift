@@ -23,7 +23,7 @@ public extension UIButton {
         setTitleColor(color, for: state)
         return self
     }
-    @discardableResult func jcs_titleColor(_ hex: Int, state: UIControl.State  = .normal ) -> Self {
+    @discardableResult func jcs_titleColor(_ hex: UInt, state: UIControl.State  = .normal ) -> Self {
         setTitleColor(UIColor(hex: hex), for: state)
         return self
     }
@@ -38,7 +38,12 @@ public extension UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
         return self
     }
-
+    // MARK: - 事件e
+    @discardableResult func jcs_onTap(_ action: @escaping ((UIButton)-> Void)) -> Self {
+        onTap { [unowned self] in
+            action(self)
+        }
+    }
     // MARK: - 图标
     
     @discardableResult func jcs_image(_ image: UIImage?, state: UIControl.State = .normal) -> Self {
@@ -80,6 +85,10 @@ public extension UIButton {
     }
     @discardableResult func jcs_contentEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> Self {
         contentEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        return self
+    }
+    @discardableResult func jcs_titleEdgeInsets(top: CGFloat, left: CGFloat, bottom: CGFloat, right: CGFloat) -> Self {
+        titleEdgeInsets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
         return self
     }
 }
