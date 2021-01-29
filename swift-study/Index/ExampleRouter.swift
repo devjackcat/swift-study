@@ -59,6 +59,13 @@ class ExampleRouter: JCRouterProtocol {
     static func handle(navigator: Navigator) {
         navigator.handle("jackcat://toggleTinyConsole") { (url, values, context) -> Bool in
             TinyConsole.toggleWindowMode()
+            
+            let userInfo = ["username": "李四"]
+            
+            Notification
+                .jcs_post(name: "loginNotification1", object: self, userInfo: userInfo)
+                .jcs_post(name: "loginNotification2", object: self, userInfo: userInfo)
+            
             return true
         }
     }

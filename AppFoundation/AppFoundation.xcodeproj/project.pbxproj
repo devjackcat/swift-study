@@ -24,6 +24,7 @@
 		7D5A4A4B25B6CE7000BE2A57 /* UIScrollView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A4A25B6CE7000BE2A57 /* UIScrollView+JCS_Create.swift */; };
 		7D5A4A4F25B6D30100BE2A57 /* UITextField+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A4E25B6D30100BE2A57 /* UITextField+JCS_Create.swift */; };
 		7D5A4A5225B6D57C00BE2A57 /* UITextView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */; };
+		7D5D3A6D25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */; };
 		7DB386822591CAC700E7058A /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386572591CAC700E7058A /* Popover.swift */; };
 		7DB386832591CAC700E7058A /* IBColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */; };
 		7DB386842591CAC700E7058A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3865A2591CAC700E7058A /* Toucan.swift */; };
@@ -84,6 +85,7 @@
 		7D5A4A4A25B6CE7000BE2A57 /* UIScrollView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5A4A4E25B6D30100BE2A57 /* UITextField+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+JCS_Create.swift"; sourceTree = "<group>"; };
+		7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+JCS_Extension.swift"; sourceTree = "<group>"; };
 		7DB386572591CAC700E7058A /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 		7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBColumnFlowLayout.swift; sourceTree = "<group>"; };
 		7DB3865A2591CAC700E7058A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toucan.swift; sourceTree = "<group>"; };
@@ -228,7 +230,6 @@
 		7DB386562591CAC700E7058A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				280836A425BBA69F00DD0389 /* JCSNavigation */,
 				7DB386572591CAC700E7058A /* Popover.swift */,
 				7DB386582591CAC700E7058A /* IBDesignableKit */,
 				7DB386682591CAC700E7058A /* JCS */,
@@ -264,6 +265,7 @@
 		7DB386682591CAC700E7058A /* JCS */ = {
 			isa = PBXGroup;
 			children = (
+				280836A425BBA69F00DD0389 /* JCSNavigation */,
 				7DB386692591CAC700E7058A /* JCSOperators */,
 				7DB3866B2591CAC700E7058A /* JCS_Create */,
 				7DB386722591CAC700E7058A /* JCS_Base */,
@@ -314,6 +316,7 @@
 				7DB386752591CAC700E7058A /* UIColor+Similarity.swift */,
 				7DB386762591CAC700E7058A /* UIView+Extension.swift */,
 				7DB386772591CAC700E7058A /* UIColor+JCS_Extension.swift */,
+				7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */,
 			);
 			path = JCS_Extension;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				7DB3868D2591CAC700E7058A /* IBButton.swift in Sources */,
 				7DB386AF2591CAD200E7058A /* DateExtension.swift in Sources */,
 				7DB386B32591CAF600E7058A /* UIViewControllerFromStoryboardWithArgs.swift in Sources */,
+				7D5D3A6D25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift in Sources */,
 				7D01021C25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift in Sources */,
 				7DB3869C2591CAC700E7058A /* UIColor+JCS_Extension.swift in Sources */,
 				7DB3874F2591CE2700E7058A /* StringExtension.swift in Sources */,

@@ -12,7 +12,12 @@ private var kNavigatorKey: Int = 0
 
 public extension UIViewController {
     var jcs_navigator: JCSNavigationViewController? {
-        return objc_getAssociatedObject(self, &kNavigatorKey) as? JCSNavigationViewController
+        get {
+            return objc_getAssociatedObject(self, &kNavigatorKey) as? JCSNavigationViewController
+        }
+        set {
+            objc_setAssociatedObject(self, &kNavigatorKey, newValue as Any, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
+        }
     }
 }
 
@@ -94,7 +99,7 @@ public class JCSNavigationViewController: UIViewController {
         
         self.hostVC = hostVC
         
-        hostVC.beginAppearanceTransition(true, animated: animated)
+//        hostVC.beginAppearanceTransition(true, animated: animated)
         hostVC.addChild(self)
         hostVC.view.addSubview(view)
         view.frame = hostVC.view.bounds
@@ -202,8 +207,8 @@ public class JCSNavigationViewController: UIViewController {
         
         lastOne.removeFromParent()
         
-        hostVC?.beginAppearanceTransition(true, animated: true)
-        self.hostVC?.endAppearanceTransition()
+//        hostVC?.beginAppearanceTransition(true, animated: true)
+//        self.hostVC?.endAppearanceTransition()
         
         leaveAnimateClosure?(self.view, {
             lastOne.view.removeFromSuperview()
@@ -215,8 +220,8 @@ public class JCSNavigationViewController: UIViewController {
     @discardableResult public func show(completion: (() -> Void)? = nil) -> Self{
         guard let lastOne = viewControlers.last else { return self }
         
-        hostVC?.beginAppearanceTransition(false, animated: true)
-        self.hostVC?.endAppearanceTransition()
+//        hostVC?.beginAppearanceTransition(false, animated: true)
+//        self.hostVC?.endAppearanceTransition()
         
         addChild(lastOne)
         view.addSubview(lastOne.view)
@@ -232,8 +237,8 @@ public class JCSNavigationViewController: UIViewController {
         
         self.removeFromParent()
         
-        self.hostVC?.beginAppearanceTransition(true, animated: animated)
-        self.hostVC?.endAppearanceTransition()
+//        self.hostVC?.beginAppearanceTransition(true, animated: animated)
+//        self.hostVC?.endAppearanceTransition()
         
         leaveAnimateClosure?(self.view, {
             self.view.removeFromSuperview()

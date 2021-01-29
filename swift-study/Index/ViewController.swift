@@ -35,18 +35,10 @@ class ViewController: UIViewController {
         // table 点击事件
         tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
             guard let self = self else { return }
-//            let item = self.viewModel.demoList[indexPath.item]
-//
-//            TinyConsole.print("进入 \(item.title)", color: .red)
-//            JCRouter.route(url: item.route, content: ["title":item.title])
-            
-            UIAlertController()
-                .jcs_addAction(title: "关闭PK", style: .default) { [weak self]_ in
-                }
-                .jcs_addAction(title: "取消", style: .cancel) { _ in
-                    
-                }
-                .jcs_show(parentVC: self)
+            let item = self.viewModel.demoList[indexPath.item]
+
+            TinyConsole.print("进入 \(item.title)", color: .red)
+            JCRouter.route(url: item.route, content: ["title":item.title])
 
         }).disposing(with: self)
 
