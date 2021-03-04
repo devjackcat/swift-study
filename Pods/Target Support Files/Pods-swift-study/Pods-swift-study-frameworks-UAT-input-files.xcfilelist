@@ -17,7 +17,6 @@ ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework
 ${BUILT_PRODUCTS_DIR}/Then/Then.framework
-${BUILT_PRODUCTS_DIR}/TinyConsole/TinyConsole.framework
 ${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework
 ${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework
 ${BUILT_PRODUCTS_DIR}/WeakMapTable/WeakMapTable.framework

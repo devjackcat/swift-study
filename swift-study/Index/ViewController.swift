@@ -26,14 +26,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-#if JCUAT
-        print("这是JCUAT环境")
-#elseif JCDEBUG
-        print("这是JCDEBUG环境")
-#else
-        print("这是Release环境")
-#endif
-
+        #if JCUAT
+            self.title = "Demo List (JCUAT)"
+        #elseif JCDEBUG
+            self.title = "Demo List (JCDEBUG)"
+        #else
+            self.title = "Demo List (Release)"
+        #endif
+        
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
             cell.titleLabel.text = model.title
@@ -45,7 +45,9 @@ class ViewController: UIViewController {
             guard let self = self else { return }
             let item = self.viewModel.demoList[indexPath.item]
 
+            #if canImport(TinyConsole)
             TinyConsole.print("进入 \(item.title)", color: .red)
+            #endif
             JCRouter.route(url: item.route, content: ["title":item.title])
 
         }).disposing(with: self)

@@ -8,7 +8,9 @@
 
 
 @_exported import AppFoundation
+#if canImport(TinyConsole)
 @_exported import TinyConsole
+#endif
 
 @_exported import NIMSDK
 @_exported import HandyJSON

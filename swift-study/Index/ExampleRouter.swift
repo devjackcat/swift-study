@@ -56,7 +56,9 @@ class ExampleRouter: JCRouterProtocol {
     
     }
     
+    
     static func handle(navigator: Navigator) {
+        #if canImport(TinyConsole)
         navigator.handle("jackcat://toggleTinyConsole") { (url, values, context) -> Bool in
             TinyConsole.toggleWindowMode()
             
@@ -68,5 +70,7 @@ class ExampleRouter: JCRouterProtocol {
             
             return true
         }
+        #endif
     }
+    
 }

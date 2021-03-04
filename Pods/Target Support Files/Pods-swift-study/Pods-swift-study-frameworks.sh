@@ -239,7 +239,6 @@ if [[ "$CONFIGURATION" == "UAT" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TinyConsole/TinyConsole.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WeakMapTable/WeakMapTable.framework"
