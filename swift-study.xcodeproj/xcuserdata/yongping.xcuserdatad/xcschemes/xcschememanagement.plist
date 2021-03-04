@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>31</integer>
 		</dict>
+		<key>AppStore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Debug.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
 		<key>Order.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -16,18 +26,22 @@
 		</dict>
 		<key>OrderModule.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>51</integer>
+			<integer>55</integer>
 		</dict>
 		<key>PersonModule.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>52</integer>
+			<integer>54</integer>
 		</dict>
-		<key>swift-study.xcscheme_^#shared#^_</key>
+		<key>UAT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<key>xx.xcscheme_^#shared#^_</key>
 		<dict>
@@ -38,6 +52,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>7D3F13C82473C42E000E6845</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DCBB9D6259440BA007D8AD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DCBBA6A25947E27007D8AD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

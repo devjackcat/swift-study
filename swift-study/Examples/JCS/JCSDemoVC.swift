@@ -8,13 +8,37 @@
 
 import UIKit
 
+class RedView: UIView {
+    func changeColor() {
+        jcs_backgroundColor_Random()
+    }
+}
+
 class JCSDemoVC: UIViewController {
+    
+    var clickBlock: ((RedView) -> Void)?
+    
+    static var nickname: String = "张三"
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
 
         view.jcs_backgroundColor_White()
         
+        clickBlock = { v in
+            v.changeColor()
+        }
+        
+        RedView()
+            .jcs_backgroundColor_Random()
+            .jcs_click { v in
+                self.clickBlock?(v as! RedView)
+                 print(Self.nickname)
+            }
+            .jcs_layout(superView: self) { (make) in
+                make.center.equalToSuperview()
+                make.width.height.equalTo(200)
+            }
     }
     
 }

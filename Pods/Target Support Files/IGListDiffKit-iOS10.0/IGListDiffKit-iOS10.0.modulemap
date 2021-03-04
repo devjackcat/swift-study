@@ -1,6 +1,0 @@
-framework module IGListDiffKit {
-  umbrella header "IGListDiffKit-iOS10.0-umbrella.h"
-
-  export *
-  module * { export * }
-}

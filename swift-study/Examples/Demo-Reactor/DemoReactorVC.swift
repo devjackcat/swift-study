@@ -81,7 +81,7 @@ class DemoReactorVC: UIViewController, View {
                 make.center.equalTo(self.view)
             })
 
-        activityIndicatorView = UIActivityIndicatorView(style: .large)
+        activityIndicatorView = UIActivityIndicatorView(style: .gray)
             .jcs_layout(superView: self, layout: { make in
                 make.center.equalTo(self.view)
             })

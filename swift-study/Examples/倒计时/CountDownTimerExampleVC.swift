@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxSwift
 
 class CountDownTimerExampleVC: UIViewController {
     
@@ -39,13 +40,35 @@ class CountDownTimerExampleVC: UIViewController {
 //            make.width.height.equalTo(200)
 //        }
     }
-        
+    
+    var animationFinish = false
+    var networkFinish = false
+    
     @IBAction func start(_ sender: Any) {
-        timer.restart()
+//        timer.restart()
+        
+//        Observable.just(true).delay(.seconds(3), scheduler: MainScheduler.instance)
+//            .subscribe(onNext: {
+//                print($0)
+//            })
+//            .disposing(with: self)
+        
+        let animationObservable = Observable.just(true).delay(.seconds(2), scheduler: MainScheduler.instance)
+        let networkObservable = Observable.just(true).delay(.seconds(1), scheduler: MainScheduler.instance)
+        
+        Observable.combineLatest(animationObservable,networkObservable)
+            .subscribe(onNext: { [weak self] (animationFinish, networkFinish) in
+                guard let self = self else { return }
+                self.animationFinish = self.animationFinish || animationFinish
+                self.networkFinish = self.networkFinish || networkFinish
+                
+                print("----self.animationFinish = \(self.animationFinish)  self.networkFinish = \(self.networkFinish)")
+            })
+            .disposing(with: self)
     }
     
     @IBAction func stop(_ sender: Any) {
-        timer.invalidate()
+//        timer.invalidate()
     }
 }
 

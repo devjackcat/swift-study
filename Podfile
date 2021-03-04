@@ -30,7 +30,7 @@ def app_foundation_depency
   pod 'UITableView+FDTemplateLayoutCell'
   
 #  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug', 'DevelopArchive']
-  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug']
+  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug','UAT']
   
   pod 'Result'
   pod 'NIMSDK_LITE'

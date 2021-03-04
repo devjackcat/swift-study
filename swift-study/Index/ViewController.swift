@@ -25,6 +25,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+#if JCUAT
+        print("这是JCUAT环境")
+#elseif JCDEBUG
+        print("这是JCDEBUG环境")
+#else
+        print("这是Release环境")
+#endif
 
         // cell 赋值
         datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
