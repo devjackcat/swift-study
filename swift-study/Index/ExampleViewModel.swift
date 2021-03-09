@@ -44,9 +44,13 @@ class ExampleViewModel {
             ExampleListItem(title: "TouchTrough",route: "jackcat://runtime/DemoTouchTroughVC"),
             ExampleListItem(title: "IBDesignableKit",route: "jackcat://sb/IBDesignableKitVC"),
         ]
-        #if canImport(TinyConsole)
-        module.items.insert(ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"), at: 0)
-        #endif
+        
+        // 加解密
+        module = ExampleListModule(title: "加解密")
+        modules.append(module)
+        module.items = [
+            ExampleListItem(title: "Des加密、解密",route: "jackcat://runtime/EncryptViewController")
+        ]
         
         // 业务测试
         module = ExampleListModule(title: "业务测试")
