@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     private var bag = DisposeBag()
-    private var datasource: BehaviorRelay = BehaviorRelay<[ExampleListItem]>(value: [])
     
     private let viewModel = ExampleViewModel()
 
@@ -34,47 +33,31 @@ class ViewController: UIViewController {
             self.title = "Demo List (Release)"
         #endif
         
-        // cell 赋值
-        datasource.bind(to: tableView.rx.items(cellIdentifier: "cell", cellType: ExampleListCell.self)) { _, model, cell in
-            cell.titleLabel.text = model.title
-            cell.jumpClassLabel.text = model.route
-        }.disposing(with: self)
-
-        // table 点击事件
-        tableView.rx.itemSelected.subscribe(onNext: { [weak self] indexPath in
-            guard let self = self else { return }
-            let item = self.viewModel.demoList[indexPath.item]
-
-            #if canImport(TinyConsole)
-            TinyConsole.print("进入 \(item.title)", color: .red)
-            #endif
-            JCRouter.route(url: item.route, content: ["title":item.title])
-
-        }).disposing(with: self)
-
-        // 触发数据
-        datasource.accept(viewModel.demoList)
+        tableView.dataSource = self
+        tableView.delegate = self
+        viewModel.configItems()
+        tableView.reloadData()
         
         demoClosure = demoFunc
         demoClosure?()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("------ Index viewWillAppear")
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("------ Index viewDidAppear")
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("------ Index viewWillDisappear")
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("------ Index viewDidDisappear")
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        print("------ Index viewWillAppear")
+//    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print("------ Index viewDidAppear")
+//    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        print("------ Index viewWillDisappear")
+//    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        print("------ Index viewDidDisappear")
+//    }
     
     private var contentView: UIView = UIView()
     private func setup() {
@@ -137,12 +120,42 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.modules.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.modules[section].items.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ExampleListCell{
+            let model = viewModel.modules[indexPath.section].items[indexPath.item]
+            
+            cell.titleLabel.text = model.title
+            cell.jumpClassLabel.text = model.route
+            return cell
+        }
+        return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = viewModel.modules[indexPath.section].items[indexPath.item]
+        
+        #if canImport(TinyConsole)
+        TinyConsole.print("进入 \(model.title)", color: .red)
+        #endif
+        
+        JCRouter.route(url: model.route, content: ["title":model.title])
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let module = viewModel.modules[section]
+        return module.title
+    }
+}
 
 extension ViewController: StoryboardIdentifiable {
     static var storyboardName: String = "Main"
     static var storyboardIdentifier: String = "ViewController"
 }
-
 
 
 
