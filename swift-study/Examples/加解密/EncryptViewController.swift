@@ -16,8 +16,40 @@ class EncryptViewController: UIViewController {
         view.jcs_backgroundColor(.red)
     }
     
+//
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let key = "12345678"
+
+        do {
+            var plainString = ""
+            if let path = Bundle.main.path(forResource: "origin-json.json", ofType: nil) {
+                plainString = try String(contentsOfFile: path, encoding: .utf8)
+            }
+
+            var publicKey = ""
+            if let path = Bundle.main.path(forResource: "rsa-public-key.txt", ofType: nil) {
+                publicKey = try String(contentsOfFile: path, encoding: .utf8)
+            }
+
+            var privateKey = ""
+            if let path = Bundle.main.path(forResource: "rsa-private-key.txt", ofType: nil) {
+                privateKey = try String(contentsOfFile: path, encoding: .utf8)
+            }
+
+//            let v = RSAUtil.encryptString(plainString, publicKey: publicKey)
+//            let v2 = RSAUtil.decryptString(v, privateKey: privateKey)
+            
+            let v = RSAUtil.encryptString(<#T##str: String!##String!#>, publicKey: <#T##String!#>)
+            let v2 = RSAUtil.decryptString(v, privateKey: privateKey)
+
+            print("")
+        } catch {
+
+        }
+    }
+    
+    private func desDemo() {
+        let key = "123456781234567812345678"
         
         var plainString = ""
         
@@ -25,9 +57,10 @@ class EncryptViewController: UIViewController {
             if let path = Bundle.main.path(forResource: "origin-json.json", ofType: nil) {
                 plainString = try String(contentsOfFile: path, encoding: .utf8)
             }
+            let v = EncryptUtil.encrypt_AES(plainString, key: key)
+            let v2 = EncryptUtil.decrypt_AES(v, key: key)
             
-            let v = Encrypt.desEncrypt(plainString, key: "12345678")
-            let v2 = Encrypt.desDecrypt(v, key: key)
+            print("")
         } catch {
             
         }

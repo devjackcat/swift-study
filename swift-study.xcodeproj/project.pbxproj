@@ -28,7 +28,11 @@
 		7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5221F42477DF1500B06978 /* IGDemoCell1.swift */; };
 		7D522349247BA81900B06978 /* DemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D522348247BA81900B06978 /* DemoItem.swift */; };
 		7D5D3A7225C3ED4F001ED2C5 /* JCSNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D3A7125C3ED4F001ED2C5 /* JCSNotificationVC.swift */; };
-		7D623BFF25F7851C0036184F /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623BFE25F7851C0036184F /* Test.m */; };
+		7D623BFF25F7851C0036184F /* EncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623BFE25F7851C0036184F /* EncryptUtil.m */; };
+		7D623C0225F867E40036184F /* RSAUtil2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C0125F867E40036184F /* RSAUtil2.m */; };
+		7D623C0425F868EE0036184F /* rsa-public-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D623C0325F868EE0036184F /* rsa-public-key.txt */; };
+		7D623C0625F869190036184F /* rsa-private-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D623C0525F869190036184F /* rsa-private-key.txt */; };
+		7D623C1F25F870AA0036184F /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C1D25F870AA0036184F /* RSAUtil.m */; };
 		7DA11D0825F76F01002EA4E1 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */; };
 		7DA11D0A25F77D02002EA4E1 /* origin-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DA11D0925F77D02002EA4E1 /* origin-json.json */; };
 		7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */; };
@@ -187,8 +191,14 @@
 		7D522348247BA81900B06978 /* DemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoItem.swift; sourceTree = "<group>"; };
 		7D5D3A7125C3ED4F001ED2C5 /* JCSNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNotificationVC.swift; sourceTree = "<group>"; };
 		7D623BFA25F784E30036184F /* swift-study-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swift-study-Bridging-Header.h"; sourceTree = "<group>"; };
-		7D623BFD25F7851C0036184F /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		7D623BFE25F7851C0036184F /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		7D623BFD25F7851C0036184F /* EncryptUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptUtil.h; sourceTree = "<group>"; };
+		7D623BFE25F7851C0036184F /* EncryptUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptUtil.m; sourceTree = "<group>"; };
+		7D623C0025F867E40036184F /* RSAUtil2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSAUtil2.h; sourceTree = "<group>"; };
+		7D623C0125F867E40036184F /* RSAUtil2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAUtil2.m; sourceTree = "<group>"; };
+		7D623C0325F868EE0036184F /* rsa-public-key.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "rsa-public-key.txt"; sourceTree = "<group>"; };
+		7D623C0525F869190036184F /* rsa-private-key.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "rsa-private-key.txt"; sourceTree = "<group>"; };
+		7D623C1D25F870AA0036184F /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
+		7D623C1E25F870AA0036184F /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
 		7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		7DA11D0925F77D02002EA4E1 /* origin-json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "origin-json.json"; sourceTree = "<group>"; };
 		7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +381,7 @@
 		7D3F13E02473C452000E6845 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				7D623BFA25F784E30036184F /* swift-study-Bridging-Header.h */,
 				7D3F13CC2473C42E000E6845 /* AppDelegate.swift */,
 				7DCBBB91259486AA007D8AD9 /* __AppSetup.swift */,
 				7D3F13D72473C42F000E6845 /* LaunchScreen.storyboard */,
@@ -391,11 +402,16 @@
 		7DA11D0625F76E9F002EA4E1 /* 加解密 */ = {
 			isa = PBXGroup;
 			children = (
+				7D623C1E25F870AA0036184F /* RSAUtil.h */,
+				7D623C1D25F870AA0036184F /* RSAUtil.m */,
 				7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */,
 				7DA11D0925F77D02002EA4E1 /* origin-json.json */,
-				7D623BFD25F7851C0036184F /* Test.h */,
-				7D623BFE25F7851C0036184F /* Test.m */,
-				7D623BFA25F784E30036184F /* swift-study-Bridging-Header.h */,
+				7D623C0325F868EE0036184F /* rsa-public-key.txt */,
+				7D623C0525F869190036184F /* rsa-private-key.txt */,
+				7D623BFD25F7851C0036184F /* EncryptUtil.h */,
+				7D623BFE25F7851C0036184F /* EncryptUtil.m */,
+				7D623C0025F867E40036184F /* RSAUtil2.h */,
+				7D623C0125F867E40036184F /* RSAUtil2.m */,
 			);
 			path = "加解密";
 			sourceTree = "<group>";
@@ -840,12 +856,14 @@
 				7DA1A1B224D2C40D00106D4B /* PopverViewController.storyboard in Resources */,
 				7D3F13D92473C42F000E6845 /* LaunchScreen.storyboard in Resources */,
 				7DA1A25924D3E2BA00106D4B /* PopverContentView.xib in Resources */,
+				7D623C0625F869190036184F /* rsa-private-key.txt in Resources */,
 				7D01022825B7C6A600A2D359 /* jcs_runtime_classes.plist in Resources */,
 				7D3F13D62473C42F000E6845 /* Assets.xcassets in Resources */,
 				7DA11D0A25F77D02002EA4E1 /* origin-json.json in Resources */,
 				7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */,
 				7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */,
 				7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */,
+				7D623C0425F868EE0036184F /* rsa-public-key.txt in Resources */,
 				7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */,
 				7D2FC41A25BAB2A400CD700D /* PushHalfVC.storyboard in Resources */,
 				7DD7FE9A24B45DF800B9B43B /* IBDesignableKitVC.storyboard in Resources */,
@@ -962,7 +980,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA1A25724D3E2B000106D4B /* PopverContentView.swift in Sources */,
-				7D623BFF25F7851C0036184F /* Test.m in Sources */,
+				7D623BFF25F7851C0036184F /* EncryptUtil.m in Sources */,
 				7D522349247BA81900B06978 /* DemoItem.swift in Sources */,
 				7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */,
 				280836AB25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift in Sources */,
@@ -975,6 +993,7 @@
 				7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */,
 				7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */,
 				7DB387F7259201B600E7058A /* ExampleRouter.swift in Sources */,
+				7D623C0225F867E40036184F /* RSAUtil2.m in Sources */,
 				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DF3974324DA55AB003E88F5 /* DemoChildViewController.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
@@ -985,6 +1004,7 @@
 				7D5D3A7225C3ED4F001ED2C5 /* JCSNotificationVC.swift in Sources */,
 				7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
+				7D623C1F25F870AA0036184F /* RSAUtil.m in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,
 				7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */,
@@ -1200,7 +1220,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.*";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG JCDEBUG";
-				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/Examples/加解密/swift-study-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1226,7 +1246,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mijin.app.test.qq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/Examples/加解密/swift-study-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1314,7 +1334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.*";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG JCUAT";
-				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/Examples/加解密/swift-study-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
