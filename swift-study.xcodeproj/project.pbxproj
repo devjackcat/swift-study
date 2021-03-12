@@ -33,6 +33,10 @@
 		7D623C0425F868EE0036184F /* rsa-public-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D623C0325F868EE0036184F /* rsa-public-key.txt */; };
 		7D623C0625F869190036184F /* rsa-private-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D623C0525F869190036184F /* rsa-private-key.txt */; };
 		7D623C1F25F870AA0036184F /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C1D25F870AA0036184F /* RSAUtil.m */; };
+		7D623C4025FA1E0F0036184F /* SliderTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C3F25FA1E0F0036184F /* SliderTabControl.swift */; };
+		7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */; };
+		7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E325FB5210008C012D /* SliderPageViewController.swift */; };
+		7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */; };
 		7DA11D0825F76F01002EA4E1 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */; };
 		7DA11D0A25F77D02002EA4E1 /* origin-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DA11D0925F77D02002EA4E1 /* origin-json.json */; };
 		7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */; };
@@ -199,6 +203,10 @@
 		7D623C0525F869190036184F /* rsa-private-key.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "rsa-private-key.txt"; sourceTree = "<group>"; };
 		7D623C1D25F870AA0036184F /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		7D623C1E25F870AA0036184F /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
+		7D623C3F25FA1E0F0036184F /* SliderTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTabControl.swift; sourceTree = "<group>"; };
+		7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTabControlDemoVC.swift; sourceTree = "<group>"; };
+		7D9219E325FB5210008C012D /* SliderPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageViewController.swift; sourceTree = "<group>"; };
+		7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageDemoVC.swift; sourceTree = "<group>"; };
 		7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		7DA11D0925F77D02002EA4E1 /* origin-json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "origin-json.json"; sourceTree = "<group>"; };
 		7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +407,24 @@
 			path = JCS_Notification;
 			sourceTree = "<group>";
 		};
+		7D623C3E25FA1DD20036184F /* SliderTabControl */ = {
+			isa = PBXGroup;
+			children = (
+				7D623C3F25FA1E0F0036184F /* SliderTabControl.swift */,
+				7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */,
+			);
+			path = SliderTabControl;
+			sourceTree = "<group>";
+		};
+		7D9219E225FB51EB008C012D /* SliderPageController */ = {
+			isa = PBXGroup;
+			children = (
+				7D9219E325FB5210008C012D /* SliderPageViewController.swift */,
+				7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */,
+			);
+			path = SliderPageController;
+			sourceTree = "<group>";
+		};
 		7DA11D0625F76E9F002EA4E1 /* 加解密 */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +603,8 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7D9219E225FB51EB008C012D /* SliderPageController */,
+				7D623C3E25FA1DD20036184F /* SliderTabControl */,
 				7DA11D0625F76E9F002EA4E1 /* 加解密 */,
 				7D5D3A7025C3ED40001ED2C5 /* JCS_Notification */,
 				280836A725BBA6D400DD0389 /* JCS_Navigator */,
@@ -997,10 +1025,13 @@
 				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DF3974324DA55AB003E88F5 /* DemoChildViewController.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
+				7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */,
 				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
 				7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */,
+				7D623C4025FA1E0F0036184F /* SliderTabControl.swift in Sources */,
 				7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */,
+				7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */,
 				7D5D3A7225C3ED4F001ED2C5 /* JCSNotificationVC.swift in Sources */,
 				7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
@@ -1022,6 +1053,7 @@
 				7D01022625B7C52C00A2D359 /* JCSDemoVC.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,
 				7D3F148D2474C2DC000E6845 /* DemoMoya.swift in Sources */,
+				7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,12 @@ public extension UIScrollView {
         return self
     }
     
+    @discardableResult func jcs_pagingEnabled(_ isPagingEnabled: Bool) -> Self {
+        self.isPagingEnabled = isPagingEnabled
+        return self
+    }
+    
+    
     @discardableResult func jcs_delegate(_ delegate: UIScrollViewDelegate) -> Self {
         self.delegate = delegate
         return self

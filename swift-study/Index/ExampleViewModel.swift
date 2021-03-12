@@ -43,6 +43,8 @@ class ExampleViewModel {
             ExampleListItem(title: "JCS", route: "jackcat://runtime/JCSDemoVC"),
             ExampleListItem(title: "TouchTrough",route: "jackcat://runtime/DemoTouchTroughVC"),
             ExampleListItem(title: "IBDesignableKit",route: "jackcat://sb/IBDesignableKitVC"),
+            ExampleListItem(title: "SliderTabControl",route: "jackcat://runtime/SliderTabControlDemoVC"),
+            ExampleListItem(title: "SliderPageViewController",route: "jackcat://runtime/SliderPageDemoVC"),
         ]
         
         // 加解密

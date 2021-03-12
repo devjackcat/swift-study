@@ -39,8 +39,8 @@ class EncryptViewController: UIViewController {
 //            let v = RSAUtil.encryptString(plainString, publicKey: publicKey)
 //            let v2 = RSAUtil.decryptString(v, privateKey: privateKey)
             
-            let v = RSAUtil.encryptString(<#T##str: String!##String!#>, publicKey: <#T##String!#>)
-            let v2 = RSAUtil.decryptString(v, privateKey: privateKey)
+//            let v = RSAUtil.encryptString(<#T##str: String!##String!#>, publicKey: <#T##String!#>)
+//            let v2 = RSAUtil.decryptString(v, privateKey: privateKey)
 
             print("")
         } catch {
