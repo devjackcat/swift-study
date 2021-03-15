@@ -55,7 +55,7 @@ class SliderTabControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func switchToItem(willSelectedIndex: Int) {
+    func switchToItem(willSelectedIndex: Int) {
         guard let lastItem = items.last, currentSelectedIndex != willSelectedIndex else {
             return
         }

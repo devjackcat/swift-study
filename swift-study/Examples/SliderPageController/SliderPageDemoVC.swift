@@ -23,6 +23,10 @@ class SliderPageDemoVC: SliderPageViewController {
         reloadData()
     }
     
+    func headerView() -> UIView? {
+        return UIView().jcs_backgroundColor_Random()
+    }
+    
     override func sliderTabTop() -> CGFloat {
         return 64
     }
@@ -33,8 +37,13 @@ class SliderPageDemoVC: SliderPageViewController {
         return titles[index]
     }
     override func sliderPageViewController(for index: Int) -> UIViewController {
-        let vc = UIViewController()
-        vc.view.jcs_backgroundColor_Random()
+        let count = (index + 1) * 10
+        var datasource = [String]()
+        for i in 0..<count {
+            datasource.append(titles[index] + "\(i)")
+        }
+        let vc = SliderPageTableVC()
+        vc.datasource = datasource
         return vc
     }
 }

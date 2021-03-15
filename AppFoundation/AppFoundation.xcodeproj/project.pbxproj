@@ -25,6 +25,7 @@
 		7D5A4A4F25B6D30100BE2A57 /* UITextField+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A4E25B6D30100BE2A57 /* UITextField+JCS_Create.swift */; };
 		7D5A4A5225B6D57C00BE2A57 /* UITextView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */; };
 		7D5D3A6D25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */; };
+		7D9219ED25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */; };
 		7DB386822591CAC700E7058A /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386572591CAC700E7058A /* Popover.swift */; };
 		7DB386832591CAC700E7058A /* IBColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */; };
 		7DB386842591CAC700E7058A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3865A2591CAC700E7058A /* Toucan.swift */; };
@@ -87,6 +88,7 @@
 		7D5A4A4E25B6D30100BE2A57 /* UITextField+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+JCS_Extension.swift"; sourceTree = "<group>"; };
+		7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+JCS_Create.swift"; sourceTree = "<group>"; };
 		7DB386572591CAC700E7058A /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 		7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBColumnFlowLayout.swift; sourceTree = "<group>"; };
 		7DB3865A2591CAC700E7058A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toucan.swift; sourceTree = "<group>"; };
@@ -229,6 +231,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		7D9219EB25FEFA79008C012D /* UITableView+JCSCreate */ = {
+			isa = PBXGroup;
+			children = (
+				7D5A4A3325B6AF5600BE2A57 /* UITableView+JCS_Create.swift */,
+				7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */,
+			);
+			path = "UITableView+JCSCreate";
+			sourceTree = "<group>";
+		};
 		7DB386562591CAC700E7058A /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,7 +309,7 @@
 				7DB3866D2591CAC700E7058A /* UIStackView+JCS_Create.swift */,
 				7DB3866E2591CAC700E7058A /* UIControl+JCS_Create.swift */,
 				7DB3866F2591CAC700E7058A /* UIImageVIew+JCS_Create.swift */,
-				7D5A4A3325B6AF5600BE2A57 /* UITableView+JCS_Create.swift */,
+				7D9219EB25FEFA79008C012D /* UITableView+JCSCreate */,
 				7D01021225B6DC4200A2D359 /* UICollectionView+JCSCreate */,
 			);
 			path = JCS_Create;
@@ -483,6 +494,7 @@
 				7DB386862591CAC700E7058A /* ToucanExtension.swift in Sources */,
 				7DB387E32591EC1A00E7058A /* JCRouter.swift in Sources */,
 				7DB386AA2591CAD200E7058A /* TimerScheduler.swift in Sources */,
+				7D9219ED25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift in Sources */,
 				7DB3868E2591CAC700E7058A /* ColorHex.swift in Sources */,
 				7DB386852591CAC700E7058A /* IBFirstResponderAction.swift in Sources */,
 				7DB386972591CAC700E7058A /* UIButton+JCS_Create.swift in Sources */,

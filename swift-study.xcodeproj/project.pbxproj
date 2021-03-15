@@ -37,6 +37,7 @@
 		7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */; };
 		7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E325FB5210008C012D /* SliderPageViewController.swift */; };
 		7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */; };
+		7D9219EA25FEF979008C012D /* SliderPageTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E925FEF979008C012D /* SliderPageTableVC.swift */; };
 		7DA11D0825F76F01002EA4E1 /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */; };
 		7DA11D0A25F77D02002EA4E1 /* origin-json.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DA11D0925F77D02002EA4E1 /* origin-json.json */; };
 		7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */; };
@@ -207,6 +208,7 @@
 		7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTabControlDemoVC.swift; sourceTree = "<group>"; };
 		7D9219E325FB5210008C012D /* SliderPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageViewController.swift; sourceTree = "<group>"; };
 		7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageDemoVC.swift; sourceTree = "<group>"; };
+		7D9219E925FEF979008C012D /* SliderPageTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageTableVC.swift; sourceTree = "<group>"; };
 		7DA11D0725F76F01002EA4E1 /* EncryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
 		7DA11D0925F77D02002EA4E1 /* origin-json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "origin-json.json"; sourceTree = "<group>"; };
 		7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextViewController.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9219E325FB5210008C012D /* SliderPageViewController.swift */,
+				7D9219E925FEF979008C012D /* SliderPageTableVC.swift */,
 				7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */,
 			);
 			path = SliderPageController;
@@ -1042,6 +1045,7 @@
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
 				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
+				7D9219EA25FEF979008C012D /* SliderPageTableVC.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
 				7DCBBAC225948013007D8AD9 /* MainAttachmentDecoder.swift in Sources */,
 				7DCBB8AE25933C8C007D8AD9 /* ExampleViewModel.swift in Sources */,

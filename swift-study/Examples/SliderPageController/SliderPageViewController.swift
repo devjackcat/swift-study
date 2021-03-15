@@ -14,11 +14,13 @@ class SliderPageViewController : UIViewController {
     private var containerScrollView: UIScrollView!
     private var contentView: UIView!
     
+    // 是否第一次加载
+    private var isFirstLoad: Bool = true
     private var titlesMap: [Int: String] = [Int: String]()
     private var viewControllersMap: [Int: UIViewController] = [Int: UIViewController]()
     
     // 是否正执行添加页面操作
-    private var isAddPage = false
+    private var isAddingPage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,6 @@ class SliderPageViewController : UIViewController {
         containerScrollView = UIScrollView()
             .jcs_delegate(self)
             .jcs_pagingEnabled(true)
-//            .jcs_backgroundColor_Random()
             .jcs_layout(superView: self, layout: { (make) in
                 if #available(iOS 11.0, *) {
                     make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
@@ -62,7 +63,6 @@ class SliderPageViewController : UIViewController {
                 make.top.equalTo(sliderTab.snp.bottom)
             })
         contentView = UIView()
-//            .jcs_backgroundColor_Random()
             .jcs_layout(superView: containerScrollView, layout: { (make) in
                 make.left.top.height.right.equalToSuperview()
                 make.width.equalTo(self.view.frame.width * CGFloat(self.sliderPageCount()))
@@ -71,34 +71,54 @@ class SliderPageViewController : UIViewController {
     }
     
     // 添加页面
-    private func addPage(for index: Int) -> UIViewController? {
-        guard isAddPage == false else { return nil }
-        isAddPage = true
+    @discardableResult private func addPage(for index: Int) -> UIViewController? {
+        guard isAddingPage == false else { return nil }
+        isAddingPage = true
+        
+        // 初始化时不切换，其他都切换Tab
+        if isFirstLoad == false {
+            sliderTab.switchToItem(willSelectedIndex: index)
+        }
+        isFirstLoad = false
+        
+        // 优先读缓存
         if let vc = self.viewControllersMap[index] {
-            isAddPage = false
+            isAddingPage = false
+            // 已缓存，则切换过去
+            containerScrollView.setContentOffset(CGPoint(x: CGFloat(index) * self.view.frame.width, y: 0), animated: false)
             return vc
         }
         
         let vc = self.sliderPageViewController(for: index)
+        self.viewControllersMap[index] = vc
+        
         self.addChild(vc)
-        vc.view.alpha = 0
+//        vc.beginAppearanceTransition(true, animated: false)
         vc.view.jcs_layout(superView: self.contentView) { (make) in
             make.top.bottom.equalToSuperview()
-            make.width.equalTo(self.containerScrollView.frame.width)
-            make.left.equalTo(CGFloat(index) * self.containerScrollView.frame.width)
+            make.width.equalTo(self.view.frame.width)
+            make.left.equalTo(self.view.frame.width * CGFloat(index))
         }
-        UIView.animate(withDuration: 0.25) {
-            vc.view.alpha = 1
-        }
+//        vc.didMove(toParent: self)
+//        vc.endAppearanceTransition()
         
-        containerScrollView.setContentOffset(CGPoint(x: CGFloat(index) * self.view.frame.width, y: 0), animated: true)
+//        vc.view.alpha = 0
+//        UIView.animate(withDuration: 0.25) {
+//            vc.view.alpha = 1
+//        }
         
-        isAddPage = false
+        containerScrollView.setContentOffset(CGPoint(x: CGFloat(index) * self.view.frame.width, y: 0), animated: false)
+        
+        isAddingPage = false
         return vc
     }
     
     func reloadData() {
         sliderTab?.reloadData()
+    }
+    
+    func headerView() -> UIView? {
+        return nil
     }
     
     // sliderTab顶部距离容器顶部的距离
@@ -122,22 +142,19 @@ class SliderPageViewController : UIViewController {
 extension SliderPageViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print("----scrollViewDidEndDragging decelerate = \(decelerate)")
         if decelerate == false{
             let pageIndex = scrollView.contentOffset.x / scrollView.frame.width
-            print("----pageIndex 1 = \(pageIndex)")
+            addPage(for: Int(pageIndex))
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("----scrollViewDidEndDecelerating")
         let pageIndex = scrollView.contentOffset.x / scrollView.frame.width
-        print("----pageIndex 2 = \(pageIndex)")
+        addPage(for: Int(pageIndex))
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        print("----scrollViewDidEndScrollingAnimation")
         let pageIndex = scrollView.contentOffset.x / scrollView.frame.width
-        print("----pageIndex 3 = \(pageIndex)")
+        addPage(for: Int(pageIndex))
     }
 }
