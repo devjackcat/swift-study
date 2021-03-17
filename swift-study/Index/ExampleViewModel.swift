@@ -44,7 +44,30 @@ class ExampleViewModel {
             ExampleListItem(title: "TouchTrough",route: "jackcat://runtime/DemoTouchTroughVC"),
             ExampleListItem(title: "IBDesignableKit",route: "jackcat://sb/IBDesignableKitVC"),
             ExampleListItem(title: "SliderTabControl",route: "jackcat://runtime/SliderTabControlDemoVC"),
-            ExampleListItem(title: "SliderPageViewController",route: "jackcat://runtime/SliderPageDemoVC"),
+            ExampleListItem(title: "SliderPageViewController(未完成)",route: "jackcat://runtime/SliderPageDemoVC"),
+            ExampleListItem(title: "ModalTip(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "HUD(未实现)",route: "jackcat://runtime/UIViewController"),
+        ]
+        
+        // 直播间相关
+        module = ExampleListModule(title: "直播间相关")
+        modules.append(module)
+        module.items = [
+            ExampleListItem(title: "InfiniteScroll(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "弹幕(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "入场动画队列(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "SVGA Queue(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "礼物跑道(未实现)",route: "jackcat://runtime/UIViewController"),
+        ]
+        
+        // 业务相关
+        module = ExampleListModule(title: "业务相关")
+        modules.append(module)
+        module.items = [
+            ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
+            ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
+            ExampleListItem(title: "Popver",route: "jackcat://sb/PopverViewController"),
+            ExampleListItem(title: "富文本",route: "jackcat://sb/RichTextViewController")
         ]
         
         // 加解密
@@ -52,16 +75,6 @@ class ExampleViewModel {
         modules.append(module)
         module.items = [
             ExampleListItem(title: "Des加密、解密",route: "jackcat://runtime/EncryptViewController")
-        ]
-        
-        // 业务测试
-        module = ExampleListModule(title: "业务测试")
-        modules.append(module)
-        module.items = [
-            ExampleListItem(title: "礼物气泡(样式1)", route: "jackcat://jumpGiftPopVC/1"),
-            ExampleListItem(title: "礼物气泡(样式2)", route: "jackcat://jumpGiftPopVC/2"),
-            ExampleListItem(title: "Popver",route: "jackcat://sb/PopverViewController"),
-            ExampleListItem(title: "富文本",route: "jackcat://sb/RichTextViewController")
         ]
         
         // runtime

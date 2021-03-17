@@ -23,7 +23,7 @@ class SliderPageDemoVC: SliderPageViewController {
         reloadData()
     }
     
-    func headerView() -> UIView? {
+    override func headerView() -> UIView? {
         return UIView().jcs_backgroundColor_Random()
     }
     
