@@ -28,9 +28,11 @@ def app_foundation_depency
   
   pod 'IGListKit'
   pod 'UITableView+FDTemplateLayoutCell'
+  pod 'YYText'
   
 #  pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug', 'DevelopArchive']
   pod 'TinyConsole', :git => 'https://gitee.com/winddpan/TinyConsole', :configurations => ['Debug']
+  pod 'GumboHTMLTransform', :git => 'https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform.git'
   
   pod 'Result'
   pod 'NIMSDK_LITE'

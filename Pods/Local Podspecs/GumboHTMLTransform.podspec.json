@@ -1,0 +1,21 @@
+{
+  "name": "GumboHTMLTransform",
+  "version": "0.1.0",
+  "summary": "Transform HTML To AttributeString",
+  "description": "Transform HTML To AttributeString Basic Gumbo From Google.",
+  "homepage": "https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "laval": "liuyawei_82@163.com"
+  },
+  "source": {
+    "git": "https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform.git"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GumboHTMLTransform/Classes/**/*"
+}

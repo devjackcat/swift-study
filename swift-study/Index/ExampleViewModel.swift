@@ -58,6 +58,7 @@ class ExampleViewModel {
             ExampleListItem(title: "入场动画队列(未实现)",route: "jackcat://runtime/UIViewController"),
             ExampleListItem(title: "SVGA Queue(未实现)",route: "jackcat://runtime/UIViewController"),
             ExampleListItem(title: "礼物跑道(未实现)",route: "jackcat://runtime/UIViewController"),
+            ExampleListItem(title: "评论区",route: "jackcat://runtime/LiveCommentVC"),
         ]
         
         // 业务相关

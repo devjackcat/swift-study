@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.4.1)
   - Cache (5.3.0)
   - Closures (0.7)
+  - GumboHTMLTransform (0.1.0)
   - GzipSwift (5.1.1)
   - HandyJSON (5.0.3-beta)
   - IGListDiffKit (4.0.0)
@@ -33,10 +34,12 @@ PODS:
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - URLNavigator (2.3.0)
   - WeakMapTable (1.1.0)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - Cache
   - Closures
+  - GumboHTMLTransform (from `https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform.git`)
   - GzipSwift
   - HandyJSON (~> 5.0.3-beta)
   - IGListKit
@@ -53,6 +56,7 @@ DEPENDENCIES:
   - TinyConsole (from `https://gitee.com/winddpan/TinyConsole`)
   - "UITableView+FDTemplateLayoutCell"
   - URLNavigator
+  - YYText
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -77,12 +81,18 @@ SPEC REPOS:
     - "UITableView+FDTemplateLayoutCell"
     - URLNavigator
     - WeakMapTable
+    - YYText
 
 EXTERNAL SOURCES:
+  GumboHTMLTransform:
+    :git: https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform.git
   TinyConsole:
     :git: https://gitee.com/winddpan/TinyConsole
 
 CHECKOUT OPTIONS:
+  GumboHTMLTransform:
+    :commit: 2b3497da4398fb35b42b21b9307e7a0f8becb0ef
+    :git: https://gitlab.kaiqi.xin/ios_3rd_lib/gumbohtmltransform.git
   TinyConsole:
     :commit: 66093e80faa98eb0371d354b3f086054edf0556e
     :git: https://gitee.com/winddpan/TinyConsole
@@ -91,6 +101,7 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Cache: 48762993ec44e1d93483c4d4a13edd18452326f4
   Closures: a83b9892a5b1c4125a9dfcd53e2754db5d7f6d22
+  GumboHTMLTransform: de75f62d040c71b7f9d07137acce8f933a02795f
   GzipSwift: 893f3e48e597a1a4f62fafcb6514220fcf8287fa
   HandyJSON: 88e8ea5f66ab65c3b8768499a1935d0509c460d4
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
@@ -110,7 +121,8 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: e36b4c29dbfb6a06e8fd574d2ffba14a8a3ddea5
+PODFILE CHECKSUM: a59116f7d9137e2bb42ae53cc28a3f7036c4b192
 
 COCOAPODS: 1.9.1

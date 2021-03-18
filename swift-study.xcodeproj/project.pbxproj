@@ -13,6 +13,9 @@
 		7D01022625B7C52C00A2D359 /* JCSDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D01022525B7C52C00A2D359 /* JCSDemoVC.swift */; };
 		7D01022825B7C6A600A2D359 /* jcs_runtime_classes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D01022725B7C6A600A2D359 /* jcs_runtime_classes.plist */; };
 		7D01FFD324B807E500C3A6FC /* ExampleRxSwiftVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */; };
+		7D0601142602E850008DA271 /* LiveCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0601132602E850008DA271 /* LiveCommentVC.swift */; };
+		7D0601162602EDCC008DA271 /* JCSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0601152602EDCC008DA271 /* JCSNavigationBar.swift */; };
+		7D06011C26032672008DA271 /* LiveVipLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06011B26032671008DA271 /* LiveVipLevelView.swift */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
 		7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */; };
 		7D2FC41A25BAB2A400CD700D /* PushHalfVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */; };
@@ -179,6 +182,9 @@
 		7D01022525B7C52C00A2D359 /* JCSDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSDemoVC.swift; sourceTree = "<group>"; };
 		7D01022725B7C6A600A2D359 /* jcs_runtime_classes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = jcs_runtime_classes.plist; sourceTree = "<group>"; };
 		7D01FFD224B807E500C3A6FC /* ExampleRxSwiftVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleRxSwiftVC.storyboard; sourceTree = "<group>"; };
+		7D0601132602E850008DA271 /* LiveCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCommentVC.swift; sourceTree = "<group>"; };
+		7D0601152602EDCC008DA271 /* JCSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNavigationBar.swift; sourceTree = "<group>"; };
+		7D06011B26032671008DA271 /* LiveVipLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVipLevelView.swift; sourceTree = "<group>"; };
 		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
 		7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushHalfVC.swift; sourceTree = "<group>"; };
 		7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushHalfVC.storyboard; sourceTree = "<group>"; };
@@ -343,6 +349,24 @@
 				7D01022525B7C52C00A2D359 /* JCSDemoVC.swift */,
 			);
 			path = JCS;
+			sourceTree = "<group>";
+		};
+		7D0601112602E82C008DA271 /* 直播 */ = {
+			isa = PBXGroup;
+			children = (
+				7D0601122602E834008DA271 /* CommentDemo */,
+			);
+			path = "直播";
+			sourceTree = "<group>";
+		};
+		7D0601122602E834008DA271 /* CommentDemo */ = {
+			isa = PBXGroup;
+			children = (
+				7D0601132602E850008DA271 /* LiveCommentVC.swift */,
+				7D06011B26032671008DA271 /* LiveVipLevelView.swift */,
+				7D0601152602EDCC008DA271 /* JCSNavigationBar.swift */,
+			);
+			path = CommentDemo;
 			sourceTree = "<group>";
 		};
 		7D2FC41625BAB1E500CD700D /* PushHalf */ = {
@@ -606,6 +630,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7D0601112602E82C008DA271 /* 直播 */,
 				7D9219E225FB51EB008C012D /* SliderPageController */,
 				7D623C3E25FA1DD20036184F /* SliderTabControl */,
 				7DA11D0625F76E9F002EA4E1 /* 加解密 */,
@@ -1027,6 +1052,7 @@
 				7D623C0225F867E40036184F /* RSAUtil2.m in Sources */,
 				7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */,
 				7DF3974324DA55AB003E88F5 /* DemoChildViewController.swift in Sources */,
+				7D06011C26032672008DA271 /* LiveVipLevelView.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
 				7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */,
 				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
@@ -1042,9 +1068,11 @@
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,
 				7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */,
+				7D0601142602E850008DA271 /* LiveCommentVC.swift in Sources */,
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
 				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
+				7D0601162602EDCC008DA271 /* JCSNavigationBar.swift in Sources */,
 				7D9219EA25FEF979008C012D /* SliderPageTableVC.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
 				7DCBBAC225948013007D8AD9 /* MainAttachmentDecoder.swift in Sources */,

@@ -2,6 +2,7 @@ ${PODS_ROOT}/Target Support Files/Pods-swift-study/Pods-swift-study-frameworks.s
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Cache/Cache.framework
 ${BUILT_PRODUCTS_DIR}/Closures/Closures.framework
+${BUILT_PRODUCTS_DIR}/GumboHTMLTransform/GumboHTMLTransform.framework
 ${BUILT_PRODUCTS_DIR}/GzipSwift/Gzip.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
 ${BUILT_PRODUCTS_DIR}/IGListDiffKit/IGListDiffKit.framework
@@ -21,3 +22,4 @@ ${BUILT_PRODUCTS_DIR}/TinyConsole/TinyConsole.framework
 ${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework
 ${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework
 ${BUILT_PRODUCTS_DIR}/WeakMapTable/WeakMapTable.framework
+${BUILT_PRODUCTS_DIR}/YYText/YYText.framework
