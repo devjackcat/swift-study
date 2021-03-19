@@ -29,6 +29,7 @@
 		7D5A4A5225B6D57C00BE2A57 /* UITextView+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */; };
 		7D5D3A6D25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */; };
 		7D9219ED25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */; };
+		7DA7F0E52604494E00F0AA0A /* Kingfisher+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA7F0E42604494E00F0AA0A /* Kingfisher+Ex.swift */; };
 		7DB386822591CAC700E7058A /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386572591CAC700E7058A /* Popover.swift */; };
 		7DB386832591CAC700E7058A /* IBColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */; };
 		7DB386842591CAC700E7058A /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3865A2591CAC700E7058A /* Toucan.swift */; };
@@ -95,6 +96,7 @@
 		7D5A4A5125B6D57C00BE2A57 /* UITextView+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D5D3A6C25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+JCS_Extension.swift"; sourceTree = "<group>"; };
 		7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+JCS_Create.swift"; sourceTree = "<group>"; };
+		7DA7F0E42604494E00F0AA0A /* Kingfisher+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Ex.swift"; sourceTree = "<group>"; };
 		7DB386572591CAC700E7058A /* Popover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 		7DB386592591CAC700E7058A /* IBColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBColumnFlowLayout.swift; sourceTree = "<group>"; };
 		7DB3865A2591CAC700E7058A /* Toucan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toucan.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				7DB387E12591EBFB00E7058A /* Tool */,
+				7DA7F0E32604493300F0AA0A /* Ex */,
 				7DB386562591CAC700E7058A /* Lib */,
 				7D4E4729258B51B300C776DD /* Extension */,
 			);
@@ -261,6 +264,14 @@
 				7D9219EC25FEFAA1008C012D /* UITableViewCell+JCS_Create.swift */,
 			);
 			path = "UITableView+JCSCreate";
+			sourceTree = "<group>";
+		};
+		7DA7F0E32604493300F0AA0A /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				7DA7F0E42604494E00F0AA0A /* Kingfisher+Ex.swift */,
+			);
+			path = Ex;
 			sourceTree = "<group>";
 		};
 		7DB386562591CAC700E7058A /* Lib */ = {
@@ -533,6 +544,7 @@
 				7DB3868B2591CAC700E7058A /* IBTextView.swift in Sources */,
 				7D01021925B6DC7D00A2D359 /* UICollectionViewFlowLayout+JCS_Create.swift in Sources */,
 				7DB386872591CAC700E7058A /* IBCircleProgressView.swift in Sources */,
+				7DA7F0E52604494E00F0AA0A /* Kingfisher+Ex.swift in Sources */,
 				7D5A4A4B25B6CE7000BE2A57 /* UIScrollView+JCS_Create.swift in Sources */,
 				7DB3868F2591CAC700E7058A /* IBImageView.swift in Sources */,
 				7DB386952591CAC700E7058A /* UIControl+JCS_Create.swift in Sources */,

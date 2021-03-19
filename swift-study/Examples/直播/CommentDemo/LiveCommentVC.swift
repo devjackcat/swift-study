@@ -15,6 +15,7 @@ class LiveCommentVC: UIViewController {
     
     private var tableView: UITableView!
     private var tableViewBgView: ContainerTouchTroughView!
+    private var bgView: UIImageView!
     
     private var comments: [LiveCommentModel] = []
 
@@ -27,7 +28,7 @@ class LiveCommentVC: UIViewController {
         super.viewDidLoad()
         view.jcs_backgroundColor_White()
         
-        UIImageView()
+        bgView = UIImageView()
             .jcs_image(image: UIImage(named: "living_lianmai_bg"))
                 .jcs_layout(superView: self) { (make) in
                 make.left.top.right.bottom.equalToSuperview()
@@ -137,11 +138,20 @@ class LiveCommentVC: UIViewController {
                                          bgImage: "zhizun_bg"))
         
         tableView.reloadData()
+        
+        KingfisherManager.shared.rx.retrieveImage(url: "http://static.devjackcat.com/guizu_icon_houjue_big%402x.png1")
+            .subscribe { [weak self] (image) in
+                self?.bgView.image = image
+            } onError: { (error) in
+                print("---下载图片 error = \(error)")
+            }
+            .disposing(with: self)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
+        // 顶部模糊背景
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = CGRect(x: -100, y: 0, width: tableViewBgView.bounds.width + 200, height: tableViewBgView.bounds.height + 10)
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
@@ -311,6 +321,9 @@ extension LiveCommentModel {
             attr.insert(attachment, at: 0)
         }
         
+        let attachment = TextAttachmentTool.makeWebImage()
+        attr.insert(NSAttributedString(string: " "), at: 0)
+        attr.insert(attachment, at: 0)
         
         attributeString = attr
         return attributeString
@@ -382,5 +395,22 @@ class TextAttachmentTool {
         layer.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         layer.contents = image?.cgImage
         return NSAttributedString.yy_attachmentString(withContent: layer, contentMode: UIView.ContentMode.center, attachmentSize: size, alignTo: .systemFont(ofSize: 15), alignment: .center)
+    }
+    
+    /// 构建贵族勋章
+    static func makeWebImage() -> NSAttributedString {
+        
+        let width = 21
+        let height = 21
+        
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        delay(5) {
+            if let url = URL(string: "http://static.devjackcat.com/huajian/flower.png") {
+                imageView.kf.setImage(with: url)
+            }
+        }
+        
+        return NSAttributedString.yy_attachmentString(withContent: imageView, contentMode: UIView.ContentMode.center, attachmentSize: CGSize(width: width, height: height), alignTo: .systemFont(ofSize: 15), alignment: .center)
     }
 }
