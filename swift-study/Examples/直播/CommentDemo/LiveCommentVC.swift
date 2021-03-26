@@ -118,6 +118,15 @@ class LiveCommentVC: UIViewController {
                                          content: "<font color=\"#64A1F4\">最佳脑残粉：</font><font color=\"#FFFFFF\">主播今天太漂亮了，播比平时晚了啊</font>",
                                          level: 0,
                                          borderColor: "#99CEFF"))
+        comments.append(LiveCommentModel(icon: "http://static.devjackcat.com/guizu_icon_bojue_big%402x.png",
+                                         smallIcon: "icon_bojue", //"http://static.devjackcat.com/icon_bojue%402x.png",
+                                         avatar: "guizu_icon_bojue_big", //http://static.devjackcat.com/guizu_icon_bojue_big%402x.png",
+                                         content: """
+                                  <font color="#FFFFFF">愚人节活动已结束，</font><font color="#FFEA1F" style="text-decoration: underline #FFEA1F;">点击查看结果</font><br/>
+                                  <font color="#FFFFFF">愚人节活动已结束，</font><font color="#FFEA1F"><u>点击查看结果</u></font>
+                            """,
+                                         level: 0,
+                                         borderColor: "#99CEFF"))
         comments.append(LiveCommentModel(icon: "http://static.devjackcat.com/guizu_icon_huangdi%402x.png",
                                          smallIcon: "icon_huangdi", //"http://static.devjackcat.com/icon_huangdi%402x.png",
                                          avatar: nil, //"http://static.devjackcat.com/guizu_icon_huangdi%402x.png",
@@ -127,7 +136,7 @@ class LiveCommentVC: UIViewController {
         comments.append(LiveCommentModel(icon: "http://static.devjackcat.com/guizu_icon_gongjue_big%402x.png",
                                          smallIcon: "icon_gongjue",  //http://static.devjackcat.com/icon_gongjue%402x.png",
                                          avatar: "guizu_icon_gongjue_big", //"http://static.devjackcat.com/guizu_icon_gongjue_big%402x.png",
-                                         content: "<font color=\"#F0384E\">最佳脑残粉：</font><font color=\"#FFFFFF\">主播今天太漂亮了，播比平时晚了啊</font>",
+                                         content: "<font color=\"#FFFFFF\">累计小丑：</font><font color=\"#FFEA1F\">80</font><br><font color=\"#FFFFFF\">当前排名 No.99+</font><br><font color=\"#FFFFFF\">距前一名：</font>",
                                          level: 0,
                                          bgImage: "huangdi_bg"))
         comments.append(LiveCommentModel(icon: "http://static.devjackcat.com/guizu_icon_houjue_big%402x.png",

@@ -27,8 +27,16 @@ class ExampleViewModel {
     
     func configItems() {
         
+        
+        // 测试
+        var module = ExampleListModule(title: "测试")
+        modules.append(module)
+        module.items = [
+            ExampleListItem(title: "TouchTestVC", route: "jackcat://runtime/TouchTestVC")
+        ]
+        
         // 工具
-        var module = ExampleListModule(title: "工具")
+        module = ExampleListModule(title: "工具")
         modules.append(module)
         #if canImport(TinyConsole)
         module.items.insert(ExampleListItem(title: "TinyConsole", route: "jackcat://toggleTinyConsole"), at: 0)
@@ -59,6 +67,7 @@ class ExampleViewModel {
             ExampleListItem(title: "SVGA Queue(未实现)",route: "jackcat://runtime/UIViewController"),
             ExampleListItem(title: "礼物跑道(未实现)",route: "jackcat://runtime/UIViewController"),
             ExampleListItem(title: "评论区",route: "jackcat://runtime/LiveCommentVC"),
+            ExampleListItem(title: "HTMLParserVC",route: "jackcat://runtime/HTMLParserVC"),
         ]
         
         // 业务相关

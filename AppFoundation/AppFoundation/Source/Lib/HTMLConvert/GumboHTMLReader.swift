@@ -66,6 +66,15 @@ class GumboHTMLReader {
                                         textShadow.radius = CGFloat(radius)
                                         subContent.yy_setTextShadow(textShadow, range: subRange)
                                     }
+                                case "text-decoration":
+                                    // style="text-decoration: underline #FFEA1F;"
+                                    let params = comp.1.components(separatedBy: " ")
+                                    if params.count > 0, params.first == "underline" {
+                                        subContent.yy_underlineStyle = .single
+                                    }
+                                    if params.count > 1 {
+                                        subContent.yy_underlineColor = colorFromString(params[1])
+                                    }
                                 case "font-size":
                                     let size = comp.1.ptValue
                                     if size > 0 {

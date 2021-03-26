@@ -38,6 +38,10 @@
 		7D623C1F25F870AA0036184F /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C1D25F870AA0036184F /* RSAUtil.m */; };
 		7D623C4025FA1E0F0036184F /* SliderTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C3F25FA1E0F0036184F /* SliderTabControl.swift */; };
 		7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */; };
+		7D8C99BD260B23D900672677 /* HTMLParserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C99BC260B23D900672677 /* HTMLParserVC.swift */; };
+		7D8C99BF260B250C00672677 /* JCSHtmlParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C99BE260B250C00672677 /* JCSHtmlParser.swift */; };
+		7D8C99C1260B255900672677 /* JCSHtml_Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C99C0260B255900672677 /* JCSHtml_Token.swift */; };
+		7D8C99C3260B463800672677 /* JCSHtmlParser_bak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C99C2260B463800672677 /* JCSHtmlParser_bak.swift */; };
 		7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E325FB5210008C012D /* SliderPageViewController.swift */; };
 		7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */; };
 		7D9219EA25FEF979008C012D /* SliderPageTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9219E925FEF979008C012D /* SliderPageTableVC.swift */; };
@@ -98,6 +102,7 @@
 		7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7FE6A24B4583300B9B43B /* ExampleStackViewVC.storyboard */; };
 		7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7FE9724B45DD400B9B43B /* IBDesignableKitVC.swift */; };
 		7DD7FE9A24B45DF800B9B43B /* IBDesignableKitVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7FE9924B45DF800B9B43B /* IBDesignableKitVC.storyboard */; };
+		7DDA8607260989AD00E59B63 /* TouchTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA8606260989AD00E59B63 /* TouchTestVC.swift */; };
 		7DE115BD2583140100609CE7 /* CountDownTimerExampleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE115BC2583140100609CE7 /* CountDownTimerExampleVC.swift */; };
 		7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE115C02583140900609CE7 /* CountDownTimerExampleVC.storyboard */; };
 		7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE167212554EDDF00DB7FE3 /* DemoTouchTroughVC.swift */; };
@@ -212,6 +217,10 @@
 		7D623C1E25F870AA0036184F /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
 		7D623C3F25FA1E0F0036184F /* SliderTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTabControl.swift; sourceTree = "<group>"; };
 		7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTabControlDemoVC.swift; sourceTree = "<group>"; };
+		7D8C99BC260B23D900672677 /* HTMLParserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParserVC.swift; sourceTree = "<group>"; };
+		7D8C99BE260B250C00672677 /* JCSHtmlParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSHtmlParser.swift; sourceTree = "<group>"; };
+		7D8C99C0260B255900672677 /* JCSHtml_Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSHtml_Token.swift; sourceTree = "<group>"; };
+		7D8C99C2260B463800672677 /* JCSHtmlParser_bak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSHtmlParser_bak.swift; sourceTree = "<group>"; };
 		7D9219E325FB5210008C012D /* SliderPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageViewController.swift; sourceTree = "<group>"; };
 		7D9219E525FB5262008C012D /* SliderPageDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageDemoVC.swift; sourceTree = "<group>"; };
 		7D9219E925FEF979008C012D /* SliderPageTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderPageTableVC.swift; sourceTree = "<group>"; };
@@ -265,6 +274,7 @@
 		7DD7FE6A24B4583300B9B43B /* ExampleStackViewVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExampleStackViewVC.storyboard; sourceTree = "<group>"; };
 		7DD7FE9724B45DD400B9B43B /* IBDesignableKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableKitVC.swift; sourceTree = "<group>"; };
 		7DD7FE9924B45DF800B9B43B /* IBDesignableKitVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IBDesignableKitVC.storyboard; sourceTree = "<group>"; };
+		7DDA8606260989AD00E59B63 /* TouchTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTestVC.swift; sourceTree = "<group>"; };
 		7DE115BC2583140100609CE7 /* CountDownTimerExampleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerExampleVC.swift; sourceTree = "<group>"; };
 		7DE115C02583140900609CE7 /* CountDownTimerExampleVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountDownTimerExampleVC.storyboard; sourceTree = "<group>"; };
 		7DE167212554EDDF00DB7FE3 /* DemoTouchTroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTouchTroughVC.swift; sourceTree = "<group>"; };
@@ -354,6 +364,7 @@
 		7D0601112602E82C008DA271 /* 直播 */ = {
 			isa = PBXGroup;
 			children = (
+				7D8C99BB260B23AB00672677 /* HTMLParser */,
 				7D0601122602E834008DA271 /* CommentDemo */,
 			);
 			path = "直播";
@@ -440,6 +451,17 @@
 				7D623C4125FA20820036184F /* SliderTabControlDemoVC.swift */,
 			);
 			path = SliderTabControl;
+			sourceTree = "<group>";
+		};
+		7D8C99BB260B23AB00672677 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				7D8C99BC260B23D900672677 /* HTMLParserVC.swift */,
+				7D8C99BE260B250C00672677 /* JCSHtmlParser.swift */,
+				7D8C99C2260B463800672677 /* JCSHtmlParser_bak.swift */,
+				7D8C99C0260B255900672677 /* JCSHtml_Token.swift */,
+			);
+			path = HTMLParser;
 			sourceTree = "<group>";
 		};
 		7D9219E225FB51EB008C012D /* SliderPageController */ = {
@@ -630,6 +652,7 @@
 		7DD7FE5824B2FCFE00B9B43B /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				7DDA86042609898F00E59B63 /* Test */,
 				7D0601112602E82C008DA271 /* 直播 */,
 				7D9219E225FB51EB008C012D /* SliderPageController */,
 				7D623C3E25FA1DD20036184F /* SliderTabControl */,
@@ -730,6 +753,22 @@
 				7DD7FE9924B45DF800B9B43B /* IBDesignableKitVC.storyboard */,
 			);
 			path = IBKit;
+			sourceTree = "<group>";
+		};
+		7DDA86042609898F00E59B63 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				7DDA86052609899600E59B63 /* TouchTest */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		7DDA86052609899600E59B63 /* TouchTest */ = {
+			isa = PBXGroup;
+			children = (
+				7DDA8606260989AD00E59B63 /* TouchTestVC.swift */,
+			);
+			path = TouchTest;
 			sourceTree = "<group>";
 		};
 		7DE115BB258313DE00609CE7 /* 倒计时 */ = {
@@ -1037,6 +1076,7 @@
 			files = (
 				7DA1A25724D3E2B000106D4B /* PopverContentView.swift in Sources */,
 				7D623BFF25F7851C0036184F /* EncryptUtil.m in Sources */,
+				7D8C99BF260B250C00672677 /* JCSHtmlParser.swift in Sources */,
 				7D522349247BA81900B06978 /* DemoItem.swift in Sources */,
 				7D5221F52477DF1500B06978 /* IGDemoCell1.swift in Sources */,
 				280836AB25BBAB9500DD0389 /* JCSNavigatorDemoVC.swift in Sources */,
@@ -1055,16 +1095,19 @@
 				7D06011C26032672008DA271 /* LiveVipLevelView.swift in Sources */,
 				7DC0B3882579E5AD00BE5165 /* HJGiftPopTrackBehavior.swift in Sources */,
 				7D9219E425FB5210008C012D /* SliderPageViewController.swift in Sources */,
+				7DDA8607260989AD00E59B63 /* TouchTestVC.swift in Sources */,
 				7DF277DC2492108400A1F7AA /* DemoReactorVC.swift in Sources */,
 				7DF397E924DA5B7C003E88F5 /* HJGiftPopDemoViewController.swift in Sources */,
 				7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */,
 				7D623C4025FA1E0F0036184F /* SliderTabControl.swift in Sources */,
 				7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */,
 				7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */,
+				7D8C99BD260B23D900672677 /* HTMLParserVC.swift in Sources */,
 				7D5D3A7225C3ED4F001ED2C5 /* JCSNotificationVC.swift in Sources */,
 				7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */,
 				7DA1A10524D2BC2500106D4B /* RichTextViewController.swift in Sources */,
 				7D623C1F25F870AA0036184F /* RSAUtil.m in Sources */,
+				7D8C99C3260B463800672677 /* JCSHtmlParser_bak.swift in Sources */,
 				7DD7FE6224B3000A00B9B43B /* ExampleStackViewVC.swift in Sources */,
 				7DD7FE6724B4420D00B9B43B /* ExampleListCell.swift in Sources */,
 				7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */,
@@ -1072,6 +1115,7 @@
 				7DD7FE6524B3006100B9B43B /* ExampleRxSwiftVC.swift in Sources */,
 				7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */,
 				7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */,
+				7D8C99C1260B255900672677 /* JCSHtml_Token.swift in Sources */,
 				7D0601162602EDCC008DA271 /* JCSNavigationBar.swift in Sources */,
 				7D9219EA25FEF979008C012D /* SliderPageTableVC.swift in Sources */,
 				7DD7FE9824B45DD400B9B43B /* IBDesignableKitVC.swift in Sources */,
