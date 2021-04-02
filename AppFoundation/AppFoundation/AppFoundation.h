@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AppFoundation/NSSwiftLoader.h>
 
 //! Project version number for AppFoundation.
 FOUNDATION_EXPORT double AppFoundationVersionNumber;

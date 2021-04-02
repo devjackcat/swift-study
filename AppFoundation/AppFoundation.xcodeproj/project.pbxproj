@@ -17,6 +17,8 @@
 		7D0601192602F08D008DA271 /* JCSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0601182602F08D008DA271 /* JCSNavigationBar.swift */; };
 		7D06014026032B8C008DA271 /* GumboHTMLReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06013F26032B8C008DA271 /* GumboHTMLReader.swift */; };
 		7D06016226032C4F008DA271 /* HTMLAttribtuedStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06016126032C4F008DA271 /* HTMLAttribtuedStringConverter.swift */; };
+		7D2E5C392615CEB1008B2533 /* NSSwiftLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D2E5C372615CEB1008B2533 /* NSSwiftLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D2E5C3A2615CEB1008B2533 /* NSSwiftLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E5C382615CEB1008B2533 /* NSSwiftLoader.m */; };
 		7D2FC46D25BFC93000CD700D /* UIAlertController+JCS_Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC46825BFC93000CD700D /* UIAlertController+JCS_Create.swift */; };
 		7D4E4644258B374900C776DD /* AppFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D4E4642258B374900C776DD /* AppFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D4E46E7258B3D4100C776DD /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D4E46E6258B3D4100C776DD /* Media1.xcassets */; };
@@ -82,6 +84,8 @@
 		7D0601182602F08D008DA271 /* JCSNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCSNavigationBar.swift; sourceTree = "<group>"; };
 		7D06013F26032B8C008DA271 /* GumboHTMLReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GumboHTMLReader.swift; sourceTree = "<group>"; };
 		7D06016126032C4F008DA271 /* HTMLAttribtuedStringConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLAttribtuedStringConverter.swift; sourceTree = "<group>"; };
+		7D2E5C372615CEB1008B2533 /* NSSwiftLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSwiftLoader.h; sourceTree = "<group>"; };
+		7D2E5C382615CEB1008B2533 /* NSSwiftLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSwiftLoader.m; sourceTree = "<group>"; };
 		7D2FC46825BFC93000CD700D /* UIAlertController+JCS_Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+JCS_Create.swift"; sourceTree = "<group>"; };
 		7D4E463F258B374900C776DD /* AppFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4E4642258B374900C776DD /* AppFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFoundation.h; sourceTree = "<group>"; };
@@ -198,6 +202,15 @@
 				7D06016126032C4F008DA271 /* HTMLAttribtuedStringConverter.swift */,
 			);
 			path = HTMLConvert;
+			sourceTree = "<group>";
+		};
+		7D2E5C362615CEA4008B2533 /* NSSwiftLoader */ = {
+			isa = PBXGroup;
+			children = (
+				7D2E5C372615CEB1008B2533 /* NSSwiftLoader.h */,
+				7D2E5C382615CEB1008B2533 /* NSSwiftLoader.m */,
+			);
+			path = NSSwiftLoader;
 			sourceTree = "<group>";
 		};
 		7D4E4635258B374900C776DD = {
@@ -405,6 +418,7 @@
 		7DB387E12591EBFB00E7058A /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7D2E5C362615CEA4008B2533 /* NSSwiftLoader */,
 				7DB387E22591EC1A00E7058A /* JCRouter.swift */,
 				7D01022A25B7C96F00A2D359 /* JCSRuntime.swift */,
 			);
@@ -426,6 +440,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2E5C392615CEB1008B2533 /* NSSwiftLoader.h in Headers */,
 				7D4E4644258B374900C776DD /* AppFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +477,7 @@
 				TargetAttributes = {
 					7D4E463E258B374900C776DD = {
 						CreatedOnToolsVersion = 12.0;
-						LastSwiftMigration = 1200;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -551,6 +566,7 @@
 				7DB3869A2591CAC700E7058A /* UIColor+Similarity.swift in Sources */,
 				7DB3868D2591CAC700E7058A /* IBButton.swift in Sources */,
 				7DB386AF2591CAD200E7058A /* DateExtension.swift in Sources */,
+				7D2E5C3A2615CEB1008B2533 /* NSSwiftLoader.m in Sources */,
 				7DB386B32591CAF600E7058A /* UIViewControllerFromStoryboardWithArgs.swift in Sources */,
 				7D5D3A6D25C3EBBC001ED2C5 /* Notification+JCS_Extension.swift in Sources */,
 				7D01021C25B6DC9900A2D359 /* UICollectionReusableView+JCS_Create.swift in Sources */,

@@ -17,6 +17,7 @@
 		7D0601162602EDCC008DA271 /* JCSNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0601152602EDCC008DA271 /* JCSNavigationBar.swift */; };
 		7D06011C26032672008DA271 /* LiveVipLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06011B26032671008DA271 /* LiveVipLevelView.swift */; };
 		7D1624032480A90F00987234 /* LSActivityExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1624022480A90F00987234 /* LSActivityExplodeView.swift */; };
+		7D2E5C3D2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2E5C3C2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift */; };
 		7D2FC41825BAB1FA00CD700D /* PushHalfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */; };
 		7D2FC41A25BAB2A400CD700D /* PushHalfVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */; };
 		7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3F13CC2473C42E000E6845 /* AppDelegate.swift */; };
@@ -191,6 +192,7 @@
 		7D0601152602EDCC008DA271 /* JCSNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSNavigationBar.swift; sourceTree = "<group>"; };
 		7D06011B26032671008DA271 /* LiveVipLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveVipLevelView.swift; sourceTree = "<group>"; };
 		7D1624022480A90F00987234 /* LSActivityExplodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSActivityExplodeView.swift; sourceTree = "<group>"; };
+		7D2E5C3C2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSubmoduleLoader.swift; sourceTree = "<group>"; };
 		7D2FC41725BAB1FA00CD700D /* PushHalfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushHalfVC.swift; sourceTree = "<group>"; };
 		7D2FC41925BAB2A400CD700D /* PushHalfVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PushHalfVC.storyboard; sourceTree = "<group>"; };
 		7D3F13C92473C42E000E6845 /* swift-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -759,6 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				7DDA86052609899600E59B63 /* TouchTest */,
+				7D2E5C3C2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1127,6 +1130,7 @@
 				280836A925BBA70E00DD0389 /* JCSNavigatorVC.swift in Sources */,
 				7DCBB94E25943AA7007D8AD9 /* IMDemoVC.swift in Sources */,
 				7D01022625B7C52C00A2D359 /* JCSDemoVC.swift in Sources */,
+				7D2E5C3D2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,
 				7D3F148D2474C2DC000E6845 /* DemoMoya.swift in Sources */,
 				7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */,
