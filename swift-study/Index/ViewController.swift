@@ -133,6 +133,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
             cell.titleLabel.text = model.title
             cell.jumpClassLabel.text = model.route
+            
             return cell
         }
         return UITableViewCell()

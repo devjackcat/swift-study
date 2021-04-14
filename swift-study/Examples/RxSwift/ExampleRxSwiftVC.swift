@@ -48,19 +48,63 @@ class UserApi {
     }
 }
 
+// PK类型
+enum LinkPKScene {
+    case undetected // 未知的
+    case friends // 普通
+    case linkScreen // 连屏
+}
+
+enum LSRoomScene: Equatable {
+    
+    enum Orientation: Int, Equatable {
+        case portrait = 1
+        case landscape = 2
+    }
+    /// 单播
+    case normal(orientation: Orientation)
+    /// 连麦PK
+    case linkPk(scene: LinkPKScene)
+    /// 3V3
+    case group3v3
+}
+
+
+
 class ExampleRxSwiftVC: UIViewController {
     private var mergeSubject1 = PublishRelay<DemoItem>()
     private var mergeSubject2 = PublishRelay<DemoItem>()
+    
+    private var enumSubject = PublishRelay<LSRoomScene>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Observable.of(mergeSubject1, mergeSubject2)
-            .merge()
-            .subscribe(onNext: { item in
-                print("---merge.item = \(item.title)")
-            })
-            .disposing(with: self)
+//        Observable.of(mergeSubject1, mergeSubject2)
+//            .merge()
+//            .subscribe(onNext: { item in
+//                print("---merge.item = \(item.title)")
+//            })
+//            .disposing(with: self)
+        
+        enumSubject
+            .distinctUntilChanged()
+            .subscribe( onNext:{ scene in
+                print("\(scene)")
+            }).disposing(with: self)
+        
+        enumSubject.accept(.normal(orientation: .portrait))
+        enumSubject.accept(.normal(orientation: .portrait))
+        enumSubject.accept(.normal(orientation: .landscape))
+        enumSubject.accept(.normal(orientation: .landscape))
+        enumSubject.accept(.group3v3)
+        enumSubject.accept(.linkPk(scene: .undetected))
+        enumSubject.accept(.linkPk(scene: .undetected))
+        enumSubject.accept(.linkPk(scene: .friends))
+        enumSubject.accept(.linkPk(scene: .friends))
+        enumSubject.accept(.linkPk(scene: .linkScreen))
+        enumSubject.accept(.linkPk(scene: .linkScreen))
+
     }
 
     @IBAction func testLogin(_: Any) {
