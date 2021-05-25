@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,7 +120,7 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iy-AI-jGG">
                                 <rect key="frame" x="87" y="446" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2wL-03-nY3"/>
                                     <constraint firstAttribute="width" constant="240" id="gUZ-NY-gcH"/>
@@ -127,20 +129,30 @@
                                     <segue destination="0oP-Pb-Qkr" kind="embed" id="QIY-d9-hpj"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhd-bi-2CC" customClass="RichXibView" customModule="swift_study" customModuleProvider="target">
+                                <rect key="frame" x="87" y="172" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AQ5-lu-fTX"/>
+                                    <constraint firstAttribute="width" constant="240" id="nPE-b8-zuP"/>
+                                </constraints>
+                            </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gdc-gO-bPk"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rJy-FD-j3x" firstAttribute="centerX" secondItem="uiN-Qc-50k" secondAttribute="centerX" id="1Br-tX-Hhf"/>
                             <constraint firstItem="Gdc-gO-bPk" firstAttribute="trailing" secondItem="GFJ-el-cvl" secondAttribute="trailing" constant="170" id="3DZ-2S-0V6"/>
+                            <constraint firstItem="Hhd-bi-2CC" firstAttribute="top" secondItem="GFJ-el-cvl" secondAttribute="bottom" id="6Ej-jM-1ej"/>
                             <constraint firstItem="ytd-ZT-f9Z" firstAttribute="centerX" secondItem="uiN-Qc-50k" secondAttribute="centerX" id="7kp-Nb-xRh"/>
                             <constraint firstItem="rJy-FD-j3x" firstAttribute="top" secondItem="ytd-ZT-f9Z" secondAttribute="bottom" constant="63" id="EgW-dO-SrH"/>
                             <constraint firstItem="ytd-ZT-f9Z" firstAttribute="top" secondItem="GFJ-el-cvl" secondAttribute="bottom" constant="50" id="MTi-kK-rIl"/>
                             <constraint firstItem="GFJ-el-cvl" firstAttribute="leading" secondItem="Gdc-gO-bPk" secondAttribute="leading" constant="39" id="QIC-Mg-fOL"/>
                             <constraint firstItem="1iy-AI-jGG" firstAttribute="top" secondItem="rJy-FD-j3x" secondAttribute="bottom" constant="44" id="o5Y-Xb-oj2"/>
+                            <constraint firstItem="Hhd-bi-2CC" firstAttribute="centerX" secondItem="uiN-Qc-50k" secondAttribute="centerX" id="pKU-cg-ts9"/>
                             <constraint firstItem="GFJ-el-cvl" firstAttribute="top" secondItem="Gdc-gO-bPk" secondAttribute="top" constant="107" id="uZs-8I-mVD"/>
                             <constraint firstItem="1iy-AI-jGG" firstAttribute="centerX" secondItem="uiN-Qc-50k" secondAttribute="centerX" id="vnf-LO-OZy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Gdc-gO-bPk"/>
                     </view>
                     <connections>
                         <outlet property="giftCountLabel" destination="XGU-VU-6pf" id="yIX-l6-VlO"/>
@@ -151,6 +163,7 @@
                         <outlet property="helloPopView" destination="ytd-ZT-f9Z" id="37K-fE-Yjw"/>
                         <outlet property="helloPopViewWidth" destination="6ka-nC-O0J" id="pTb-lc-SzG"/>
                         <outlet property="label" destination="GFJ-el-cvl" id="Cd4-5q-ZBN"/>
+                        <outlet property="richXibView" destination="Hhd-bi-2CC" id="7HZ-3K-sZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="350-KB-sNr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,7 +177,8 @@
                     <view key="view" contentMode="scaleToFill" id="OGW-qn-87U">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="b3h-ar-xiM"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psb-df-oC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -175,5 +189,14 @@
     <resources>
         <image name="panda_gift_pop_high" width="65" height="65"/>
         <image name="panda_hello_arrow" width="11.5" height="9.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

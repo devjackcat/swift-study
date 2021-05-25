@@ -17,6 +17,7 @@ class RichTextViewController: UIViewController {
     @IBOutlet var giftCountLabel: UILabel!
     @IBOutlet var giftPopView: UIView!
     @IBOutlet var giftPopContentView: UIView!
+    @IBOutlet var richXibView: RichXibView!
     
     @IBOutlet var guideView: UIView!
     
@@ -24,6 +25,9 @@ class RichTextViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .black
+        
+        richXibView.contentView.backgroundColor = UIColor.jcs_randomColor()
+        richXibView.titleLabel.text = "RichXibView Test"
         
 //        // 引导页
 //        if UserDefaults.standard.bool(forKey: "panda_guide") {

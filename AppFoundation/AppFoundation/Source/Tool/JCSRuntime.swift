@@ -33,7 +33,13 @@ public class JCSRuntime: NSObject {
     public static func createInstance(for clazz: String) -> AnyObject? {
         guard let fullClassName = JCSRuntime.instance.maps[clazz] else {
             // 不存在，则默认尝试主工程获取
-            return createInstance(fullClassName: "\(defaultBundleName).\(clazz)")
+            if let vc = createInstance(fullClassName: "\(defaultBundleName).\(clazz)") {
+                return vc
+            }
+            if let vc = createInstance(fullClassName: "\(clazz)") {
+                return vc
+            }
+            return nil
         }
         return createInstance(fullClassName: fullClassName)
     }

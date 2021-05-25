@@ -32,7 +32,8 @@ class ExampleViewModel {
         var module = ExampleListModule(title: "测试")
         modules.append(module)
         module.items = [
-            ExampleListItem(title: "TouchTestVC", route: "jackcat://runtime/TouchTestVC")
+            ExampleListItem(title: "TouchTestVC", route: "jackcat://runtime/TouchTestVC"),
+            ExampleListItem(title: "Runloop", route: "jackcat://runtime/RunLoopViewController")
         ]
         
         // 工具

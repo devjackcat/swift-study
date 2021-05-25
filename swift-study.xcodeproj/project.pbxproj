@@ -54,8 +54,12 @@
 		7DA1A1B224D2C40D00106D4B /* PopverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA1A1B124D2C40D00106D4B /* PopverViewController.storyboard */; };
 		7DA1A25724D3E2B000106D4B /* PopverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA1A25624D3E2B000106D4B /* PopverContentView.swift */; };
 		7DA1A25924D3E2BA00106D4B /* PopverContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DA1A25824D3E2BA00106D4B /* PopverContentView.xib */; };
+		7DABFF1D264CB40B00FA6800 /* RichXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DABFF1C264CB40B00FA6800 /* RichXibView.swift */; };
+		7DABFF1F264CB41A00FA6800 /* RichXibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DABFF1E264CB41A00FA6800 /* RichXibView.xib */; };
 		7DAE3CDB24E26EB900C64245 /* ModalDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE3CDA24E26EB900C64245 /* ModalDemoViewController.swift */; };
 		7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE3D7F24E39F2600C64245 /* Media.xcassets */; };
+		7DB2308B26368AAA006925F3 /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB2308A26368AAA006925F3 /* RunLoopViewController.m */; };
+		7DB2308E26369193006925F3 /* RunLoopSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB2308D26369193006925F3 /* RunLoopSuperViewController.m */; };
 		7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387572591CF9C00E7058A /* GlobalImport.swift */; };
 		7DB387862591D46900E7058A /* TinyConsoleDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */; };
 		7DB387F7259201B600E7058A /* ExampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB387F6259201B600E7058A /* ExampleRouter.swift */; };
@@ -234,8 +238,14 @@
 		7DA1A1B124D2C40D00106D4B /* PopverViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopverViewController.storyboard; sourceTree = "<group>"; };
 		7DA1A25624D3E2B000106D4B /* PopverContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopverContentView.swift; sourceTree = "<group>"; };
 		7DA1A25824D3E2BA00106D4B /* PopverContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopverContentView.xib; sourceTree = "<group>"; };
+		7DABFF1C264CB40B00FA6800 /* RichXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichXibView.swift; sourceTree = "<group>"; };
+		7DABFF1E264CB41A00FA6800 /* RichXibView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichXibView.xib; sourceTree = "<group>"; };
 		7DAE3CDA24E26EB900C64245 /* ModalDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDemoViewController.swift; sourceTree = "<group>"; };
 		7DAE3D7F24E39F2600C64245 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		7DB2308926368AAA006925F3 /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
+		7DB2308A26368AAA006925F3 /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
+		7DB2308C26369193006925F3 /* RunLoopSuperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopSuperViewController.h; sourceTree = "<group>"; };
+		7DB2308D26369193006925F3 /* RunLoopSuperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopSuperViewController.m; sourceTree = "<group>"; };
 		7DB387572591CF9C00E7058A /* GlobalImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImport.swift; sourceTree = "<group>"; };
 		7DB387852591D46900E7058A /* TinyConsoleDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyConsoleDemoVC.swift; sourceTree = "<group>"; };
 		7DB387F6259201B600E7058A /* ExampleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRouter.swift; sourceTree = "<group>"; };
@@ -499,6 +509,8 @@
 				7DA1A10424D2BC2500106D4B /* RichTextViewController.swift */,
 				7DF3974224DA55AB003E88F5 /* DemoChildViewController.swift */,
 				7DA1A10624D2BC3B00106D4B /* RichTextViewController.storyboard */,
+				7DABFF1C264CB40B00FA6800 /* RichXibView.swift */,
+				7DABFF1E264CB41A00FA6800 /* RichXibView.xib */,
 			);
 			path = "富文本";
 			sourceTree = "<group>";
@@ -520,6 +532,17 @@
 				7DAE3CDA24E26EB900C64245 /* ModalDemoViewController.swift */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		7DB2308826368A8D006925F3 /* Runloop */ = {
+			isa = PBXGroup;
+			children = (
+				7DB2308C26369193006925F3 /* RunLoopSuperViewController.h */,
+				7DB2308D26369193006925F3 /* RunLoopSuperViewController.m */,
+				7DB2308926368AAA006925F3 /* RunLoopViewController.h */,
+				7DB2308A26368AAA006925F3 /* RunLoopViewController.m */,
+			);
+			path = Runloop;
 			sourceTree = "<group>";
 		};
 		7DB387842591D44700E7058A /* TinyConsole */ = {
@@ -760,6 +783,7 @@
 		7DDA86042609898F00E59B63 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				7DB2308826368A8D006925F3 /* Runloop */,
 				7DDA86052609899600E59B63 /* TouchTest */,
 				7D2E5C3C2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift */,
 			);
@@ -960,6 +984,7 @@
 				7DA11D0A25F77D02002EA4E1 /* origin-json.json in Resources */,
 				7DAE3D8024E39F2600C64245 /* Media.xcassets in Resources */,
 				7DD7FE6B24B4583300B9B43B /* ExampleStackViewVC.storyboard in Resources */,
+				7DABFF1F264CB41A00FA6800 /* RichXibView.xib in Resources */,
 				7D3F13D42473C42E000E6845 /* Main.storyboard in Resources */,
 				7D623C0425F868EE0036184F /* rsa-public-key.txt in Resources */,
 				7DE115C12583140900609CE7 /* CountDownTimerExampleVC.storyboard in Resources */,
@@ -1090,6 +1115,7 @@
 				7DC57B362579DC09000F0CDA /* HJGiftPopViewModel.swift in Sources */,
 				7DE167222554EDDF00DB7FE3 /* DemoTouchTroughVC.swift in Sources */,
 				7D3F13CD2473C42E000E6845 /* AppDelegate.swift in Sources */,
+				7DB2308E26369193006925F3 /* RunLoopSuperViewController.m in Sources */,
 				7DB387582591CF9C00E7058A /* GlobalImport.swift in Sources */,
 				7DB387F7259201B600E7058A /* ExampleRouter.swift in Sources */,
 				7D623C0225F867E40036184F /* RSAUtil2.m in Sources */,
@@ -1104,6 +1130,7 @@
 				7DCBBB92259486AA007D8AD9 /* __AppSetup.swift in Sources */,
 				7D623C4025FA1E0F0036184F /* SliderTabControl.swift in Sources */,
 				7DCBBABD25947FD1007D8AD9 /* AnimationVO.swift in Sources */,
+				7DABFF1D264CB40B00FA6800 /* RichXibView.swift in Sources */,
 				7D9219E625FB5262008C012D /* SliderPageDemoVC.swift in Sources */,
 				7D8C99BD260B23D900672677 /* HTMLParserVC.swift in Sources */,
 				7D5D3A7225C3ED4F001ED2C5 /* JCSNotificationVC.swift in Sources */,
@@ -1133,6 +1160,7 @@
 				7D2E5C3D2615D00E008B2533 /* ViewControllerSubmoduleLoader.swift in Sources */,
 				7D5221F32477DEB000B06978 /* IGDemoSectionOne.swift in Sources */,
 				7D3F148D2474C2DC000E6845 /* DemoMoya.swift in Sources */,
+				7DB2308B26368AAA006925F3 /* RunLoopViewController.m in Sources */,
 				7D623C4225FA20820036184F /* SliderTabControlDemoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1320,17 +1348,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SKB334AM79;
+				DEVELOPMENT_TEAM = K97LC9L92F;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "swift-study/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yn.huayou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.*";
+				PROVISIONING_PROFILE_SPECIFIER = match_development_wildcard_group1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG JCDEBUG";
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1346,18 +1375,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = K97LC9L92F;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "swift-study/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mijin.app.test.qq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = match_adhoc_wildcard_group1;
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1434,17 +1465,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = SKB334AM79;
+				DEVELOPMENT_TEAM = K97LC9L92F;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "swift-study/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yn.huayou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.*";
+				PROVISIONING_PROFILE_SPECIFIER = match_development_wildcard_group1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG JCUAT";
 				SWIFT_OBJC_BRIDGING_HEADER = "swift-study/swift-study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

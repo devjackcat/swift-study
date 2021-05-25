@@ -21,6 +21,36 @@ class ViewController: UIViewController {
     private var bag = DisposeBag()
     
     private let viewModel = ExampleViewModel()
+    
+    private var timer: DispatchSourceTimer?
+    func addTimer() {
+         // 子线程创建timer
+        timer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.global())
+        //        let timer = DispatchSource.makeTimerSource()
+        /*
+         dealine: 开始执行时间
+         repeating: 重复时间间隔
+         leeway: 时间精度
+         */
+        timer?.schedule(deadline: .now() + .seconds(1), repeating: DispatchTimeInterval.seconds(1), leeway: DispatchTimeInterval.seconds(0))
+        // timer 添加事件
+        timer?.setEventHandler {
+            print("timer事件")
+        }
+        timer?.resume()
+    }
+    // timer暂停
+    func stopTimer() {
+        timer?.suspend()
+    }
+    // timer结束
+    func cancleTimer() {
+        guard let t = timer else {
+            return
+        }
+        t.cancel()
+        timer = nil
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +70,11 @@ class ViewController: UIViewController {
         
         demoClosure = demoFunc
         demoClosure?()
+        
+//        addTimer()
+        
+//        Thread.sleep(forTimeInterval: 10)
+        
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +83,7 @@ class ViewController: UIViewController {
 //    }
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
-//        print("------ Index viewDidAppear")
-//    }
+//        print("------ Index viewDidAppear") 45//    }
 //    override func viewWillDisappear(_ animated: Bool) {
 //        super.viewWillDisappear(animated)
 //        print("------ Index viewWillDisappear")
